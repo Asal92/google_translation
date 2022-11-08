@@ -27,35 +27,44 @@ coner_tags =[
     "B-Medication/Vaccine", "I-Medication/Vaccine", "B-MedicalProcedure", "I-MedicalProcedure",
     "B-AnatomicalStructure", "I-AnatomicalStructure", "B-Symptom", "I-Symptom", "B-Disease", "I-Disease",
 ]
+UNK = 'unk'
 
 def preproess_coner(sentence):
-    str = []
+    new_string, original_string, tags = [], [], []
     if sentence == '':
         return None
     else:
         for w in sentence:
             if w[1]=="O":
-                str.append(w[0])
+                new_string.append(w[0])
+                original_string.append(w[0])
             else:
-                t = '[' + w[1] + " " + w[0] + ']'
-                str.append(t)
-        original_string = ' '.join(str)
-        print("original sentence: ",original_string)
-    return original_string
+                # Replacing tags with unk since the tags were getting translated by Google cloud
+                tags.append(w[1])
+                t = '[' + UNK + " " + w[0] + ']'
+                new_string.append(t)
+                original_string.append('[' + w[1] + " " + w[0] + ']')
+        new_sentence = ' '.join(new_string)
+        print("original sentence: ",' '.join(original_string))
+    return new_sentence, tags
 
-def postprocess_coner(sentence):
+def postprocess_coner(sentence, tags):
     t = sentence
     t = t.replace("&quot;", "")
     t = t.replace("&#39;", "'")
     t = t.replace("&amp","&")
     t = t.replace("a&;s", "a&s")
-    # t = t.replace(" DOCSTART ", "-DOCSTART-")
     t = t.replace("[", "")
     t = t.replace("]", "")
+    tag_n = 0
 
     s = t.split()
     for i in range(len(s)):
-        # Google cloud trans;ate words inside brackets with Upper case!
+        # Google cloud were translating words inside tags!!!
+        if s[i] == UNK:
+            s[i] = tags[tag_n]
+            tag_n += 1
+        # Google cloud translate words inside brackets with Upper case!
         if s[i] in coner_tags:
             s[i+1] = s[i+1].lower()
 
@@ -81,11 +90,11 @@ def run(fpath, ofpath):
                         sentence.append(line)
             else:
                 if sentence != []:
-                    sentence_preprocessed = preproess_coner(sentence)
+                    sentence_preprocessed, tags_list = preproess_coner(sentence)
                     if sentence_preprocessed is None:
                         continue
                     results = translator.translate(sentence_preprocessed, source_language=sl, target_language=tl)
-                    t = postprocess_coner(results['translatedText'])
+                    t = postprocess_coner(results['translatedText'], tags_list)
                     print("translated sentence: ", t)
                     of.write(t + '\n')
                     time.sleep(0.2)
