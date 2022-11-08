@@ -49,6 +49,7 @@ def preproess_coner(sentence):
     return new_sentence, tags_dict
 
 def postprocess_coner(sentence, tags_dict, original):
+
     t = sentence
     t = t.replace("&quot;", "")
     t = t.replace("&#39;", "'")
@@ -75,25 +76,36 @@ def postprocess_coner(sentence, tags_dict, original):
                         s[i + 1] = s[i + 1].lower()
                         n += 1
                     except:
-                        back_translate = translator.translate(s[i+1].lower(), source_language=tl, target_language=sl)
-                        res = back_translate['translatedText'].lower()
-                        if res in tags_dict.keys():
-                            s[i] = tags_dict[res]
-                            s[i + 1] = s[i + 1].lower()
-                            n += 1
+                        if i == len(s)-1: # Google cloud swapped the tokens inside the bracket
+                            back_translate = translator.translate(s[i-1].lower(), source_language=tl, target_language=sl)
+                            res = back_translate['translatedText'].lower()
+                            if res in tags_dict.keys():
+                                s[i] = tags_dict[res]
+                                temp = s[i]
+                                s[i] = s[i-1]
+                                s[i-1] = temp
+                                n += 1
                         else:
-                            # for now... plural s is missing after the translation
-                            X, Y = s[i], s[i + 1]
-                            s.remove(X)
-                            s.remove(Y)
-                            i -= 2
+                            back_translate = translator.translate(s[i+1].lower(), source_language=tl, target_language=sl)
+                            res = back_translate['translatedText'].lower()
+                            if res in tags_dict.keys():
+                                s[i] = tags_dict[res]
+                                s[i + 1] = s[i + 1].lower()
+                                n += 1
+                            else:
+                                # for now... plural s is missing after the translation
+                                X, Y = s[i], s[i + 1]
+                                s.remove(X)
+                                s.remove(Y)
+                                i -= 2
                 else:
                     # Google cloud translated [X Y] twice!
                     X, Y = s[i], s[i+1]
                     s.remove(X)
                     s.remove(Y)
                     i -= 2
-
+    if UNK in s: # watch out for leftovers
+        s.remove(UNK)
     new_sentence = ' '.join(s)
     return new_sentence
 
