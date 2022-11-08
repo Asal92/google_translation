@@ -30,7 +30,7 @@ coner_tags =[
 UNK = 'unk'
 
 def preproess_coner(sentence):
-    new_string, original_string, tags = [], [], []
+    new_string, original_string, tags_dict = [], [], {}
     if sentence == '':
         return None
     else:
@@ -38,35 +38,61 @@ def preproess_coner(sentence):
             if w[1]=="O":
                 new_string.append(w[0])
                 original_string.append(w[0])
-            else:
+            elif w[1] in coner_tags:
                 # Replacing tags with unk since the tags were getting translated by Google cloud
-                tags.append(w[1])
+                tags_dict[w[0]] = w[1]
                 t = '[' + UNK + " " + w[0] + ']'
                 new_string.append(t)
                 original_string.append('[' + w[1] + " " + w[0] + ']')
         new_sentence = ' '.join(new_string)
         print("original sentence: ",' '.join(original_string))
-    return new_sentence, tags
+    return new_sentence, tags_dict
 
-def postprocess_coner(sentence, tags):
+def postprocess_coner(sentence, tags_dict, original):
     t = sentence
     t = t.replace("&quot;", "")
     t = t.replace("&#39;", "'")
     t = t.replace("&amp","&")
     t = t.replace("a&;s", "a&s")
-    t = t.replace("[", "")
-    t = t.replace("]", "")
-    tag_n = 0
+    t = t.replace("&;", "&")
+    t = t.replace("]-", " ")
+    t = t.replace("],", " ")
+    t = t.replace("].", " ")
+    t = t.replace("[", " ")
+    t = t.replace("]", " ")
 
     s = t.split()
-    for i in range(len(s)):
+    n, l = 0, len(s)
+
+    for i in range(l):
         # Google cloud were translating words inside tags!!!
-        if s[i] == UNK:
-            s[i] = tags[tag_n]
-            tag_n += 1
         # Google cloud translate words inside brackets with Upper case!
-        if s[i] in coner_tags:
-            s[i+1] = s[i+1].lower()
+        if i<len(s):
+            if s[i] == UNK:
+                if n < len(tags_dict):
+                    try:
+                        s[i] = tags_dict[s[i+1].lower()]
+                        s[i + 1] = s[i + 1].lower()
+                        n += 1
+                    except:
+                        back_translate = translator.translate(s[i+1].lower(), source_language=tl, target_language=sl)
+                        res = back_translate['translatedText'].lower()
+                        if res in tags_dict.keys():
+                            s[i] = tags_dict[res]
+                            s[i + 1] = s[i + 1].lower()
+                            n += 1
+                        else:
+                            # for now... plural s is missing after the translation
+                            X, Y = s[i], s[i + 1]
+                            s.remove(X)
+                            s.remove(Y)
+                            i -= 2
+                else:
+                    # Google cloud translated [X Y] twice!
+                    X, Y = s[i], s[i+1]
+                    s.remove(X)
+                    s.remove(Y)
+                    i -= 2
 
     new_sentence = ' '.join(s)
     return new_sentence
@@ -90,11 +116,11 @@ def run(fpath, ofpath):
                         sentence.append(line)
             else:
                 if sentence != []:
-                    sentence_preprocessed, tags_list = preproess_coner(sentence)
+                    sentence_preprocessed, tags_dict = preproess_coner(sentence)
                     if sentence_preprocessed is None:
                         continue
                     results = translator.translate(sentence_preprocessed, source_language=sl, target_language=tl)
-                    t = postprocess_coner(results['translatedText'], tags_list)
+                    t = postprocess_coner(results['translatedText'], tags_dict, sentence)
                     print("translated sentence: ", t)
                     of.write(t + '\n')
                     time.sleep(0.2)
