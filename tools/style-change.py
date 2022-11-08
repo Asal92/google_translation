@@ -5,16 +5,16 @@ import re
 
 def to_mulda(file_name):
     source_file = file_name
-    with open(source_file, 'r') as fr, open("mulda-"+source_file,'w') as fw:
+    with open(source_file, 'r') as fr, open("en-mulda-train.txt",'w') as fw:
         lines = fr.readlines()
-        mulda_doc_start = "-DOCSTART-	O\n"
-        fw.write(mulda_doc_start)
-        fw.write('\n')
+        # mulda_doc_start = "-DOCSTART-	O\n"
+        # fw.write(mulda_doc_start)
+        # fw.write('\n')
         for line in lines:
             if line[0] == '#':
                 #continue
                 fw.write(line)
-                fw.write('\n')
+                # fw.write('\n')
             elif line[0] == '\n':
                 fw.write('\n')
             else:
@@ -42,10 +42,10 @@ def to_coner(file_name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    #source_file = "coner-en-test.txt"
-    output_file = "out.txt"
-    #to_mulda(source_file)
-    to_coner(output_file)
+    source_file = "en-train.conll"
+    #output_file = "de-out.txt"
+    to_mulda(source_file)
+    #to_coner(output_file)
 
 
 
