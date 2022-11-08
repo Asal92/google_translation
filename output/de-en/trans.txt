@@ -1,0 +1,42 @@
+[
+ [
+  "# id da9de7c8-9aff-4297-95d5-40633d5dbee8\tdomain=de",
+  "The building had a 51st floor until 1984. stock B-Facility Observation I-Facility Deck ."
+ ],
+ [
+  "# id 925760d5-309e-4dbc-99ff-406471af6779\tdomain=de",
+  "The regiment was assigned to B-Facility Lancaster I-Facility (Pennsylvania) where the problems continued."
+ ],
+ [
+  "# id bd78b34c-e08c-44dc-a75e-2010c6896bcb\tdomain=de",
+  "Movable seating is a feature of some facilities such as B-Facility sports I-Facility stadiums often referred to as convertible stadiums or sculptable stadiums."
+ ],
+ [
+  "# id c50180f9-7ff5-4cba-955c-ff78df2db8b4\tdomain=de",
+  "B-Facility greenhouse walls (and roof) transmit as much light and as little heat as possible."
+ ],
+ [
+  "# id 0a23ba61-a28b-44ee-9384-0f1c4859bd0b\tdomain=de",
+  "the painting is located under B-Facility mus\u00e9es I-Facility royaux I-Facility des I-Facility beaux-arts I-Facility de I-Facility belgique in B-HumanSettlement region I-HumanSettlement brussels-capital ."
+ ],
+ [
+  "# id 5bcf38de-b594-4858-861b-af8df101a886\tdomain=de",
+  "1974 B-Artist philip I-Artist moore ( later organist of B-Facility york I-Facility minster )"
+ ],
+ [
+  "# id 3784d3c2-8b62-4e66-b5ee-967bb3f63780\tdomain=de",
+  "There is a wide range of B-Facility restaurants accommodation places and other tourist places."
+ ],
+ [
+  "# id 244f31cd-c81d-408c-a5e2-8d226caf5584\tdomain=de",
+  "B-OtherPER edward I-OtherPER seymour, I-OtherPER lord I-OtherPER beauchamp ( 1561 - 1612 ) eldest son and heir born at B-Facility the I-Facility tower  I-Facility of I-Facility london ."
+ ],
+ [
+  "# id e622c9f8-2553-4779-8873-834a75c4af9c\tdomain=de",
+  "Moctezuma ordered to be informed of new sightings of aliens on the coast and listed additional watchmen and B-Facility Watchtower to accomplish this."
+ ],
+ [
+  "# id 8848dcb5-7d28-43fb-8c72-2574d205640b\tdomain=de",
+  "The girls had an unusual education different from their brother who went to B-Facility Eton I-Facility college ; they were taught by their mother."
+ ]
+]

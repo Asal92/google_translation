@@ -1,0 +1,42 @@
+[
+ {
+  "translatedText": "The building had a 51st floor until 1984. stock \"B-Facility Observation Deck\" .",
+  "input": "das geb\u00e4ude hatte bis 1984 einen 51 . stock \"B-Facility aussichtsplattform\" ."
+ },
+ {
+  "translatedText": "The regiment was assigned to \"B-Facility Lancaster\" \"I-Facility (Pennsylvania)\" where the problems continued.",
+  "input": "das regiment wurde an \"B-Facility lancaster\" \"I-Facility (pennsylvania)\" angewiesen wo die probleme fortgesetzt wurden ."
+ },
+ {
+  "translatedText": "Movable seating is a feature of some facilities such as \"B-Facility sports stadiums\" often referred to as convertible stadiums or sculptable stadiums.",
+  "input": "bewegliche sitzpl\u00e4tze sind ein merkmal einiger einrichtungen wie \"B-Facility sportstadien\" die h\u00e4ufig als cabrio -stadien oder modellierbaren stadien bezeichnet werden ."
+ },
+ {
+  "translatedText": "\"B-Facility greenhouse\" walls (and roof) transmit as much light and as little heat as possible.",
+  "input": "\"B-Facility gew\u00e4chshaus\" w\u00e4nde ( und d\u00e4cher ) werden so viel licht und so wenig w\u00e4rme wie m\u00f6glich \u00fcbertragen ."
+ },
+ {
+  "translatedText": "the painting is located under \"B-Facility mus\u00e9es\" \"I-Facility royaux\" \"I-Facility des\" \"I-Facility beaux-arts\" \"I-Facility de\" \"I-Facility belgique\" in \"B-HumanSettlement region\" \"I-HumanSettlement brussels-capital\" .",
+  "input": "das gem\u00e4lde befindet sich unter \"B-Facility mus\u00e9es\" \"I-Facility royaux\" \"I-Facility des\" \"I-Facility beaux-arts\" \"I-Facility de\" \"I-Facility belgique\" in \"B-HumanSettlement region\" \"I-HumanSettlement br\u00fcssel-hauptstadt\" ."
+ },
+ {
+  "translatedText": "1974 \"B-Artist philip\" \"I-Artist moore\" ( later organist of \"B-Facility york\" \"I-Facility minster\" )",
+  "input": "1974 \"B-Artist philip\" \"I-Artist moore\" ( sp\u00e4terer organist von \"B-Facility york\" \"I-Facility minster\" )"
+ },
+ {
+  "translatedText": "There is a wide range of \"B-Facility restaurants\" accommodation places and other tourist places.",
+  "input": "es gibt eine breite palette von \"B-Facility restaurants\" unterkunftsstellen und anderen touristenorten ."
+ },
+ {
+  "translatedText": "\"B-OtherPER edward\" \"I-OtherPER seymour,\" \"I-OtherPER lord\" \"I-OtherPER beauchamp\" ( 1561 - 1612 ) eldest son and heir born at \"B-Facility the\" \"I-Facility tower\" \" I-Facility of\" \"I-Facility london\" .",
+  "input": "\"B-OtherPER edward\" \"I-OtherPER seymour,\" \"I-OtherPER lord\" \"I-OtherPER beauchamp\" ( 1561 - 1612 ) \u00e4ltester sohn und erbe geboren in der \"B-Facility the\" \"I-Facility tower\" \"I-Facility of\" \"I-Facility london\" ."
+ },
+ {
+  "translatedText": "Moctezuma ordered to be informed of new sightings of aliens on the coast and listed additional watchmen and \"B-Facility Watchtower\" to accomplish this.",
+  "input": "moctezuma befahl \u00fcber neue sichtungen von ausl\u00e4ndern an der k\u00fcste informiert zu werden und verzeichnete zus\u00e4tzliche wachw\u00e4chter und \"B-Facility wachturm\" um dies zu erreichen ."
+ },
+ {
+  "translatedText": "The girls had an unusual education different from their brother who went to \"B-Facility Eton\" \"I-Facility college\" ; they were taught by their mother.",
+  "input": "die m\u00e4dchen hatten eine ungew\u00f6hnliche ausbildung die sich von ihrem bruder unterscheidet der zu \"B-Facility eton\" \"I-Facility college\" ging ; sie wurden von ihrer mutter unterrichtet ."
+ }
+]
