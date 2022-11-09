@@ -27,12 +27,10 @@ def to_mulda(file_name):
 
 def to_coner(file_name):
     source_file = file_name
-    with open(source_file, 'r') as fr, open("mulda-"+source_file,'w') as fw:
+    with open(source_file, 'r') as fr, open("coner-train-en-fr.txt",'w') as fw:
         lines = fr.readlines()
         for line in lines:
-            if line[0:5]== '-DOCS':
-                continue
-            elif line[0] == '#':
+            if line[0] == '#':
                 fw.write(line + '\n')
             else:
                 new_line = re.sub("\t", ' _ _ ', line)
@@ -42,10 +40,9 @@ def to_coner(file_name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    source_file = "en-train.conll"
-    #output_file = "de-out.txt"
-    to_mulda(source_file)
-    #to_coner(output_file)
+    source_file = "fr-en-mulda-train-lin2col.txt"
+    #to_mulda(source_file)
+    to_coner(source_file)
 
 
 
