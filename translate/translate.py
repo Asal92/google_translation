@@ -99,11 +99,16 @@ def postprocess_coner(sentence, tags_dict, original):
                                 s.remove(Y)
                                 i -= 2
                 else:
-                    # Google cloud translated [X Y] twice!
-                    X, Y = s[i], s[i+1]
-                    s.remove(X)
-                    s.remove(Y)
-                    i -= 2
+                    # unk at the end of thesentence. somehow translation is ruined again
+                    if i == len(s)-1:
+                        X = s[i]
+                        s.remove(X)
+                    else:
+                        # Google cloud translated [X Y] twice!
+                        X, Y = s[i], s[i+1]
+                        s.remove(Y)
+                        s.remove(X)
+                        i -= 2
     if UNK in s: # watch out for leftovers
         s.remove(UNK)
     new_sentence = ' '.join(s)
@@ -140,7 +145,7 @@ def run(fpath, ofpath):
 
 #define source language and target language
 sl = 'en'
-tl = 'de'
+tl = 'fr'
 #tl = 'es'
 #tl = 'nl'
 
