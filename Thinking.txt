@@ -1,0 +1,10 @@
+'''
+11/11/2022
+
+Renamed some variables to make them more clear.
+Looks like it's not actually adding sentences because it's expecting there to be a space rather than these underlines so I'm confused.
+
+I don't know what the preprocess function is for.
+
+When I try to run the code, it doesn't seem to work because no sentences are added.
+'''

@@ -1,12 +1,9 @@
 from google.cloud import translate_v2 as translate
-import sys
-import os
 import time
-from nltk import word_tokenize
 
+ENCODING = 'utf-8'
 
-translator = translate.Client.from_service_account_json("translation-367016-9ae157928fc9.json")
-
+translator = translate.Client.from_service_account_json("../secret/high-comfort-368404-39708e023588.json")
 
 coner_tags =[
     # Location - LOC
@@ -79,7 +76,7 @@ def postprocess_coner(sentence, tags_dict, original):
                         n += 1
                     except:
                         if i == len(s)-1: # Google cloud swapped the tokens inside the bracket
-                            back_translate = translator.translate(s[i-1].lower(), source_language=tl, target_language=sl)
+                            back_translate = translator.translate(s[i-1].lower(), source_language=target_language, target_language=source_language)
                             res = back_translate['translatedText'].lower()
                             if res in tags_dict.keys():
                                 s[i] = tags_dict[res]
@@ -88,7 +85,7 @@ def postprocess_coner(sentence, tags_dict, original):
                                 s[i-1] = temp
                                 n += 1
                         else:
-                            back_translate = translator.translate(s[i+1].lower(), source_language=tl, target_language=sl)
+                            back_translate = translator.translate(s[i+1].lower(), source_language=target_language, target_language=source_language)
                             res = back_translate['translatedText'].lower()
                             if res in tags_dict.keys():
                                 s[i] = tags_dict[res]
@@ -120,37 +117,44 @@ def postprocess_coner(sentence, tags_dict, original):
 def run(input_file_path, output_file_path):
     sentence = []
     print("Start the process.")
-    with open(input_file_path, 'r') as input_file, open(output_file_path, 'w') as output_file:
+    with open(input_file_path, 'r', encoding=ENCODING) as input_file, open(output_file_path, 'w', encoding=ENCODING) as output_file:
         for line in input_file:
             line = line.strip()
             if line != '':
                 if line[0] == '#':
-                    output_file.write('\n')
-                    output_file.write(line + '\n')
-                    output_file.write('\n')
+                    output_file.write(f'\n{line}\n\n')
                     continue
                 else:
                     line = line.split()
                     if len(line) == 2:
+                        # LONDON: THIS DOESN'T SEEM TO BE HAPPENING BECAUSE THERE IS THE "_ _" PART OF THE DATASET
                         sentence.append(line)
             else:
                 if sentence != []:
                     sentence_preprocessed, tags_dict = preproess_coner(sentence)
                     if sentence_preprocessed is None:
                         continue
-                    results = translator.translate(sentence_preprocessed, source_language=sl, target_language=tl)
+                    
+                    print("Here's what we're about to translate: ", sentence_preprocessed)
+                    raise RuntimeError("Not processing - just testing")
+                    results = translator.translate(sentence_preprocessed, source_language=source_language, target_language=target_language)
                     t = postprocess_coner(results['translatedText'], tags_dict, sentence)
                     print("translated sentence: ", t)
                     output_file.write(t + '\n')
                     time.sleep(0.2)
                     sentence = []
 
-#define source language and target language
-sl = 'en'
-tl = 'fr'
-#tl = 'es'
-#tl = 'nl'
+if __name__ == '__main__':
+    import os
+    # define source language and target language
+    source_language = 'en'
+    target_language = 'fr'
+    # target_language = 'es'
+    # target_language = 'nl'
 
-fpath = 'en-mulda-train.txt'
-ofpath = tl + '-' + fpath
-run(fpath, ofpath)
+    file_path = f'../data/{source_language}-train.conll'
+    output_file_path = f'../output/{source_language}-to-{target_language}-train.conll'
+    # make sure the output folder exists
+    if not os.path.exists(os.path.dirname(output_file_path)):
+        os.makedirs(os.path.dirname(output_file_path))
+    run(file_path, output_file_path)
