@@ -7,4 +7,13 @@ Looks like it's not actually adding sentences because it's expecting there to be
 I don't know what the preprocess function is for.
 
 When I try to run the code, it doesn't seem to work because no sentences are added.
+
+I'm going to actually switch to use Ku's branch rather than this one.
+
+Unsure if I should rebase or how to do this best.
+I'm worried that a merge will keep some changes from Asal or me that I don't want.
+If I create a new branch, I have to rename this one.
+
+That should actually be fine.
+That's what I'll do, then.
 '''
