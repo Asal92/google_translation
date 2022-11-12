@@ -30,3 +30,45 @@ Ooh we actually already have examples of the output. Great!
 
 Let's do it for French and see what happens! I think the postprocessing code will be broken but that's okay.
 '''
+
+'''
+11/12/2022
+
+Here's what I posted in the chat last night:
+    Finally got a handle on the code today. Should have the datasets we need (with translation of entities and without translation of entities) by tomorrow's meeting as promised.
+    One thing that I found in the code is that we weren't following the MulDA method described in the paper. So, I'm going to rewrite it so it works the way MulDA does so that we're closer to the original. The main thing is that MulDA never linearizes the tags while doing the translation. As described in the document, MulDA has three steps - 1: translate with the entity tags (not linearization) 2: translate with the original term in brackets (not linearization) 3: replace the entity tags with the translated term (in our case, replace the entity tags with the non-translated term). The linearization (DAGA stuff) doesn't come into MulDA until the generation step, which we're not doing.
+    Another thing is that we seem to be replacing unicode symbols by hand, which shouldn't be needed at all. As long as the data is read into our AI model using UTF-8 encoding, those \u and & values should remain in the .txt files. See these questions (1, 2, and 3) for more information.
+
+
+So, what I need to do is essentially recode this from scratch.
+The Google format is pretty easy to deal with, as is the MulDA stuff, so I'm not too worried.
+Let's do it!
+
+At some point we'll need a dictionary where an index points to the example number and the index of the word that's being translated in the sentence.
+
+I think Ku was also missing some labels.
+
+This sentence makes the bracket idea not work:
+    siegfried ( ca . 1906 ) photo by aimé dupont ]]
+
+And there's another sentence that has braces:
+    inome _ _ O
+    fishing _ _ O
+    port _ _ O
+    izumo _ _ B-HumanSettlement
+    shimane _ _ B-ORG
+    prefecture _ _ I-ORG
+    japan _ _ B-HumanSettlement
+    { _ _ O
+    nwp _ _ O
+    } _ _ O
+
+So I think using quotes will be the best idea.
+
+In order to get this to work in time, I'll be ignoring sentences without any entities.
+
+We're going to be doing it slightly different than MulDA in that we're not going to be substituting the token in. We're just going to surround it in quotes.
+
+I think ours should work better anyways.
+Would be a good thing to test later.
+'''
