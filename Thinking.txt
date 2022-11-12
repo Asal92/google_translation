@@ -1,0 +1,32 @@
+'''
+11/11/2022
+
+Renamed some variables to make them more clear.
+Looks like it's not actually adding sentences because it's expecting there to be a space rather than these underlines so I'm confused.
+
+I don't know what the preprocess function is for.
+
+When I try to run the code, it doesn't seem to work because no sentences are added.
+
+I'm going to actually switch to use Ku's branch rather than this one.
+
+Unsure if I should rebase or how to do this best.
+I'm worried that a merge will keep some changes from Asal or me that I don't want.
+If I create a new branch, I have to rename this one.
+
+That should actually be fine.
+That's what I'll do, then.
+
+Great, on the new branch now!
+
+It's looking likely that neither Ku nor Asal followed the paper.
+The paper doesn't linearize the tags while doing the Google Translate conversion.
+Should I follow what my group has already done and call it a new technique?
+Or should I stick to the paper and do it the right way?
+
+Let's cut down the number of sentences we translate and see how long it takes / what the format of the output is like.
+
+Ooh we actually already have examples of the output. Great!
+
+Let's do it for French and see what happens! I think the postprocessing code will be broken but that's okay.
+'''
