@@ -27,6 +27,8 @@ coner_tags =[
     "B-Medication/Vaccine", "I-Medication/Vaccine", "B-MedicalProcedure", "I-MedicalProcedure",
     "B-AnatomicalStructure", "I-AnatomicalStructure", "B-Symptom", "I-Symptom", "B-Disease", "I-Disease",
 ]
+assert False not in [True for tag in coner_tags if f"B-{tag[2:]}" and f"I-{tag[2:]}" in coner_tags], "Not every tag has a B and I tag"
+
 UNK = 'unk'
 
 def preproess_coner(sentence):
@@ -49,7 +51,7 @@ def preproess_coner(sentence):
     return new_sentence, tags_dict
 
 def postprocess_coner(sentence, tags_dict, original):
-
+    # this seems like an encoding issue - are we using utf-8?
     t = sentence
     t = t.replace("&quot;", "")
     t = t.replace("&#39;", "'")
@@ -115,17 +117,17 @@ def postprocess_coner(sentence, tags_dict, original):
     return new_sentence
 
 
-def run(fpath, ofpath):
+def run(input_file_path, output_file_path):
     sentence = []
     print("Start the process.")
-    with open(fpath, 'r') as inf, open(ofpath, 'w') as of:
-        for line in inf:
+    with open(input_file_path, 'r') as input_file, open(output_file_path, 'w') as output_file:
+        for line in input_file:
             line = line.strip()
             if line != '':
                 if line[0] == '#':
-                    of.write('\n')
-                    of.write(line + '\n')
-                    of.write('\n')
+                    output_file.write('\n')
+                    output_file.write(line + '\n')
+                    output_file.write('\n')
                     continue
                 else:
                     line = line.split()
@@ -139,7 +141,7 @@ def run(fpath, ofpath):
                     results = translator.translate(sentence_preprocessed, source_language=sl, target_language=tl)
                     t = postprocess_coner(results['translatedText'], tags_dict, sentence)
                     print("translated sentence: ", t)
-                    of.write(t + '\n')
+                    output_file.write(t + '\n')
                     time.sleep(0.2)
                     sentence = []
 
