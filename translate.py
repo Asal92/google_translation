@@ -19,15 +19,18 @@ OUTPUT_FOLDER_STRUCTURE = "{output_folder}/{source_language}-{target_language}"
 INPUT_FILE = INPUT_FILE_STRUCTURE.format(input_folder=INPUT_FOLDER, source_language=SOURCE_LANGUAGE)
 OUTPUT_FOLDER = OUTPUT_FOLDER_STRUCTURE.format(output_folder=OUTPUT_FOLDER, source_language=SOURCE_LANGUAGE, target_language=TARGET_LANGUAGE)
 JSON_FILE_NAME = "results.json"
+SKIPPED_FILE_NAME = "skipped.txt"
 JSON_FILE = f"{OUTPUT_FOLDER}/{JSON_FILE_NAME}"
-UNTRANSLATED_CONLL_FILE_NAME = f"{TARGET_LANGUAGE}-orig-mulda.conll"
-TRANSLATED_CONLL_FILE_NAME = f"{TARGET_LANGUAGE}-trans-mulda.conll"
+SKIPPED_FILE = f"{OUTPUT_FOLDER}/{SKIPPED_FILE_NAME}"
+UNTRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-orig-mulda.conll"
+TRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-trans-mulda.conll"
 UNTRANSLATED_CONLL_FILE = f"{OUTPUT_FOLDER}/{UNTRANSLATED_CONLL_FILE_NAME}"
 TRANSLATED_CONLL_FILE = f"{OUTPUT_FOLDER}/{TRANSLATED_CONLL_FILE_NAME}"
+# set to False if you've already run Google Translate once
 RUN_GOOGLE_TRANSLATE = False
 SECRET_JSON = "./secret/high-comfort-368404-39708e023588.json"
 # how many full sentences to translate at once
-# (each full sentence is translated once for each entity in the sentence plus once for the sentence as a whole)
+# (each full sentence is translated once for each entity in the sentence)
 BATCH_SIZE = 50
 
 ID_VALUE_REGEX_KEY = "id_value"
@@ -248,6 +251,11 @@ class Sentence:
     # def get_all_entity_data(self) -> List[Tuple[str, TagCategory]]:
     #     return list(zip(self.get_entities(), self.get_entity_categories()))
 
+# from https://stackoverflow.com/a/2187390/5049813
+def custom_formatwarning(msg, *args, **kwargs):
+    # ignore everything except the message
+    return str(msg) + '\n'
+warnings.formatwarning = custom_formatwarning
 
 def check_brackets(s: str) -> bool:
     if START_BRACKET == END_BRACKET:
@@ -256,24 +264,24 @@ def check_brackets(s: str) -> bool:
         return s.count(START_BRACKET) == s.count(END_BRACKET) == 1
 
 def get_bracket_indexes(s: str) -> Tuple[int, int]:
-    assert check_brackets(s)
+    assert check_brackets(s), s
     start_bracket_index = s.index(START_BRACKET)
     end_bracket_index = start_bracket_index + 1 + s[start_bracket_index + 1:].index(END_BRACKET)
     return start_bracket_index, end_bracket_index
 
 def remove_brackets(s: str) -> str:
-    assert check_brackets(s)
+    assert check_brackets(s), s
     start_bracket_index, end_bracket_index = get_bracket_indexes(s)
     return s[:start_bracket_index] + s[start_bracket_index + 1:end_bracket_index] + s[end_bracket_index + 1:]
 
 def remove_bracketed_entity(s: str) -> str:
     # remove everything between the two brackets
-    assert check_brackets(s)
+    assert check_brackets(s), s
     start_bracket_index, end_bracket_index = get_bracket_indexes(s)
     return s[:start_bracket_index] + s[end_bracket_index + 1:]
 
 def get_bracketed_entity(s: str) -> str:
-    assert check_brackets(s)
+    assert check_brackets(s), s
     start_bracket_index, end_bracket_index = get_bracket_indexes(s)
     ret = s[start_bracket_index + 1:end_bracket_index]
     return ret
@@ -296,7 +304,7 @@ def add_conll_word(file_desc, word: Word):
 
 def add_conll_id_line(file_desc, id_value: str, domain: Domain):
     '''Add an ID to the (open) file'''
-    # TODO this may need fixing
+    # the output tabs displays slightly differently than the input tabs on my computer - unsure why
     file_desc.write(f"# id {id_value}\tdomain={domain.value}\n")
 
 if RUN_GOOGLE_TRANSLATE:
@@ -357,7 +365,6 @@ if RUN_GOOGLE_TRANSLATE:
         # see https://stackoverflow.com/questions/1198777/double-iteration-in-list-comprehension
         batch = [sentence for sentences in sentences_to_translate[start:end] for sentence in sentences]
         results.extend(translator.translate(batch, TARGET_LANGUAGE, 'text', SOURCE_LANGUAGE))
-        break # testing
     
     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
     with open(JSON_FILE, 'w', encoding=ENCODING) as f:
@@ -372,8 +379,10 @@ with open(JSON_FILE, 'r', encoding=ENCODING) as f:
 trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 orig_file = open(UNTRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 translations_index = 0
-db_amt = 0
-max_amt = 4
+skipped = []
+total_translations_expected = sum([len(sentence.entity_indexes) for sentence in sentences])
+total_translations_reality = len(results)
+assert total_translations_expected == total_translations_reality, f"Expected {total_translations_expected} translations, but got {total_translations_reality}"
 for sentence_index, sentence in enumerate(tqdm(sentences)):
     number_of_entities = len(sentence.entity_indexes)
     # each one of these translations will have bracketed a single entity
@@ -383,11 +392,8 @@ for sentence_index, sentence in enumerate(tqdm(sentences)):
 
     translations_index += number_of_entities
 
-    print("translations")
-    print(translations)
-
     # the translation without any of the entities
-    main_unbracketed_translation = remove_brackets(translations[0])
+    main_unbracketed_translation = None
     skip = False
     for translation in translations:
         if not check_brackets(translation):
@@ -396,12 +402,15 @@ for sentence_index, sentence in enumerate(tqdm(sentences)):
             break
         # check to make sure the translation is the same, regardless of which entity is bracketed
         unbracketed_translation = remove_brackets(translation)
+        if main_unbracketed_translation is None:
+            main_unbracketed_translation = unbracketed_translation
         if unbracketed_translation != main_unbracketed_translation:
-            warnings.warn(f"Skipping! Translated sentence '{translation}', which, when unbracketed is '{unbracketed_translation}' does not match the unbracketed main translation '{main_unbracketed_translation}'", TranslationMismatchWarning)
+            warnings.warn(f"Skipping! Translated sentence ('{translation}') (unbracketed: '{unbracketed_translation}') does not match the unbracketed main translation ('{main_unbracketed_translation}')", TranslationMismatchWarning)
             skip = True
             break
 
     if skip:
+        skipped.append(sentence.id_value)
         continue
         
     entity_categories = sentence.get_entity_categories()
@@ -410,37 +419,27 @@ for sentence_index, sentence in enumerate(tqdm(sentences)):
 
     assert len(entity_categories) == len(original_entity_tokens) == len(translated_entity_tokens), f"The number of categories ({len(entity_categories)}), original entity tokens ({len(original_entity_tokens)}), and translated entity tokens ({len(translated_entity_tokens)}) do not match"
 
-    print("debugging up")
-    print("original")
-    print(original_entity_tokens)
-    print("translated")
-    print(translated_entity_tokens)
-
     # create a template for the translated sentence
     # this will be used to replace the original entity tokens with the translated entity tokens
     template = main_unbracketed_translation
     assert TEMPLATE_TOKEN not in template
-    # print("Debugging")
-    # print(translated_entity_tokens)
     for translated_entity_token in translated_entity_tokens:
         # this will work even if there are duplicate entities because the order remains the same
-        # print(f"template: {template}")
-        # print(f"entity: {translated_entity_token}")
         template = template.replace(translated_entity_token, TEMPLATE_TOKEN, 1)
 
     entity_indexes_index = -1
     split_template = template.split()
     if split_template.count(TEMPLATE_TOKEN) != number_of_entities:
         # this is usually due to punctuation being added just after bracketing in the translation
-        warnings.warn(f"Skipping! The number of template tokens ({split_template.count(TEMPLATE_TOKEN)}) does not match the number of entities ({number_of_entities}) in the template ({template})", TemplateTokenMismatchWarning)
+        warnings.warn(f"Skipping! The number of template tokens ({split_template.count(TEMPLATE_TOKEN)}) in the split template ({split_template}) does not match the number of entities ({number_of_entities}) in the template ({template}). This is usually due to punctuation just after the template in the split template.", TemplateTokenMismatchWarning)
+        skipped.append(sentence.id_value)
         continue
 
     # there's no more skipping at this point
     # add the id line
-    example_id = f"{sentence.id_value}-{entity_indexes_index}"
     domain = Domain(TARGET_LANGUAGE)
-    add_conll_id_line(trans_file, example_id, domain)
-    add_conll_id_line(orig_file, example_id, domain)
+    add_conll_id_line(trans_file, sentence.id_value, domain)
+    add_conll_id_line(orig_file, sentence.id_value, domain)
 
     for word in split_template:
         if word == TEMPLATE_TOKEN:
@@ -448,9 +447,6 @@ for sentence_index, sentence in enumerate(tqdm(sentences)):
             category = entity_categories[entity_indexes_index]
             original_entity_tokens_split = original_entity_tokens[entity_indexes_index].split()
             translated_entity_tokens_split = translated_entity_tokens[entity_indexes_index].split()
-            print("debugging")
-            print(original_entity_tokens_split)
-            print(translated_entity_tokens_split)
             for tokens, file in zip([original_entity_tokens_split, translated_entity_tokens_split], [orig_file, trans_file]):
                 for token_index, token in enumerate(tokens):
                     word = Word(token, Tag(TagType.B if token_index == 0 else TagType.I, category))
@@ -460,12 +456,12 @@ for sentence_index, sentence in enumerate(tqdm(sentences)):
             add_conll_word(orig_file, word)
             add_conll_word(trans_file, word)
 
-    db_amt += 1
-    if db_amt >= max_amt:
-        break
     trans_file.write("\n\n")
     orig_file.write("\n\n")
 
+print(f"Skipped {len(skipped)}/{len(sentences)} sentences")
+with open(SKIPPED_FILE, 'w', encoding=ENCODING) as f:
+    f.write("\n".join(skipped))
 input_file.close()
 trans_file.close()
 orig_file.close()

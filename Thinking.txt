@@ -103,4 +103,15 @@ Actually, what if we take out the brackets? Shouldn't all of them be the same?
 Yes. If they're not, we should ignore that example. That makes sense!
 
 I think for the time being I'm going to skip the complicated cases with the symbols attached to the brackets.
+
+Quotes in French are converted into "«»" also known as Guillemets, so I don't think we want to use quotes as the brackets.
+
+I'm going to see if the same thing happens to backticks.
+
+If so, then I'll just skip examples where that happens.
+
+This site is super helpful for seeing what characters are in text:
+    https://www.soscisurvey.de/tools/view-chars.php
+
+Everything says its a tab, so I'm just going to go with it.
 '''
