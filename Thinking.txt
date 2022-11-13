@@ -241,4 +241,11 @@ Final run with square brackets:
     Skipped 54 sentences due to brackets not being found
     Skipped 4152 sentences due to translations not matching
     Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+Final run from fr to en (square brackets):
+    Skipped 4111/16548 sentences
+    Skipped 42 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 77 sentences due to brackets not being found
+    Skipped 3992 sentences due to translations not matching
+    Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
 '''

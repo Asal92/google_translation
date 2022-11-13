@@ -10,8 +10,8 @@ from google.cloud import translate_v2 as translate
 
 ENCODING = 'utf-8'
 # languages must be in Domain enum
-SOURCE_LANGUAGE = "en"
-TARGET_LANGUAGE = "fr"
+SOURCE_LANGUAGE = "fr"
+TARGET_LANGUAGE = "en"
 INPUT_FOLDER = "data"
 OUTPUT_FOLDER = "output"
 INPUT_FILE_STRUCTURE = "{input_folder}/{source_language}-train.conll"
