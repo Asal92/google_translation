@@ -234,8 +234,7 @@ class Sentence:
         return entity
 
     def get_entities(self) -> List[str]:
-        for entity_indexes_index in range(len(self.entity_indexes)):
-            yield self.get_entity(entity_indexes_index)
+        return [self.get_entity(i) for i in range(len(self.entity_indexes))]
 
     def get_entity_category(self, entity_indexes_index: int) -> TagCategory:
         '''Return the entity type at the given index'''
@@ -243,8 +242,7 @@ class Sentence:
         return self.words[entity_index].tag.tag_category
 
     def get_entity_categories(self) -> List[TagCategory]:
-        for entity_indexes_index in range(len(self.entity_indexes)):
-            yield self.get_entity_category(entity_indexes_index)
+        return [self.get_entity_category(i) for i in range(len(self.entity_indexes))]
 
     # UNNEEDED
     # def get_all_entity_data(self) -> List[Tuple[str, TagCategory]]:
@@ -260,7 +258,7 @@ def check_brackets(s: str) -> bool:
 def get_bracket_indexes(s: str) -> Tuple[int, int]:
     assert check_brackets(s)
     start_bracket_index = s.index(START_BRACKET)
-    end_bracket_index = start_bracket_index + s[start_bracket_index:].index(END_BRACKET)
+    end_bracket_index = start_bracket_index + 1 + s[start_bracket_index + 1:].index(END_BRACKET)
     return start_bracket_index, end_bracket_index
 
 def remove_brackets(s: str) -> str:
@@ -277,7 +275,8 @@ def remove_bracketed_entity(s: str) -> str:
 def get_bracketed_entity(s: str) -> str:
     assert check_brackets(s)
     start_bracket_index, end_bracket_index = get_bracket_indexes(s)
-    return s[start_bracket_index + 1:end_bracket_index]
+    ret = s[start_bracket_index + 1:end_bracket_index]
+    return ret
 
 def bracket_entity(s: str, entity: str) -> str:
     # put brackets around the only instance of the entity in the string
@@ -373,33 +372,60 @@ with open(JSON_FILE, 'r', encoding=ENCODING) as f:
 trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 orig_file = open(UNTRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 translations_index = 0
-for sentence_index, sentence in enumerate(sentences):
+db_amt = 0
+max_amt = 4
+for sentence_index, sentence in enumerate(tqdm(sentences)):
     number_of_entities = len(sentence.entity_indexes)
     # each one of these translations will have bracketed a single entity
     translations = [result[TRANSLATED_TEXT_KEY] for result in results[translations_index:translations_index + number_of_entities]]
 
+    assert len(translations) == number_of_entities, f"The number of translations ({len(translations)}) does not match the number of entities ({number_of_entities})"
+
+    translations_index += number_of_entities
+
+    print("translations")
+    print(translations)
+
     # the translation without any of the entities
     main_unbracketed_translation = remove_brackets(translations[0])
+    skip = False
     for translation in translations:
         if not check_brackets(translation):
-            warnings.warn(f"Skipping! Could not find brackets in translated sentence: {translated_sentence}", BracketsNotFoundWarning)
-            continue
+            warnings.warn(f"Skipping! Could not find brackets in translated sentence: {translation}", BracketsNotFoundWarning)
+            skip = True
+            break
         # check to make sure the translation is the same, regardless of which entity is bracketed
         unbracketed_translation = remove_brackets(translation)
         if unbracketed_translation != main_unbracketed_translation:
-            warnings.warn(f"Skipping! Translated sentence '{translation}' does not match the main translation '{main_unbracketed_translation}'", TranslationMismatchWarning)
-            continue
+            warnings.warn(f"Skipping! Translated sentence '{translation}', which, when unbracketed is '{unbracketed_translation}' does not match the unbracketed main translation '{main_unbracketed_translation}'", TranslationMismatchWarning)
+            skip = True
+            break
+
+    if skip:
+        continue
         
     entity_categories = sentence.get_entity_categories()
     original_entity_tokens = sentence.get_entities()
     translated_entity_tokens = [get_bracketed_entity(translation) for translation in translations]
 
+    assert len(entity_categories) == len(original_entity_tokens) == len(translated_entity_tokens), f"The number of categories ({len(entity_categories)}), original entity tokens ({len(original_entity_tokens)}), and translated entity tokens ({len(translated_entity_tokens)}) do not match"
+
+    print("debugging up")
+    print("original")
+    print(original_entity_tokens)
+    print("translated")
+    print(translated_entity_tokens)
+
     # create a template for the translated sentence
     # this will be used to replace the original entity tokens with the translated entity tokens
     template = main_unbracketed_translation
     assert TEMPLATE_TOKEN not in template
+    # print("Debugging")
+    # print(translated_entity_tokens)
     for translated_entity_token in translated_entity_tokens:
         # this will work even if there are duplicate entities because the order remains the same
+        # print(f"template: {template}")
+        # print(f"entity: {translated_entity_token}")
         template = template.replace(translated_entity_token, TEMPLATE_TOKEN, 1)
 
     entity_indexes_index = -1
@@ -409,20 +435,34 @@ for sentence_index, sentence in enumerate(sentences):
         warnings.warn(f"Skipping! The number of template tokens ({split_template.count(TEMPLATE_TOKEN)}) does not match the number of entities ({number_of_entities}) in the template ({template})", TemplateTokenMismatchWarning)
         continue
 
+    # there's no more skipping at this point
+    # add the id line
+    example_id = f"{sentence.id_value}-{entity_indexes_index}"
+    domain = Domain(TARGET_LANGUAGE)
+    add_conll_id_line(trans_file, example_id, domain)
+    add_conll_id_line(orig_file, example_id, domain)
+
     for word in split_template:
         if word == TEMPLATE_TOKEN:
             entity_indexes_index += 1
             category = entity_categories[entity_indexes_index]
-            translated_entity_tokens = translated_entity_tokens[entity_indexes_index].split()
-            for tokens, file in zip([original_entity_tokens, translated_entity_tokens], [orig_file, trans_file]):
-                for token_index, token in tokens:
-                    word = Word(translated_entity_token, Tag(TagType.B if token_index == 0 else TagType.I, category))
-                    add_conll_word(word, file)
+            original_entity_tokens_split = original_entity_tokens[entity_indexes_index].split()
+            translated_entity_tokens_split = translated_entity_tokens[entity_indexes_index].split()
+            print("debugging")
+            print(original_entity_tokens_split)
+            print(translated_entity_tokens_split)
+            for tokens, file in zip([original_entity_tokens_split, translated_entity_tokens_split], [orig_file, trans_file]):
+                for token_index, token in enumerate(tokens):
+                    word = Word(token, Tag(TagType.B if token_index == 0 else TagType.I, category))
+                    add_conll_word(file, word)
         else:
             word = Word(word, Tag(TagType.O, TagCategory.Empty))
-            add_conll_word(word, orig_file)
-            add_conll_word(word, trans_file)
+            add_conll_word(orig_file, word)
+            add_conll_word(trans_file, word)
 
+    db_amt += 1
+    if db_amt >= max_amt:
+        break
     trans_file.write("\n\n")
     orig_file.write("\n\n")
 
