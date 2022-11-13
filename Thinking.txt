@@ -139,4 +139,13 @@ With square bracketing:
     Skipped 54 sentences due to brackets not being found
     Skipped 4153 sentences due to translations not matching
     Skipped 1579 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+With curly braces:
+    Skipped 5780/16778 sentences
+    Skipped 1 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 49 sentences due to brackets not being found
+    Skipped 4087 sentences due to translations not matching
+    Skipped 1643 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+It seems like a lot of the curly braces ones are because it's literally not translating the word in all cases.
 '''

@@ -39,8 +39,8 @@ TOKEN_REGEX_KEY = "token"
 TAG_TYPE_REGEX_KEY = "token_type"
 TAG_REGEX_KEY = "tag"
 
-START_BRACKET = '['
-END_BRACKET = ']'
+START_BRACKET = '{'
+END_BRACKET = '}'
 
 TRANSLATED_TEXT_KEY = "translatedText"
 INPUT_TEXT_KEY = "input"
