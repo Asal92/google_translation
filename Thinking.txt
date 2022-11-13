@@ -148,4 +148,11 @@ With curly braces:
     Skipped 1643 sentences due to template token mismatch (usually from punctuation added after an entity)
 
 It seems like a lot of the curly braces ones are because it's literally not translating the word in all cases.
+
+With angular brackets:
+    Skipped 5599/16778 sentences
+    Skipped 5 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 98 sentences due to brackets not being found
+    Skipped 4039 sentences due to translations not matching
+    Skipped 1457 sentences due to template token mismatch (usually from punctuation added after an entity)
 '''
