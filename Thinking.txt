@@ -218,4 +218,27 @@ Double dashes (--):
 I think I should just add space around punctuation naturally.
 
 There is a string.punctuation, but I feel like using that would take a while to program.
+
+Mismatched Asterisk Square Bracket (*[ ]):
+    Skipped 5798/16778 sentences
+    Skipped 71 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 2281 sentences due to brackets not being found
+    Skipped 3446 sentences due to translations not matching
+    Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+Bars (||):
+    Skipped 5672/16778 sentences
+    Skipped 63 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 192 sentences due to brackets not being found
+    Skipped 5417 sentences due to translations not matching
+    Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+I still have no idea how a token mismatch could happen with the carets.
+
+Final run with square brackets:
+    Skipped 4278/16778 sentences
+    Skipped 72 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 54 sentences due to brackets not being found
+    Skipped 4152 sentences due to translations not matching
+    Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
 '''
