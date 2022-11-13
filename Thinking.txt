@@ -155,4 +155,25 @@ With angular brackets:
     Skipped 98 sentences due to brackets not being found
     Skipped 4039 sentences due to translations not matching
     Skipped 1457 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+With parentheses:
+    Skipped 7440/16778 sentences
+    Skipped 2459 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)        
+    Skipped 108 sentences due to brackets not being found
+    Skipped 3526 sentences due to translations not matching
+    Skipped 1347 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+
+
+TEMPLATE TOKEN MISMATCH ISSUE FIXED
+
+
+Quotes (with template token mismatch issue fixed):
+    Skipped 5304/16778 sentences
+    Skipped 0 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 1823 sentences due to brackets not being found
+    Skipped 3481 sentences due to translations not matching
+    Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+I'm going to try quotes again now that I've fixed this.
 '''

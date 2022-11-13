@@ -39,8 +39,8 @@ TOKEN_REGEX_KEY = "token"
 TAG_TYPE_REGEX_KEY = "token_type"
 TAG_REGEX_KEY = "tag"
 
-START_BRACKET = '('
-END_BRACKET = ')'
+START_BRACKET = '"'
+END_BRACKET = '"'
 
 TRANSLATED_TEXT_KEY = "translatedText"
 INPUT_TEXT_KEY = "input"
@@ -448,7 +448,8 @@ for sentence_index, sentence in enumerate(tqdm(valid_sentences)):
     assert TEMPLATE_TOKEN not in template
     for translated_entity_token in translated_entity_tokens:
         # this will work even if there are duplicate entities because the order remains the same
-        template = template.replace(translated_entity_token, TEMPLATE_TOKEN, 1)
+        # we add extra space around the template token so that it separates out from punctuation that may have been added right next to the entity
+        template = template.replace(translated_entity_token, f" {TEMPLATE_TOKEN} ", 1)
 
     entity_indexes_index = -1
     split_template = template.split()
