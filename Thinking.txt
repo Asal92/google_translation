@@ -193,4 +193,11 @@ Square brackets:
     Skipped 52 sentences due to brackets not being found
     Skipped 4149 sentences due to translations not matching
     Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+Caret (^):
+    Skipped 4973/16778 sentences
+    Skipped 0 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 922 sentences due to brackets not being found
+    Skipped 4049 sentences due to translations not matching
+    Skipped 2 sentences due to template token mismatch (usually from punctuation added after an entity)
 '''
