@@ -122,8 +122,21 @@ Let's try backticks!
 
 Even worse:
     Skipped 12808/16778 sentences
+    Skipped 0 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 10975 sentences due to brackets not being found
+    Skipped 1198 sentences due to translations not matching
+    Skipped 635 sentences due to template token mismatch (usually from punctuation added after an entity)
 
 Looks like it converts backticks into quotes at times too.
 
 What if we actually use brackets?
+
+It fails - I'm going to make it so it doesn't.
+
+With square bracketing:
+    Skipped 5858/16778 sentences
+    Skipped 72 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 54 sentences due to brackets not being found
+    Skipped 4153 sentences due to translations not matching
+    Skipped 1579 sentences due to template token mismatch (usually from punctuation added after an entity)
 '''

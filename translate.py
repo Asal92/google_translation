@@ -19,7 +19,7 @@ OUTPUT_FOLDER_STRUCTURE = "{output_folder}/{source_language}-{target_language}"
 INPUT_FILE = INPUT_FILE_STRUCTURE.format(input_folder=INPUT_FOLDER, source_language=SOURCE_LANGUAGE)
 OUTPUT_FOLDER = OUTPUT_FOLDER_STRUCTURE.format(output_folder=OUTPUT_FOLDER, source_language=SOURCE_LANGUAGE, target_language=TARGET_LANGUAGE)
 JSON_FILE_NAME = "results.json"
-SKIPPED_FILE_NAME = "skipped.txt"
+SKIPPED_FILE_NAME = "skipped.csv"
 JSON_FILE = f"{OUTPUT_FOLDER}/{JSON_FILE_NAME}"
 SKIPPED_FILE = f"{OUTPUT_FOLDER}/{SKIPPED_FILE_NAME}"
 UNTRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-orig-mulda.conll"
@@ -39,8 +39,8 @@ TOKEN_REGEX_KEY = "token"
 TAG_TYPE_REGEX_KEY = "token_type"
 TAG_REGEX_KEY = "tag"
 
-START_BRACKET = '`'
-END_BRACKET = '`'
+START_BRACKET = '['
+END_BRACKET = ']'
 
 TRANSLATED_TEXT_KEY = "translatedText"
 INPUT_TEXT_KEY = "input"
@@ -59,6 +59,16 @@ class TemplateTokenMismatchWarning(UserWarning):
     '''Raised when the number of template tokens in the original sentence and the split template don't match.
     This is usually due to punctuation being added just after the bracketing.'''
     pass
+
+class InvalidBracketingError(ValueError):
+    '''Raised when the bracketing is invalid, usually due to the text already containing brackets'''
+    pass
+
+class SkipReason(Enum):
+    TemplateTokenMismatch = "TemplateTokenMismatch"
+    InvalidBracketing = "InvalidBracketing"
+    BracketsNotFound = "BracketsNotFound"
+    TranslationMismatch = "MismatchedSentences"
 
 class TagCategory(Enum):
     '''The tags are:
@@ -217,7 +227,7 @@ class Sentence:
                 bracketed_sentence += END_BRACKET
             bracketed_sentence = bracketed_sentence.strip()
             if not check_brackets(bracketed_sentence):
-                raise ValueError(f"Brackets were not done correctly in {bracketed_sentence}")
+                raise InvalidBracketingError(f"Brackets were not done correctly in {bracketed_sentence}")
             bracketed_sentences.append(bracketed_sentence)
         assert len(bracketed_sentences) == len(self.entity_indexes)
         return bracketed_sentences
@@ -351,19 +361,32 @@ for line in tqdm(input_file, total=num_lines):
         word = Word(token, tag)
         sentence.add_word(word)
 
+# add the last sentence, if there is one
 if sentence.words:
     sentences.append(sentence)
 
+skipped: List[Tuple[str, SkipReason]]= []
+
 # we now have a list of sentences
 # for each entity in each sentence, we want to put the entity in brackets and translate it
-sentences_to_translate: List[List[str]] = [sentence.get_bracketed_sentences() for sentence in sentences]
+sentences_to_translate: List[List[str]] = []
+valid_sentences = []
+for sentence in sentences:
+    try:
+        sentences_to_translate.append(sentence.get_bracketed_sentences())
+        valid_sentences.append(sentence)
+    except InvalidBracketingError:
+        warnings.warn(f"Skipping sentence because the entities in it could not be bracketed without confusion: {sentence}")
+        skipped.append((sentence.id_value, SkipReason.InvalidBracketing))
+
+valid_sentences
 if RUN_GOOGLE_TRANSLATE:
     results = []
     for i in tqdm(range(len(sentences_to_translate) // BATCH_SIZE + 1)):
         start = BATCH_SIZE * i
         end = min(BATCH_SIZE * (i + 1), len(sentences_to_translate))
         # see https://stackoverflow.com/questions/1198777/double-iteration-in-list-comprehension
-        batch = [sentence for sentences in sentences_to_translate[start:end] for sentence in sentences]
+        batch = [sentence for valid_sentences in sentences_to_translate[start:end] for sentence in valid_sentences]
         results.extend(translator.translate(batch, TARGET_LANGUAGE, 'text', SOURCE_LANGUAGE))
     
     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
@@ -379,11 +402,10 @@ with open(JSON_FILE, 'r', encoding=ENCODING) as f:
 trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 orig_file = open(UNTRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 translations_index = 0
-skipped = []
-total_translations_expected = sum([len(sentence.entity_indexes) for sentence in sentences])
+total_translations_expected = sum([len(sentence.entity_indexes) for sentence in valid_sentences])
 total_translations_reality = len(results)
 assert total_translations_expected == total_translations_reality, f"Expected {total_translations_expected} translations, but got {total_translations_reality}"
-for sentence_index, sentence in enumerate(tqdm(sentences)):
+for sentence_index, sentence in enumerate(tqdm(valid_sentences)):
     number_of_entities = len(sentence.entity_indexes)
     # each one of these translations will have bracketed a single entity
     translations = [result[TRANSLATED_TEXT_KEY] for result in results[translations_index:translations_index + number_of_entities]]
@@ -399,6 +421,7 @@ for sentence_index, sentence in enumerate(tqdm(sentences)):
         if not check_brackets(translation):
             warnings.warn(f"Skipping! Could not find brackets in translated sentence: {translation}", BracketsNotFoundWarning)
             skip = True
+            skipped.append((sentence.id_value, SkipReason.BracketsNotFound))
             break
         # check to make sure the translation is the same, regardless of which entity is bracketed
         unbracketed_translation = remove_brackets(translation)
@@ -407,10 +430,10 @@ for sentence_index, sentence in enumerate(tqdm(sentences)):
         if unbracketed_translation != main_unbracketed_translation:
             warnings.warn(f"Skipping! Translated sentence ('{translation}') (unbracketed: '{unbracketed_translation}') does not match the unbracketed main translation ('{main_unbracketed_translation}')", TranslationMismatchWarning)
             skip = True
+            skipped.append((sentence.id_value, SkipReason.TranslationMismatch))
             break
 
     if skip:
-        skipped.append(sentence.id_value)
         continue
         
     entity_categories = sentence.get_entity_categories()
@@ -432,7 +455,7 @@ for sentence_index, sentence in enumerate(tqdm(sentences)):
     if split_template.count(TEMPLATE_TOKEN) != number_of_entities:
         # this is usually due to punctuation being added just after bracketing in the translation
         warnings.warn(f"Skipping! The number of template tokens ({split_template.count(TEMPLATE_TOKEN)}) in the split template ({split_template}) does not match the number of entities ({number_of_entities}) in the template ({template}). This is usually due to punctuation just after the template in the split template.", TemplateTokenMismatchWarning)
-        skipped.append(sentence.id_value)
+        skipped.append((sentence.id_value, SkipReason.TemplateTokenMismatch))
         continue
 
     # there's no more skipping at this point
@@ -460,8 +483,13 @@ for sentence_index, sentence in enumerate(tqdm(sentences)):
     orig_file.write("\n\n")
 
 print(f"Skipped {len(skipped)}/{len(sentences)} sentences")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.InvalidBracketing])} sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.BracketsNotFound])} sentences due to brackets not being found")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.TranslationMismatch])} sentences due to translations not matching")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.TemplateTokenMismatch])} sentences due to template token mismatch (usually from punctuation added after an entity)")
 with open(SKIPPED_FILE, 'w', encoding=ENCODING) as f:
-    f.write("\n".join(skipped))
+    f.write("Sentence ID, Reason\n")
+    f.write("\n".join([f"{id_value}, {reason.value}" for id_value, reason in skipped]))
 input_file.close()
 trans_file.close()
 orig_file.close()
