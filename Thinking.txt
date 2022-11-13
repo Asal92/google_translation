@@ -114,4 +114,16 @@ This site is super helpful for seeing what characters are in text:
     https://www.soscisurvey.de/tools/view-chars.php
 
 Everything says its a tab, so I'm just going to go with it.
+
+With quotes we end up skipping a lot:
+    Skipped 8559/16778 sentences
+
+Let's try backticks!
+
+Even worse:
+    Skipped 12808/16778 sentences
+
+Looks like it converts backticks into quotes at times too.
+
+What if we actually use brackets?
 '''

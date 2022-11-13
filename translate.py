@@ -27,7 +27,7 @@ TRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-trans-mulda.c
 UNTRANSLATED_CONLL_FILE = f"{OUTPUT_FOLDER}/{UNTRANSLATED_CONLL_FILE_NAME}"
 TRANSLATED_CONLL_FILE = f"{OUTPUT_FOLDER}/{TRANSLATED_CONLL_FILE_NAME}"
 # set to False if you've already run Google Translate once
-RUN_GOOGLE_TRANSLATE = False
+RUN_GOOGLE_TRANSLATE = True
 SECRET_JSON = "./secret/high-comfort-368404-39708e023588.json"
 # how many full sentences to translate at once
 # (each full sentence is translated once for each entity in the sentence)
@@ -39,8 +39,8 @@ TOKEN_REGEX_KEY = "token"
 TAG_TYPE_REGEX_KEY = "token_type"
 TAG_REGEX_KEY = "tag"
 
-START_BRACKET = '"'
-END_BRACKET = '"'
+START_BRACKET = '`'
+END_BRACKET = '`'
 
 TRANSLATED_TEXT_KEY = "translatedText"
 INPUT_TEXT_KEY = "input"
