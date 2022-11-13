@@ -165,8 +165,10 @@ With parentheses:
 
 
 
+
 TEMPLATE TOKEN MISMATCH ISSUE FIXED
 
+I'm going to try quotes again now that I've fixed this.
 
 Quotes (with template token mismatch issue fixed):
     Skipped 5304/16778 sentences
@@ -175,5 +177,14 @@ Quotes (with template token mismatch issue fixed):
     Skipped 3481 sentences due to translations not matching
     Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
 
-I'm going to try quotes again now that I've fixed this.
+Next is curly braces.
+
+Curly braces:
+    Skipped 4129/16778 sentences
+    Skipped 1 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 48 sentences due to brackets not being found
+    Skipped 4080 sentences due to translations not matching
+    Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+We have to try their standard of square brackets.
 '''
