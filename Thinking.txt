@@ -200,4 +200,22 @@ Caret (^):
     Skipped 922 sentences due to brackets not being found
     Skipped 4049 sentences due to translations not matching
     Skipped 2 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+Looks like sometimes I get different results! But overall not too different.
+
+Let's see what happens if I use ones with different lengths now.
+
+The one rule is that neither bracket should be a strict substring of the other bracket.
+
+Oops I didn't do that I still did the same length:
+Double dashes (--):
+    Skipped 5335/16778 sentences
+    Skipped 1 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 1395 sentences due to brackets not being found
+    Skipped 3939 sentences due to translations not matching
+    Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
+
+I think I should just add space around punctuation naturally.
+
+There is a string.punctuation, but I feel like using that would take a while to program.
 '''

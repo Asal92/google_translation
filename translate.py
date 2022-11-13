@@ -39,8 +39,8 @@ TOKEN_REGEX_KEY = "token"
 TAG_TYPE_REGEX_KEY = "token_type"
 TAG_REGEX_KEY = "tag"
 
-START_BRACKET = '^'
-END_BRACKET = '^'
+START_BRACKET = '*['
+END_BRACKET = ']'
 
 TRANSLATED_TEXT_KEY = "translatedText"
 INPUT_TEXT_KEY = "input"
@@ -282,7 +282,7 @@ def get_bracket_indexes(s: str) -> Tuple[int, int]:
 def remove_brackets(s: str) -> str:
     assert check_brackets(s), s
     start_bracket_index, end_bracket_index = get_bracket_indexes(s)
-    return s[:start_bracket_index] + s[start_bracket_index + len(START_BRACKET):end_bracket_index] + s[end_bracket_index + len(START_BRACKET):]
+    return s[:start_bracket_index] + s[start_bracket_index + len(START_BRACKET):end_bracket_index] + s[end_bracket_index + len(END_BRACKET):]
 
 def remove_bracketed_entity(s: str) -> str:
     # remove everything between the two brackets, including the brackets
