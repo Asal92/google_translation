@@ -42,8 +42,8 @@ sous _ _ O
 le _ _ O
 règne _ _ O
 de _ _ O
-l'empereur _ _ B-OtherPER
-tongzhi _ _ I-OtherPER
+tongzhi _ _ B-OtherPER
+emperor _ _ I-OtherPER
 ( _ _ O
 r _ _ O
 . _ _ O
@@ -204,7 +204,7 @@ similaire _ _ O
 à _ _ O
 celui _ _ O
 de _ _ O
-telemann". _ _ B-OtherPER
+telemann _ _ B-OtherPER
 
 
 # id 273aa283-9bb0-42d3-9f46-1daad90565ef-0	domain=fr
@@ -233,14 +233,14 @@ a _ _ O
 transféré _ _ O
 au _ _ O
 lord _ _ B-OtherPER
-lord _ _ I-OtherPER
-lord _ _ I-OtherPER
-lord _ _ I-OtherPER
+justice _ _ I-OtherPER
+scott _ _ I-OtherPER
+baker _ _ I-OtherPER
 
 
 # id cc7237b8-e586-47a0-bd7d-5855a4e6d2ff-0	domain=fr
 grace _ _ B-OtherPER
-grace _ _ I-OtherPER
+carley _ _ I-OtherPER
 harriman _ _ I-OtherPER
 leader _ _ O
 sociale _ _ O
@@ -283,18 +283,7 @@ en _ _ O
 collaboration _ _ O
 avec _ _ O
 robert _ _ B-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
-robert _ _ I-OtherPER
+gompf _ _ I-OtherPER
 
 
 # id cc26e65b-572c-4771-b64e-4f1bd5ad2a5d-0	domain=fr
@@ -327,7 +316,7 @@ du _ _ O
 vingtième _ _ O
 siècle _ _ O
 pieter _ _ B-OtherPER
-pieter _ _ I-OtherPER
+hendrik _ _ I-OtherPER
 schoute _ _ I-OtherPER
 a _ _ O
 commencé _ _ O
@@ -361,7 +350,7 @@ les _ _ O
 polytopes _ _ O
 avec _ _ O
 alicia _ _ B-OtherPER
-alicia _ _ I-OtherPER
+boole _ _ I-OtherPER
 stott _ _ I-OtherPER
 . _ _ O
 
@@ -411,9 +400,9 @@ l'ère _ _ O
 yanping _ _ O
 utilisé _ _ O
 par _ _ O
-l'empereur _ _ B-OtherPER
-l'empereur _ _ I-OtherPER
-l'empereur _ _ I-OtherPER
+emperor _ _ B-OtherPER
+shang _ _ I-OtherPER
+of _ _ I-OtherPER
 han _ _ I-OtherPER
 
 
@@ -448,8 +437,8 @@ son _ _ O
 meilleur _ _ O
 général _ _ O
 khalid _ _ B-OtherPER
-khalid _ _ I-OtherPER
-khalid _ _ I-OtherPER
+ibn _ _ I-OtherPER
+al-walid _ _ I-OtherPER
 
 
 # id cefdbf35-160b-4a1f-aaf5-e43b8ad34340-0	domain=fr
@@ -475,7 +464,7 @@ rauchmiller _ _ I-OtherPER
 
 # id 3e961cca-9aaa-433f-b45c-49b68b96972c-0	domain=fr
 stephen _ _ B-OtherPER
-stephen _ _ I-OtherPER
+w. _ _ I-OtherPER
 thompson _ _ I-OtherPER
 ( _ _ O
 1894 _ _ O
@@ -550,7 +539,7 @@ et _ _ O
 est _ _ O
 connu _ _ O
 de _ _ O
-l'inde". _ _ B-HumanSettlement
+india _ _ B-HumanSettlement
 
 
 # id c7d1949e-5736-4a3d-9fff-b0b4e1dfe6f5-0	domain=fr
@@ -591,7 +580,7 @@ texte _ _ O
 commun _ _ O
 : _ _ O
 michael _ _ B-OtherPER
-michael _ _ I-OtherPER
+d. _ _ I-OtherPER
 dubie _ _ I-OtherPER
 
 
@@ -634,8 +623,8 @@ de _ _ O
 Peter _ _ O
 Pettigrew _ _ O
 et _ _ O
-Remus _ _ B-OtherPER
-Lupin _ _ I-OtherPER
+remus _ _ B-OtherPER
+lupin _ _ I-OtherPER
 dont _ _ O
 ils _ _ O
 ont _ _ O
@@ -650,8 +639,9 @@ loup-garou. _ _ O
 
 # id d6c5a343-fd80-4d4e-bcc5-0e95db2c4805-0	domain=fr
 le _ _ O
-duc _ _ B-OtherPER
-d'edimbourg _ _ I-OtherPER
+duke _ _ B-OtherPER
+of _ _ I-OtherPER
+edinburgh _ _ I-OtherPER
 a _ _ O
 visite _ _ O
 l'ile _ _ O
@@ -684,8 +674,8 @@ yang _ _ O
 lihua _ _ O
 et _ _ O
 épouse _ _ O
-l'empereur _ _ B-OtherPER
-l'empereur _ _ I-OtherPER
+emperor _ _ B-OtherPER
+xuan _ _ I-OtherPER
 
 
 # id b2665906-f204-4a98-b3a0-63d4de9c3ed8-0	domain=fr
@@ -696,7 +686,7 @@ comme _ _ O
 élève _ _ O
 de _ _ O
 abraham _ _ B-OtherPER
-abraham _ _ I-OtherPER
+harrison _ _ I-OtherPER
 goodall _ _ I-OtherPER
 pendant _ _ O
 5 _ _ O
@@ -723,7 +713,7 @@ a _ _ O
 décrit _ _ O
 par _ _ O
 stephan _ _ B-OtherPER
-stephan _ _ I-OtherPER
+von _ _ I-OtherPER
 breuning _ _ I-OtherPER
 . _ _ O
 
@@ -757,14 +747,14 @@ célèbre _ _ O
 architecte _ _ O
 paysagiste _ _ O
 charles _ _ B-OtherPER
-charles _ _ I-OtherPER
+gillette _ _ I-OtherPER
 
 
 # id 17555f08-335f-4884-978d-a3d19800f8e5-0	domain=fr
-dame _ _ B-VisualWork
-dame _ _ I-VisualWork
-dame _ _ I-VisualWork
-noir _ _ I-VisualWork
+lady _ _ B-VisualWork
+in _ _ I-VisualWork
+the _ _ I-VisualWork
+dark _ _ I-VisualWork
 – _ _ O
 direction _ _ O
 artistique _ _ O
@@ -821,8 +811,8 @@ hans _ _ O
 dreier _ _ O
 et _ _ O
 raoul _ _ B-Artist
-raoul _ _ I-Artist
-raoul _ _ I-Artist
+pene _ _ I-Artist
+du _ _ I-Artist
 bois _ _ I-Artist
 ; _ _ O
 décoration _ _ O
@@ -893,7 +883,7 @@ les _ _ O
 partenaires _ _ O
 architecturaux _ _ O
 ida _ _ B-OtherPER
-ida _ _ I-OtherPER
+annah _ _ I-OtherPER
 ryan _ _ I-OtherPER
 et _ _ O
 isabel _ _ O
@@ -917,51 +907,22 @@ annah _ _ O
 ryan _ _ O
 et _ _ O
 isabel _ _ B-OtherPER
-isabel _ _ I-OtherPER
+roberts _ _ I-OtherPER
 
 
 # id a66cd7ba-98f7-4044-8d52-bbc1ecf31850-0	domain=fr
 découverte _ _ O
 par _ _ O
-l'homme-araignée _ _ B-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
-l'homme-araignée _ _ I-OtherPER
+spider-man _ _ B-OtherPER
+of _ _ I-OtherPER
+her _ _ I-OtherPER
+time _ _ I-OtherPER
 
 
 # id 116ed501-67b5-4e49-9375-482c1fa97f59-0	domain=fr
 avec _ _ O
 ted _ _ B-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
-ted _ _ I-OtherPER
+nelson _ _ I-OtherPER
 
 
 # id 116ed501-67b5-4e49-9375-482c1fa97f59-1	domain=fr
@@ -978,7 +939,7 @@ d'édition _ _ O
 hypertexte _ _ O
 du _ _ O
 système _ _ O
-hypertexte _ _ B-WrittenWork
+hypertext _ _ B-WrittenWork
 ( _ _ O
 hes _ _ O
 ) _ _ O
@@ -1002,9 +963,9 @@ au _ _ O
 premier _ _ O
 système _ _ O
 hypertexte _ _ O
-système _ _ B-Software
-système _ _ I-Software
-hypertexte _ _ I-Software
+hypertext _ _ B-Software
+editing _ _ I-Software
+system _ _ I-Software
 ( _ _ O
 hes _ _ O
 ) _ _ O
@@ -1025,7 +986,7 @@ a _ _ O
 érigé _ _ O
 par _ _ O
 maria _ _ B-OtherPER
-maria _ _ I-OtherPER
+alma _ _ I-OtherPER
 solis _ _ I-OtherPER
 et _ _ O
 al _ _ O
@@ -1049,7 +1010,7 @@ le _ _ O
 peintre _ _ O
 animalier _ _ O
 christian _ _ B-OtherPER
-christian _ _ I-OtherPER
+david _ _ I-OtherPER
 gebauer _ _ I-OtherPER
 . _ _ O
 
@@ -1102,18 +1063,15 @@ photographe _ _ O
 portraitiste _ _ O
 échevin _ _ O
 de _ _ O
-cracovie _ _ B-HumanSettlement
+kraków _ _ B-HumanSettlement
 
 
 # id fa4ea3b2-3987-4bc1-8b08-8245a78d7e2e-0	domain=fr
 l'espèce _ _ O
 a _ _ O
 été _ _ O
-décrite _ _ B-WrittenWork
-décrite _ _ I-WrittenWork
-décrite _ _ I-WrittenWork
-décrite _ _ I-WrittenWork
-fois _ _ I-WrittenWork
+first _ _ B-WrittenWork
+described _ _ I-WrittenWork
 par _ _ O
 achille _ _ O
 guenée _ _ O
@@ -1170,7 +1128,7 @@ nouveau _ _ O
 venu _ _ O
 promotionnel _ _ O
 sabah _ _ B-OtherPER
-sabah _ _ I-OtherPER
+homasi _ _ I-OtherPER
 
 
 # id b2a38131-7490-4de1-b30f-d0cb1f256710-0	domain=fr
@@ -1190,7 +1148,8 @@ en _ _ O
 au _ _ O
 XVIIIe _ _ O
 siècle, _ _ O
-Marie-Thérèse _ _ B-OtherPER
+maria _ _ B-OtherPER
+theresa _ _ I-OtherPER
 a _ _ O
 décidé _ _ O
 d'arrêter _ _ O

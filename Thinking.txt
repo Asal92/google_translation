@@ -71,4 +71,25 @@ We're going to be doing it slightly different than MulDA in that we're not going
 
 I think ours should work better anyways.
 Would be a good thing to test later.
+
+I'm untranslating each entity individually.
+Can write more code later to untranslate them all together.
+
+Looks like something is off with the tabs
+
+It also looks like something is wrong with the translated one (not the orig one)
+
+This example is tricky:
+    {
+    "translatedText": "en collaboration avec \"robert gompf\", il a d\u00e9couvert des mod\u00e8les quadridimensionnels de la topologie de l'espace-temps.",
+    "input": "jointly with \"robert gompf\" he discovered four dimensional models of space time topology ."
+    },
+
+It looks like in most examples the comma is its own token, unless it's in a number.
+
+So I think we need to separate things off of quotes if it happens.
+
+I've currently turned the quotes into backticks.
+
+I think we will need to merge them all together, otherwise the AI will train incorrectly.
 '''
