@@ -4,7 +4,7 @@ import json
 import warnings
 from enum import Enum
 from dataclasses import dataclass
-from typing import List
+from typing import List, Tuple
 from tqdm import tqdm
 from google.cloud import translate_v2 as translate
 
@@ -42,8 +42,19 @@ END_BRACKET = '"'
 TRANSLATED_TEXT_KEY = "translatedText"
 INPUT_TEXT_KEY = "input"
 
+TEMPLATE_TOKEN = "<#TEMPLATE#>"
+
 class BracketsNotFoundWarning(UserWarning):
     '''Raised when brackets are not found in a string'''
+    pass
+
+class TranslationMismatchWarning(UserWarning):
+    '''Raised when the translations of a sentence don't match each other'''
+    pass
+
+class TemplateTokenMismatchWarning(UserWarning):
+    '''Raised when the number of template tokens in the original sentence and the split template don't match.
+    This is usually due to punctuation being added just after the bracketing.'''
     pass
 
 class TagCategory(Enum):
@@ -222,16 +233,58 @@ class Sentence:
                     entity += f" {word.token}"
         return entity
 
+    def get_entities(self) -> List[str]:
+        for entity_indexes_index in range(len(self.entity_indexes)):
+            yield self.get_entity(entity_indexes_index)
+
     def get_entity_category(self, entity_indexes_index: int) -> TagCategory:
         '''Return the entity type at the given index'''
         entity_index = self.entity_indexes[entity_indexes_index]
         return self.words[entity_index].tag.tag_category
 
-def check_brackets(sentence: str) -> bool:
+    def get_entity_categories(self) -> List[TagCategory]:
+        for entity_indexes_index in range(len(self.entity_indexes)):
+            yield self.get_entity_category(entity_indexes_index)
+
+    # UNNEEDED
+    # def get_all_entity_data(self) -> List[Tuple[str, TagCategory]]:
+    #     return list(zip(self.get_entities(), self.get_entity_categories()))
+
+
+def check_brackets(s: str) -> bool:
     if START_BRACKET == END_BRACKET:
-        return sentence.count(START_BRACKET) == 2
+        return s.count(START_BRACKET) == 2
     else:
-        return sentence.count(START_BRACKET) == sentence.count(END_BRACKET) == 1
+        return s.count(START_BRACKET) == s.count(END_BRACKET) == 1
+
+def get_bracket_indexes(s: str) -> Tuple[int, int]:
+    assert check_brackets(s)
+    start_bracket_index = s.index(START_BRACKET)
+    end_bracket_index = start_bracket_index + s[start_bracket_index:].index(END_BRACKET)
+    return start_bracket_index, end_bracket_index
+
+def remove_brackets(s: str) -> str:
+    assert check_brackets(s)
+    start_bracket_index, end_bracket_index = get_bracket_indexes(s)
+    return s[:start_bracket_index] + s[start_bracket_index + 1:end_bracket_index] + s[end_bracket_index + 1:]
+
+def remove_bracketed_entity(s: str) -> str:
+    # remove everything between the two brackets
+    assert check_brackets(s)
+    start_bracket_index, end_bracket_index = get_bracket_indexes(s)
+    return s[:start_bracket_index] + s[end_bracket_index + 1:]
+
+def get_bracketed_entity(s: str) -> str:
+    assert check_brackets(s)
+    start_bracket_index, end_bracket_index = get_bracket_indexes(s)
+    return s[start_bracket_index + 1:end_bracket_index]
+
+def bracket_entity(s: str, entity: str) -> str:
+    # put brackets around the only instance of the entity in the string
+    # raise a ValueError if the entity is not in the string or if the entity is not unique
+    if s.count(entity) != 1:
+        raise ValueError(f"Did not find exactly one instance of '{entity}' in '{s}'")
+    return s.replace(entity, f"{START_BRACKET}{entity}{END_BRACKET}")
 
 def list_to_generator(input_list):
     '''Convert a list to a generator'''
@@ -317,77 +370,62 @@ with open(JSON_FILE, 'r', encoding=ENCODING) as f:
     results = json.load(f)
 
 # we want to put the results back into the CONLL format
-results_generator = list_to_generator(results)
 trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 orig_file = open(UNTRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
+translations_index = 0
 for sentence_index, sentence in enumerate(sentences):
-    for entity_indexes_index, entity_index in enumerate(sentence.entity_indexes):
-        try:
-            result = next(results_generator)
-        except StopIteration:
-            raise RuntimeError(f"There wasn't one result for each entity. Was about to deal with entity {entity_indexes_index + 1} in the following sentence: {sentence}")
-        translated_sentence = result[TRANSLATED_TEXT_KEY]
-        entity_tag_category = sentence.get_entity_category(entity_indexes_index)
-        print("translated sentence:", translated_sentence)
+    number_of_entities = len(sentence.entity_indexes)
+    # each one of these translations will have bracketed a single entity
+    translations = [result[TRANSLATED_TEXT_KEY] for result in results[translations_index:translations_index + number_of_entities]]
 
-        if not check_brackets(translated_sentence):
+    # the translation without any of the entities
+    main_unbracketed_translation = remove_brackets(translations[0])
+    for translation in translations:
+        if not check_brackets(translation):
             warnings.warn(f"Skipping! Could not find brackets in translated sentence: {translated_sentence}", BracketsNotFoundWarning)
             continue
+        # check to make sure the translation is the same, regardless of which entity is bracketed
+        unbracketed_translation = remove_brackets(translation)
+        if unbracketed_translation != main_unbracketed_translation:
+            warnings.warn(f"Skipping! Translated sentence '{translation}' does not match the main translation '{main_unbracketed_translation}'", TranslationMismatchWarning)
+            continue
+        
+    entity_categories = sentence.get_entity_categories()
+    original_entity_tokens = sentence.get_entities()
+    translated_entity_tokens = [get_bracketed_entity(translation) for translation in translations]
 
-        # separate off symbols that come before the starting bracket and after the ending bracket
-        # for example, if there's a comma after the ending bracket
-        start_bracket_location = translated_sentence.find(START_BRACKET)
-        end_bracket_location = start_bracket_location + translated_sentence[start_bracket_location:].find(END_BRACKET)
+    # create a template for the translated sentence
+    # this will be used to replace the original entity tokens with the translated entity tokens
+    template = main_unbracketed_translation
+    assert TEMPLATE_TOKEN not in template
+    for translated_entity_token in translated_entity_tokens:
+        # this will work even if there are duplicate entities because the order remains the same
+        template = template.replace(translated_entity_token, TEMPLATE_TOKEN, 1)
 
-        # add a space
-        # since we're using split, extra spaces won't matter
-        translated_sentence
+    entity_indexes_index = -1
+    split_template = template.split()
+    if split_template.count(TEMPLATE_TOKEN) != number_of_entities:
+        # this is usually due to punctuation being added just after bracketing in the translation
+        warnings.warn(f"Skipping! The number of template tokens ({split_template.count(TEMPLATE_TOKEN)}) does not match the number of entities ({number_of_entities}) in the template ({template})", TemplateTokenMismatchWarning)
+        continue
 
-        # add the id line
-        example_id = f"{sentence.id_value}-{entity_indexes_index}"
-        domain = Domain(TARGET_LANGUAGE)
-        add_conll_id_line(trans_file, example_id, domain)
-        add_conll_id_line(orig_file, example_id, domain)
+    for word in split_template:
+        if word == TEMPLATE_TOKEN:
+            entity_indexes_index += 1
+            category = entity_categories[entity_indexes_index]
+            translated_entity_tokens = translated_entity_tokens[entity_indexes_index].split()
+            for tokens, file in zip([original_entity_tokens, translated_entity_tokens], [orig_file, trans_file]):
+                for token_index, token in tokens:
+                    word = Word(translated_entity_token, Tag(TagType.B if token_index == 0 else TagType.I, category))
+                    add_conll_word(word, file)
+        else:
+            word = Word(word, Tag(TagType.O, TagCategory.Empty))
+            add_conll_word(word, orig_file)
+            add_conll_word(word, trans_file)
 
-        translated_words = translated_sentence.split()
-        bracketing = False
-        for translated_word in tqdm(translated_words, desc="words", leave=False):
-            if translated_word.startswith(START_BRACKET):
-                bracketing = True
-                if translated_word.endswith(END_BRACKET):
-                    bracketing = False
-                    translated_word_without_brackets = translated_word[1:-1]
-                else:
-                    translated_word_without_brackets = translated_word[1:]
+    trans_file.write("\n\n")
+    orig_file.write("\n\n")
 
-                orig_entity = sentence.get_entity(entity_indexes_index)
-                orig_entity_words = orig_entity.split()
-
-                # add this one translated word to the translated file
-                word = Word(translated_word_without_brackets, Tag(TagType.B, entity_tag_category))
-                add_conll_word(trans_file, word)
-
-                # add the entire original word to the file
-                for orig_entity_word_index, orig_entity_word in enumerate(orig_entity_words):
-                    if orig_entity_word_index == 0:
-                        entity_tag_type = TagType.B
-                    else:
-                        entity_tag_type = TagType.I
-                    word = Word(orig_entity_word, Tag(entity_tag_type, entity_tag_category))
-                    add_conll_word(orig_file, word)
-
-            elif bracketing:
-                if translated_word.endswith(END_BRACKET):
-                    bracketing = False
-                    translated_word_without_brackets = translated_word[:-1]
-                word = Word(translated_word_without_brackets, Tag(TagType.I, entity_tag_category))
-                add_conll_word(trans_file, word)
-            else:
-                word = Word(translated_word, Tag(TagType.O, TagCategory.Empty))
-                add_conll_word(trans_file, word)
-                add_conll_word(orig_file, word)
-        trans_file.write("\n\n")
-        orig_file.write("\n\n")
 input_file.close()
 trans_file.close()
 orig_file.close()

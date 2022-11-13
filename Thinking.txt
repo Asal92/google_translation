@@ -92,4 +92,15 @@ So I think we need to separate things off of quotes if it happens.
 I've currently turned the quotes into backticks.
 
 I think we will need to merge them all together, otherwise the AI will train incorrectly.
+
+Okay, I may have made a huge mistake.
+
+If it's translating each of the bracketed words separately, how do we know the default to put them in?
+We can't put the translated ones back into the original one, because the original one isn't translated.
+We also don't know where the non-bracketed ones went.
+
+Actually, what if we take out the brackets? Shouldn't all of them be the same?
+Yes. If they're not, we should ignore that example. That makes sense!
+
+I think for the time being I'm going to skip the complicated cases with the symbols attached to the brackets.
 '''
