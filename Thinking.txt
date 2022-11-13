@@ -187,4 +187,10 @@ Curly braces:
     Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
 
 We have to try their standard of square brackets.
+Square brackets:
+    Skipped 4273/16778 sentences
+    Skipped 72 sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)
+    Skipped 52 sentences due to brackets not being found
+    Skipped 4149 sentences due to translations not matching
+    Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
 '''
