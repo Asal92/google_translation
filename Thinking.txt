@@ -249,3 +249,38 @@ Final run from fr to en (square brackets):
     Skipped 3992 sentences due to translations not matching
     Skipped 0 sentences due to template token mismatch (usually from punctuation added after an entity)
 '''
+
+'''
+11/15/2022
+
+Okay here's a good example:
+{
+  "translatedText": "la soci\u00e9t\u00e9 a \u00e9t\u00e9 achet\u00e9e par [john waddington limited] en 1963 qui l'a vendue \u00e0 son tour \u00e0 des cartes de marque en 1980 .",
+  "input": "the company was purchased by [john waddington limited] in 1963 who sold it in turn to hallmark cards in 1980 ."
+ },
+ {
+  "translatedText": "la soci\u00e9t\u00e9 a \u00e9t\u00e9 achet\u00e9e par john waddington limited en 1963 qui l'a vendue \u00e0 son tour \u00e0 [hallmark cards] en 1980 .",
+  "input": "the company was purchased by john waddington limited in 1963 who sold it in turn to [hallmark cards] in 1980 ."
+ },
+
+ Actualy I like the wrestling one more.
+
+ {
+  "translatedText": "ils ont fait \u00e9quipe de 1989 \u00e0 1991 dans la [national wrestling alliance] (nwa) et le championnat du monde de lutte (www).",
+  "input": "they teamed from 1989 to 1991 in the [national wrestling alliance] ( nwa ) and world championship wrestling ( wcw ) ."
+ },
+ {
+  "translatedText": "ils ont fait \u00e9quipe de 1989 \u00e0 1991 dans l'alliance nationale de lutte (nwa) et [la lutte du championnat du monde] (wcw).",
+  "input": "they teamed from 1989 to 1991 in the national wrestling alliance ( nwa ) and [world championship wrestling] ( wcw ) ."
+ },
+
+Here's an example that's short that shows it working.
+  {
+  "translatedText": "il est exprim\u00e9 par [mitsuko horie] dans le premier anime et par motoko kumai dans le second.",
+  "input": "he is voiced by [mitsuko horie] in the first anime and by motoko kumai in the second ."
+ },
+ {
+  "translatedText": "il est exprim\u00e9 par mitsuko horie dans le premier anime et par [motoko kumai] dans le second.",
+  "input": "he is voiced by mitsuko horie in the first anime and by [motoko kumai] in the second ."
+ },
+'''
