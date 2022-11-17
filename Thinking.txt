@@ -283,4 +283,66 @@ Here's an example that's short that shows it working.
   "translatedText": "il est exprim\u00e9 par mitsuko horie dans le premier anime et par [motoko kumai] dans le second.",
   "input": "he is voiced by mitsuko horie in the first anime and by [motoko kumai] in the second ."
  },
+
+
+
+{
+"translatedText": "[edward weston] chimiste et ing\u00e9nieur concurrent de thomas edison",
+"input": "[edward weston] chemist and engineer competitor with thomas edison"
+},
+{
+"translatedText": "edward weston chimiste et ing\u00e9nieur concurrent de [thomas edison]",
+"input": "edward weston chemist and engineer competitor with [thomas edison]"
+},
+
+Okay, here's just a list of weirdly tagged examples: (put these on slide 14)
+# id 156a76ec-4fe3-42ed-9bcc-ec550894cf08	domain=en
+he _ _ O
+holds _ _ O
+wins _ _ O
+over _ _ O
+tito _ _ B-Athlete
+ortiz _ _ I-Athlete
+masakatsu _ _ B-Athlete
+funaki _ _ I-Athlete
+yuki _ _ B-OtherPER
+kondo _ _ I-OtherPER
+semmy _ _ B-Athlete
+schilt _ _ I-Athlete
+and _ _ O
+minoru _ _ B-Athlete
+suzuki _ _ I-Athlete
+. _ _ O
+
+# id 1de39462-f3b7-41b2-8605-5a8cf6e4e220	domain=en
+ray _ _ B-Athlete
+ferraro _ _ I-Athlete
+( _ _ O
+select _ _ O
+games _ _ O
+) _ _ O
+jamie _ _ B-Athlete
+mclennan _ _ I-Athlete
+( _ _ O
+select _ _ O
+games _ _ O
+) _ _ O
+mike _ _ B-OtherPER
+johnson _ _ I-OtherPER
+( _ _ O
+select _ _ O
+games _ _ O
+) _ _ O
+
+
+
+Here's the example I'll actually use for the slide:
+ {
+  "translatedText": "la [r\u00e9action en cha\u00eene par polym\u00e9rase] a \u00e9t\u00e9 d\u00e9velopp\u00e9e dans les ann\u00e9es 1980 par kary mullis .",
+  "input": "the [polymerase chain reaction] was developed in the 1980s by kary mullis ."
+ },
+ {
+  "translatedText": "la r\u00e9action en cha\u00eene par polym\u00e9rase a \u00e9t\u00e9 d\u00e9velopp\u00e9e dans les ann\u00e9es 1980 par [kary mullis] .",
+  "input": "the polymerase chain reaction was developed in the 1980s by [kary mullis] ."
+ },
 '''
