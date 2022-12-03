@@ -346,3 +346,23 @@ Here's the example I'll actually use for the slide:
   "input": "the polymerase chain reaction was developed in the 1980s by [kary mullis] ."
  },
 '''
+
+'''
+12/3/2022
+
+Alright, it's time to actually implement MulDA in the next few hours.
+It shouldn't be too hard.
+Step 1: Replace entities with the names.
+Step 2: Translate the sentence.
+Step 3: Translate the sentence with brackets for each individual word.
+Step 4: Replace the names with the original entities and the non-translated entities.
+
+Step 3 can probably load from an existing file. I've already done all those translations.
+
+Yup, Step 3 is definitely in `results.json` files.
+
+So I should just be able to reload those.
+
+So the goal of this script is to again output an orig and a trans.
+Sweet.
+'''
