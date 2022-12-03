@@ -365,4 +365,29 @@ So I should just be able to reload those.
 
 So the goal of this script is to again output an orig and a trans.
 Sweet.
+
+Here's another bad training example:
+    dimeglio _ _ O
+    also _ _ O
+    had _ _ O
+    a _ _ O
+    brief _ _ O
+    stint _ _ O
+    in _ _ O
+    world _ _ B-PrivateCorp
+    championship _ _ I-PrivateCorp
+    wrestling _ _ I-PrivateCorp
+    with _ _ O
+    romeo _ _ B-Athlete
+    valentino _ _ I-Athlete
+    during _ _ O
+    the _ _ O
+    mid _ _ O
+    1990s _ _ O
+    . _ _ O
+
+Alright, I think I've got the main portions solid.
+
+I renamed the old outputs so it's clear that they're london outputs rather than MulDA outputs.
+TODO will need to rename these outputs in the london_translate script.
 '''
