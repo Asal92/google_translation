@@ -460,4 +460,22 @@ I could rename things "stable" instead of "London", but I think that would just 
 The code's not finding anything from the London results, so I'll have to look into that.
 
 Athlète is another one in addition to Politicien and AutrePER.
+
+Wow, this dataset is a mess.
+The current bug is because some of the examples in the dataset are included twice.
+So when I go through the london translation, it shows up twice, and adds twice the examples.
+
+Sometimes, the same example is translated differently.
+
+ {
+  "translatedText": "comme l'oiseau tout aussi grandeur nature du cygne menac\u00e9 de jan asselijn, le taureau peut \u00e9galement fonctionner comme un symbole de la [r\u00e9publique n\u00e9erlandaise].",
+  "input": "like the equally life size bird in jan asselijn 's the threatened swan the bull can also function as a symbol of the [dutch republic] ."
+ },
+ {
+  "translatedText": "comme l'oiseau tout aussi grandeur nature du cygne menac\u00e9 de jan asselijn, le taureau peut \u00e9galement fonctionner comme un symbole de la [r\u00e9publique hollandaise].",
+  "input": "like the equally life size bird in jan asselijn 's the threatened swan the bull can also function as a symbol of the [dutch republic] ."
+ },
+
+I think I'm just going to skip duplicate examples. I think that's the best way to handle this.
+It will trigger a few assertions for now, but I can just remove those.
 '''

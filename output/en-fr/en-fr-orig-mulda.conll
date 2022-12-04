@@ -1887,6 +1887,19 @@ en _ _ O
 . _ _ O
 
 
+# id e4604ce5-7e89-4cad-ac58-5acd8b91b007	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+edward _ _ B-OtherPER
+meyrick _ _ I-OtherPER
+en _ _ O
+1910 _ _ O
+. _ _ O
+
+
 # id 28c6f3db-7741-4ed5-8924-9bde5517ea29	domain=fr
 hungary _ _ B-SportsGRP
 ( _ _ O
@@ -2556,6 +2569,20 @@ né _ _ O
 ) _ _ O
 
 
+# id 5746233f-e9c0-4676-83a1-6071f74f40d1	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+stephan _ _ B-OtherPER
+von _ _ I-OtherPER
+breuning _ _ I-OtherPER
+en _ _ O
+1938 _ _ O
+. _ _ O
+
+
 # id ac5fd214-e191-4a12-b914-8b8d0c1e44fc	domain=fr
 son _ _ O
 vaste _ _ O
@@ -2613,6 +2640,19 @@ magiquement _ _ O
 élevés _ _ O
 par _ _ O
 la _ _ B-OtherPER
+. _ _ O
+
+
+# id c3806c4b-d41a-44a6-86f8-b20dde8707c0	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+francis _ _ B-OtherPER
+walker _ _ I-OtherPER
+en _ _ O
+1855 _ _ O
 . _ _ O
 
 
@@ -4343,6 +4383,19 @@ valadon _ _ I-Artist
 . _ _ O
 
 
+# id eb7318ad-def8-4bde-a551-751d88b9bcf6	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+francis _ _ B-OtherPER
+walker _ _ I-OtherPER
+en _ _ O
+1855 _ _ O
+. _ _ O
+
+
 # id 43d80f36-619c-41db-bc93-11d47f89b5af	domain=fr
 exposition _ _ O
 manifiesto _ _ O
@@ -5491,6 +5544,21 @@ représentation _ _ O
 . _ _ O
 
 
+# id 288cb1d7-edd1-4e86-8988-45f9d6a0f91f	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+harrison _ _ B-OtherPER
+gray _ _ I-OtherPER
+dyar _ _ I-OtherPER
+jr. _ _ I-OtherPER
+en _ _ O
+1914 _ _ O
+. _ _ O
+
+
 # id 3802b946-55f8-4b44-948a-8e343334421f	domain=fr
 sa _ _ O
 cousine _ _ O
@@ -6102,6 +6170,24 @@ xiang _ _ B-OtherPER
 . _ _ O
 
 
+# id f76b3a83-2692-4d89-9413-a0dd39f2daf5	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+examiné _ _ O
+et _ _ O
+décrit _ _ O
+par _ _ O
+paulin _ _ B-Cleric
+martin _ _ I-Cleric
+collationné _ _ O
+par _ _ O
+eduard _ _ B-OtherPER
+de _ _ I-OtherPER
+muralt _ _ I-OtherPER
+. _ _ O
+
+
 # id 9a196ab7-57c8-4b6c-afdd-9df9db099bcb	domain=fr
 le _ _ O
 propriétaire _ _ O
@@ -6181,6 +6267,20 @@ né _ _ O
 dans _ _ O
 le _ _ O
 village _ _ O
+. _ _ O
+
+
+# id 5c757ae7-b28e-40e2-86c3-34df75509d26	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+stephan _ _ B-OtherPER
+von _ _ I-OtherPER
+breuning _ _ I-OtherPER
+en _ _ O
+1938 _ _ O
 . _ _ O
 
 
@@ -7716,6 +7816,21 @@ jones _ _ I-OtherPER
 dansant. _ _ O
 
 
+# id d2a4fc69-6f27-4bd7-8acd-6bcbb997612d	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+harrison _ _ B-OtherPER
+gray _ _ I-OtherPER
+dyar _ _ I-OtherPER
+jr. _ _ I-OtherPER
+en _ _ O
+1914 _ _ O
+. _ _ O
+
+
 # id 3bbc564d-40fc-4109-892e-9b14d308438d	domain=fr
 ravishankar _ _ B-OtherPER
 raval _ _ I-OtherPER
@@ -7950,6 +8065,19 @@ entre _ _ O
 botany _ _ B-OtherPER
 et _ _ O
 zoology _ _ B-OtherPER
+. _ _ O
+
+
+# id 307b2d0b-f2c9-48c5-af79-99bb53444c63	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+edward _ _ B-OtherPER
+meyrick _ _ I-OtherPER
+en _ _ O
+1886 _ _ O
 . _ _ O
 
 
@@ -8626,6 +8754,21 @@ bridges _ _ I-OtherPER
 . _ _ O
 
 
+# id 16e2fd44-82ec-4350-90b4-770c1d4ed778	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+per _ _ B-OtherPER
+olof _ _ I-OtherPER
+christopher _ _ I-OtherPER
+aurivillius _ _ I-OtherPER
+en _ _ O
+1927 _ _ O
+. _ _ O
+
+
 # id e62548db-05f0-452f-ba15-7d16167aba9c	domain=fr
 prangarda _ _ B-OtherPER
 ( _ _ O
@@ -8760,6 +8903,19 @@ aîné _ _ O
 survivant _ _ O
 william _ _ B-OtherPER
 hyacinth _ _ I-OtherPER
+. _ _ O
+
+
+# id ee8ee71a-32af-44a1-a3f1-2677640ac0b2	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+edward _ _ B-OtherPER
+meyrick _ _ I-OtherPER
+en _ _ O
+1886 _ _ O
 . _ _ O
 
 
@@ -9493,6 +9649,19 @@ années _ _ O
 par _ _ O
 kary _ _ B-OtherPER
 mullis _ _ I-OtherPER
+. _ _ O
+
+
+# id d13f6108-43b9-4ae1-b1ef-b8f2cbabfe7b	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+edward _ _ B-OtherPER
+meyrick _ _ I-OtherPER
+en _ _ O
+1886 _ _ O
 . _ _ O
 
 
@@ -12461,6 +12630,19 @@ et _ _ O
 ) _ _ O
 
 
+# id 41b4ca57-a985-4764-bf9b-bc037f70e681	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+edward _ _ B-OtherPER
+meyrick _ _ I-OtherPER
+en _ _ O
+1910 _ _ O
+. _ _ O
+
+
 # id f12fd514-d75b-43d7-8c35-b91050fd1147	domain=fr
 28 _ _ O
 mars _ _ O
@@ -12485,6 +12667,21 @@ successeur _ _ O
 peut-être _ _ O
 amyntas _ _ B-OtherPER
 ii _ _ I-OtherPER
+. _ _ O
+
+
+# id d374a0b1-3a68-46bc-86ab-d35cdfc89e44	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+per _ _ B-OtherPER
+olof _ _ I-OtherPER
+christopher _ _ I-OtherPER
+aurivillius _ _ I-OtherPER
+en _ _ O
+1927 _ _ O
 . _ _ O
 
 
@@ -15309,6 +15506,31 @@ hopefully _ _ I-Artist
 en _ _ O
 1982 _ _ O
 . _ _ O
+
+
+# id 580d6db3-46b4-4578-a9ce-7219db55b5f6	domain=fr
+en _ _ O
+1989 _ _ O
+1990 _ _ O
+et _ _ O
+au _ _ O
+début _ _ O
+de _ _ O
+1991, _ _ O
+ils _ _ O
+ont _ _ O
+modelé _ _ O
+pour _ _ O
+chanel _ _ B-PrivateCorp
+thierry _ _ B-Artist
+mugler _ _ I-Artist
+jean _ _ B-Artist
+paul _ _ I-Artist
+gaultier _ _ I-Artist
+john _ _ B-Artist
+galliano _ _ I-Artist
+et _ _ O
+d'autres. _ _ O
 
 
 # id 68209eb5-c0c7-4dc6-a5d7-1c0b34793184	domain=fr
@@ -22565,6 +22787,24 @@ télévisées _ _ O
 ou _ _ O
 émissions _ _ O
 spéciales. _ _ O
+
+
+# id a35f79c2-0657-4f57-97b4-70aff2c6b166	domain=fr
+ranbir _ _ B-Artist
+kapoor _ _ I-Artist
+( _ _ O
+également _ _ O
+pour _ _ O
+wake _ _ B-VisualWork
+up _ _ I-VisualWork
+sid _ _ I-VisualWork
+et _ _ O
+ajab _ _ B-VisualWork
+prem _ _ I-VisualWork
+ki _ _ I-VisualWork
+ghazab _ _ I-VisualWork
+kahani _ _ I-VisualWork
+) _ _ O
 
 
 # id 981537ee-aa31-4cb2-8eda-66190fa289e0	domain=fr
@@ -37944,6 +38184,19 @@ marine _ _ O
 ) _ _ O
 
 
+# id 51d8ad06-ae6d-412a-9c94-0876c2b2e4ca	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+paul _ _ B-OtherPER
+dognin _ _ I-OtherPER
+en _ _ O
+1916 _ _ O
+. _ _ O
+
+
 # id c44088ea-77ad-4443-a12e-9bd0850c7dbd	domain=fr
 au _ _ O
 deuxième _ _ O
@@ -38249,6 +38502,19 @@ bormann _ _ I-OtherPER
 et _ _ O
 fritz _ _ B-OtherPER
 klein _ _ I-OtherPER
+. _ _ O
+
+
+# id 53ee8440-0989-476d-a04e-a10c56ff0de1	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+herbert _ _ B-OtherPER
+druce _ _ I-OtherPER
+en _ _ O
+1910 _ _ O
 . _ _ O
 
 
@@ -38625,6 +38891,19 @@ cibler _ _ O
 une _ _ O
 attaque _ _ O
 terroriste. _ _ O
+
+
+# id f5789a76-96e1-4a5a-812a-8d5fcae4441f	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+herbert _ _ B-OtherPER
+druce _ _ I-OtherPER
+en _ _ O
+1910 _ _ O
+. _ _ O
 
 
 # id dc6477da-0f0e-4c38-8043-e7be9a3c26b2	domain=fr
@@ -41042,6 +41321,19 @@ l'a _ _ O
 abandonnée _ _ O
 en _ _ O
 851 _ _ O
+. _ _ O
+
+
+# id 9326ddca-fbd7-4167-ae46-ffd885363dbc	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+paul _ _ B-OtherPER
+dognin _ _ I-OtherPER
+en _ _ O
+1916 _ _ O
 . _ _ O
 
 
@@ -51018,6 +51310,28 @@ secrétaire _ _ O
 . _ _ O
 
 
+# id 4e24e0f1-818d-4cd6-87fb-a767c900c57f	domain=fr
+horn _ _ O
+a _ _ O
+perdu _ _ O
+sa _ _ O
+réélection _ _ O
+face _ _ O
+au _ _ O
+challenger _ _ O
+republican _ _ B-ORG
+stephanie _ _ B-Politician
+bice _ _ I-Politician
+qui _ _ O
+a _ _ O
+obtenu _ _ O
+52,1 _ _ O
+% _ _ O
+des _ _ O
+voix _ _ O
+. _ _ O
+
+
 # id afa2079c-e2ed-4c0d-b609-a29a8084973b	domain=fr
 c'était _ _ O
 une _ _ O
@@ -52839,6 +53153,19 @@ au _ _ O
 recensement _ _ O
 de _ _ O
 2004 _ _ O
+. _ _ O
+
+
+# id 131a43fa-2f21-4e8d-90f4-bdc110581e61	domain=fr
+tous _ _ O
+les _ _ O
+résultats _ _ O
+proviennent _ _ O
+de _ _ O
+l' _ _ O
+international _ _ B-ORG
+ski _ _ I-ORG
+federation _ _ I-ORG
 . _ _ O
 
 
@@ -55933,6 +56260,19 @@ de _ _ O
 revenir _ _ O
 le _ _ O
 chercher. _ _ O
+
+
+# id 97ad4748-0672-4d89-98e5-cccbe6b172c0	domain=fr
+tous _ _ O
+les _ _ O
+résultats _ _ O
+proviennent _ _ O
+de _ _ O
+l' _ _ O
+international _ _ B-ORG
+ski _ _ I-ORG
+federation _ _ I-ORG
+. _ _ O
 
 
 # id b7298a1e-1e1a-4537-acd7-984fefcbda42	domain=fr
@@ -59545,6 +59885,19 @@ liberty _ _ I-ORG
 . _ _ O
 
 
+# id 11890cf4-7fe9-4d07-8171-bb0bf35c50f5	domain=fr
+tous _ _ O
+les _ _ O
+résultats _ _ O
+proviennent _ _ O
+de _ _ O
+l' _ _ O
+international _ _ B-ORG
+ski _ _ I-ORG
+federation _ _ I-ORG
+. _ _ O
+
+
 # id 03e34d64-1cd0-46bf-bbf2-1752dbe04852	domain=fr
 de _ _ O
 1931 _ _ O
@@ -59650,6 +60003,19 @@ spécialisé _ _ O
 en _ _ O
 politique _ _ O
 internationale. _ _ O
+
+
+# id 89948a5b-a1b6-46bc-9168-511f99a0713b	domain=fr
+tous _ _ O
+les _ _ O
+résultats _ _ O
+proviennent _ _ O
+de _ _ O
+l' _ _ O
+international _ _ B-ORG
+ski _ _ I-ORG
+federation _ _ I-ORG
+. _ _ O
 
 
 # id 6843ff1b-0674-44ed-8b3e-a49b60321823	domain=fr
@@ -61126,6 +61492,24 @@ faisant _ _ O
 des _ _ O
 observations _ _ O
 solaires. _ _ O
+
+
+# id af6af451-349d-44ec-b1d7-2e9a5e519f0d	domain=fr
+l'équipe _ _ O
+a _ _ O
+joué _ _ O
+ses _ _ O
+matchs _ _ O
+à _ _ O
+domicile _ _ O
+dans _ _ O
+arizona _ _ B-Facility
+stadium _ _ I-Facility
+in _ _ O
+tucson _ _ B-HumanSettlement
+, _ _ I-HumanSettlement
+arizona _ _ I-HumanSettlement
+. _ _ O
 
 
 # id 7f1091c8-abea-405c-92c5-cfbcd827c8c6	domain=fr
@@ -63210,6 +63594,16 @@ autres _ _ O
 baleines. _ _ O
 
 
+# id 0322527a-4467-4d40-b34e-5ef64e47a99f	domain=fr
+il _ _ O
+se _ _ O
+trouve _ _ O
+uniquement _ _ O
+dans _ _ O
+madagascar _ _ B-HumanSettlement
+. _ _ O
+
+
 # id af1f8a84-c27a-47a7-8249-5d527c2f93e3	domain=fr
 il _ _ O
 lui _ _ O
@@ -64768,6 +65162,16 @@ le _ _ O
 siège _ _ O
 du _ _ O
 district. _ _ O
+
+
+# id 69521498-a41b-4d5d-979c-5e19317095e9	domain=fr
+il _ _ O
+se _ _ O
+trouve _ _ O
+uniquement _ _ O
+dans _ _ O
+madagascar _ _ B-HumanSettlement
+. _ _ O
 
 
 # id 2efb5b9f-8aad-4eae-8009-84d426b10ff9	domain=fr
@@ -70071,6 +70475,16 @@ en _ _ O
 . _ _ O
 
 
+# id c428d946-a1fc-4874-90b7-25beaec106b0	domain=fr
+il _ _ O
+se _ _ O
+trouve _ _ O
+dans _ _ O
+south _ _ B-HumanSettlement
+africa _ _ I-HumanSettlement
+. _ _ O
+
+
 # id 111a4a64-2a03-4361-a07f-191f732dbc19	domain=fr
 sa _ _ O
 famille _ _ O
@@ -71937,6 +72351,15 @@ ont _ _ O
 commencé _ _ O
 en _ _ O
 2010 _ _ O
+. _ _ O
+
+
+# id 66a25983-d94d-4a52-b178-47f7609d7f72	domain=fr
+avant _ _ O
+1945, _ _ O
+c'était _ _ O
+dans _ _ O
+germany _ _ B-HumanSettlement
 . _ _ O
 
 
@@ -75207,6 +75630,15 @@ bétail _ _ O
 domestique. _ _ O
 
 
+# id 1fd75553-31be-415e-bbc5-2374a347371f	domain=fr
+avant _ _ O
+1945, _ _ O
+c'était _ _ O
+dans _ _ O
+germany _ _ B-HumanSettlement
+. _ _ O
+
+
 # id f16fda81-4d82-4132-bfdc-4f03b6b69b5b	domain=fr
 certaines _ _ O
 de _ _ O
@@ -75815,6 +76247,16 @@ basé _ _ O
 new _ _ B-HumanSettlement
 york _ _ I-HumanSettlement
 city _ _ I-HumanSettlement
+. _ _ O
+
+
+# id 375aeef8-ee60-40cf-b02a-69cabf1168f6	domain=fr
+il _ _ O
+est _ _ O
+endémique _ _ O
+à _ _ O
+sri _ _ B-HumanSettlement
+lanka _ _ I-HumanSettlement
 . _ _ O
 
 
@@ -76694,6 +77136,15 @@ sa _ _ O
 mère. _ _ O
 
 
+# id 9eaa8126-8470-4646-ad16-5e03e489ad5e	domain=fr
+avant _ _ O
+1945, _ _ O
+c'était _ _ O
+dans _ _ O
+germany _ _ B-HumanSettlement
+. _ _ O
+
+
 # id 762c0427-54fc-4597-b908-23f6e4730ddd	domain=fr
 il _ _ O
 était _ _ O
@@ -77112,6 +77563,16 @@ germany _ _ B-HumanSettlement
 italy _ _ B-HumanSettlement
 et _ _ O
 spain _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 872bdc5a-b3a3-41d8-b78a-b2caeea5be0b	domain=fr
+il _ _ O
+est _ _ O
+endémique _ _ O
+à _ _ O
+sri _ _ B-HumanSettlement
+lanka _ _ I-HumanSettlement
 . _ _ O
 
 
@@ -77567,6 +78028,16 @@ septembre _ _ O
 1991 _ _ O
 : _ _ O
 vicenza _ _ B-HumanSettlement
+
+
+# id 72b68582-8fdc-4cdd-9ec5-8e6b93916836	domain=fr
+il _ _ O
+se _ _ O
+trouve _ _ O
+dans _ _ O
+south _ _ B-HumanSettlement
+africa _ _ I-HumanSettlement
+. _ _ O
 
 
 # id 36ddadd1-d761-4af3-88df-8a6823817b71	domain=fr
@@ -82411,6 +82882,27 @@ kawasaki _ _ B-PublicCorp
 . _ _ O
 
 
+# id 2329a743-c723-4d65-acab-1d55558fd322	domain=fr
+sears _ _ B-PublicCorp
+- _ _ O
+une _ _ O
+chaîne _ _ O
+de _ _ O
+department _ _ B-Facility
+stores _ _ I-Facility
+qui _ _ O
+sont _ _ O
+généralement _ _ O
+situés _ _ O
+dans _ _ O
+shopping _ _ B-Facility
+malls _ _ I-Facility
+avec _ _ O
+quelques _ _ O
+emplacements _ _ O
+autonomes. _ _ O
+
+
 # id 3a8cb310-6858-4812-bc2d-303d0a71bd9b	domain=fr
 avec _ _ O
 le _ _ O
@@ -84527,6 +85019,17 @@ bottom _ _ B-VisualWork
 4 _ _ I-VisualWork
 
 
+# id 68ed319d-c868-4a83-9721-b80ecb679aea	domain=fr
+il _ _ O
+est _ _ O
+considéré _ _ O
+comme _ _ O
+un _ _ O
+lost _ _ B-VisualWork
+film _ _ I-VisualWork
+. _ _ O
+
+
 # id 9643444c-2e26-44ce-bd44-5de8da53008e	domain=fr
 Professeur _ _ O
 de _ _ O
@@ -84535,6 +85038,17 @@ our _ _ B-VisualWork
 school _ _ I-VisualWork
 's _ _ I-VisualWork
 e.t. _ _ I-VisualWork
+
+
+# id c0c5ac4a-c5c4-4f61-bd61-57abc9b42bf0	domain=fr
+il _ _ O
+est _ _ O
+considéré _ _ O
+comme _ _ O
+un _ _ O
+lost _ _ B-VisualWork
+film _ _ I-VisualWork
+. _ _ O
 
 
 # id 9d013ba7-727f-4b1c-aa74-1416e96554f5	domain=fr
@@ -87353,6 +87867,31 @@ aux _ _ O
 . _ _ O
 
 
+# id c0f7a784-be6e-4044-82f5-a469e35c04c2	domain=fr
+la _ _ O
+bande _ _ O
+originale _ _ O
+est _ _ O
+devenue _ _ O
+le _ _ O
+meilleur _ _ O
+téléchargement _ _ O
+de _ _ O
+sa _ _ O
+catégorie _ _ O
+sur _ _ O
+itunes _ _ B-Software
+au-dessus _ _ O
+de _ _ O
+la _ _ O
+bande _ _ O
+originale _ _ O
+de _ _ O
+casino _ _ B-VisualWork
+royale _ _ I-VisualWork
+. _ _ O
+
+
 # id 034a75d7-00b9-43df-b79d-395f493942fb	domain=fr
 running _ _ B-VisualWork
 with _ _ I-VisualWork
@@ -88029,6 +88568,24 @@ the _ _ I-VisualWork
 animated _ _ I-VisualWork
 series _ _ I-VisualWork
 . _ _ O
+
+
+# id a35f79c2-0657-4f57-97b4-70aff2c6b166	domain=fr
+ranbir _ _ B-Artist
+kapoor _ _ I-Artist
+( _ _ O
+également _ _ O
+pour _ _ O
+wake _ _ B-VisualWork
+up _ _ I-VisualWork
+sid _ _ I-VisualWork
+et _ _ O
+ajab _ _ B-VisualWork
+prem _ _ I-VisualWork
+ki _ _ I-VisualWork
+ghazab _ _ I-VisualWork
+kahani _ _ I-VisualWork
+) _ _ O
 
 
 # id b26e2dc3-3d43-4ee5-8691-81400cd54d08	domain=fr
@@ -100473,6 +101030,25 @@ gallery _ _ I-Facility
 . _ _ O
 
 
+# id 6330bbd4-0245-4e82-b5ba-523631df3321	domain=fr
+head _ _ O
+est _ _ O
+né _ _ O
+à _ _ O
+white _ _ B-Facility
+plains _ _ I-Facility
+, _ _ I-Facility
+new _ _ I-Facility
+york _ _ I-Facility
+et _ _ O
+a _ _ O
+grandi _ _ O
+à _ _ O
+south _ _ B-Politician
+bronx _ _ I-Politician
+. _ _ O
+
+
 # id 4e19d9b2-de5d-464b-a745-28865f07dc15	domain=fr
 la _ _ O
 chambre _ _ O
@@ -102380,6 +102956,27 @@ place _ _ I-Facility
 . _ _ O
 
 
+# id 2329a743-c723-4d65-acab-1d55558fd322	domain=fr
+sears _ _ B-PublicCorp
+- _ _ O
+une _ _ O
+chaîne _ _ O
+de _ _ O
+department _ _ B-Facility
+stores _ _ I-Facility
+qui _ _ O
+sont _ _ O
+généralement _ _ O
+situés _ _ O
+dans _ _ O
+shopping _ _ B-Facility
+malls _ _ I-Facility
+avec _ _ O
+quelques _ _ O
+emplacements _ _ O
+autonomes. _ _ O
+
+
 # id 6271af70-86d2-4cec-bdc7-379bcee27c26	domain=fr
 à _ _ O
 partir _ _ O
@@ -102597,6 +103194,24 @@ conventionnel _ _ O
 un _ _ O
 apartment _ _ B-Facility
 hotel _ _ I-Facility
+. _ _ O
+
+
+# id a50d8dc0-f870-4a48-8983-efaa762a4f96	domain=fr
+l'équipe _ _ O
+a _ _ O
+joué _ _ O
+ses _ _ O
+matchs _ _ O
+à _ _ O
+domicile _ _ O
+dans _ _ O
+arizona _ _ B-Facility
+stadium _ _ I-Facility
+in _ _ O
+tucson _ _ B-HumanSettlement
+, _ _ I-HumanSettlement
+arizona _ _ I-HumanSettlement
 . _ _ O
 
 
@@ -106554,6 +107169,21 @@ ch _ _ O
 . _ _ O
 
 
+# id f1d548e5-fb4f-4c81-ac33-650b26405a13	domain=fr
+lorsqu'elle _ _ O
+était _ _ O
+submergée, _ _ O
+chaque _ _ O
+hélice _ _ O
+était _ _ O
+entraînée _ _ O
+par _ _ O
+un _ _ O
+electric _ _ B-OtherPROD
+motor _ _ I-OtherPROD
+. _ _ O
+
+
 # id 9ade7fe7-9816-431d-a799-78c2dc3e7bde	domain=fr
 il _ _ O
 poursuit _ _ O
@@ -109501,6 +110131,21 @@ donné _ _ O
 un _ _ O
 diamètre _ _ O
 de _ _ O
+. _ _ O
+
+
+# id fd956bdc-e556-405b-847b-21c00ea9ede5	domain=fr
+lorsqu'elle _ _ O
+était _ _ O
+submergée, _ _ O
+chaque _ _ O
+hélice _ _ O
+était _ _ O
+entraînée _ _ O
+par _ _ O
+un _ _ O
+electric _ _ B-OtherPROD
+motor _ _ I-OtherPROD
 . _ _ O
 
 
@@ -114296,6 +114941,23 @@ de _ _ O
 fond. _ _ O
 
 
+# id 3a505b6b-2690-41fc-8a8d-884820e57e64	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+pour _ _ O
+la _ _ O
+première _ _ O
+fois _ _ O
+par _ _ O
+lord _ _ B-Politician
+walsingham _ _ I-Politician
+en _ _ O
+1907 _ _ O
+. _ _ O
+
+
 # id f2f71702-16c2-4c23-b67d-d50196a4ba87	domain=fr
 delafaye _ _ O
 a _ _ O
@@ -114305,6 +114967,25 @@ rôle _ _ O
 avec _ _ O
 martin _ _ B-Politician
 bladen _ _ I-Politician
+. _ _ O
+
+
+# id 6330bbd4-0245-4e82-b5ba-523631df3321	domain=fr
+head _ _ O
+est _ _ O
+né _ _ O
+à _ _ O
+white _ _ B-Facility
+plains _ _ I-Facility
+, _ _ I-Facility
+new _ _ I-Facility
+york _ _ I-Facility
+et _ _ O
+a _ _ O
+grandi _ _ O
+à _ _ O
+south _ _ B-Politician
+bronx _ _ I-Politician
 . _ _ O
 
 
@@ -117190,6 +117871,23 @@ avait _ _ O
 commencés. _ _ O
 
 
+# id 8ed66e11-33c7-4bdc-b642-b57424bbff03	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+pour _ _ O
+la _ _ O
+première _ _ O
+fois _ _ O
+par _ _ O
+lord _ _ B-Politician
+walsingham _ _ I-Politician
+en _ _ O
+1907 _ _ O
+. _ _ O
+
+
 # id 445f061e-e78c-4195-9bad-07bbef7482b0	domain=fr
 on _ _ O
 l'a _ _ O
@@ -117732,6 +118430,28 @@ hensman _ _ I-Politician
 . _ _ O
 
 
+# id 4e24e0f1-818d-4cd6-87fb-a767c900c57f	domain=fr
+horn _ _ O
+a _ _ O
+perdu _ _ O
+sa _ _ O
+réélection _ _ O
+face _ _ O
+au _ _ O
+challenger _ _ O
+republican _ _ B-ORG
+stephanie _ _ B-Politician
+bice _ _ I-Politician
+qui _ _ O
+a _ _ O
+obtenu _ _ O
+52,1 _ _ O
+% _ _ O
+des _ _ O
+voix _ _ O
+. _ _ O
+
+
 # id 1a42ea4f-1a01-48d5-8f4c-0a1db79a309e	domain=fr
 elle _ _ O
 a _ _ O
@@ -118008,6 +118728,19 @@ le _ _ O
 volet _ _ O
 lázaro _ _ B-Politician
 cárdenas _ _ I-Politician
+. _ _ O
+
+
+# id c712f2e0-2df0-4c5b-9503-0ed71ab6a2ee	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+walter _ _ B-Politician
+rothschild _ _ I-Politician
+en _ _ O
+1910 _ _ O
 . _ _ O
 
 
@@ -119637,6 +120370,19 @@ en _ _ O
 l'a _ _ O
 rendu _ _ O
 impossible. _ _ O
+
+
+# id 698b4e74-ad9e-4f15-9d1c-f197f5649099	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+décrit _ _ O
+par _ _ O
+walter _ _ B-Politician
+rothschild _ _ I-Politician
+en _ _ O
+1910 _ _ O
+. _ _ O
 
 
 # id 650d5a83-700c-4c30-9999-67bd1443adea	domain=fr
@@ -122494,6 +123240,40 @@ probantes _ _ O
 . _ _ O
 
 
+# id 7d0cc5bd-3381-4855-af5b-9e8cca22829e	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1994 _ _ O
+. _ _ O
+
+
+# id 14100781-acce-47f2-8817-5904cca1bdd7	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1973 _ _ O
+. _ _ O
+
+
 # id 585987c9-f2a2-4271-8ac9-2e2bfbc85635	domain=fr
 gallia _ _ O
 est _ _ O
@@ -122575,6 +123355,22 @@ un _ _ O
 spectacle _ _ O
 en _ _ O
 direct _ _ O
+
+
+# id a634fc5e-4833-4696-971f-c439006f8019	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2014. _ _ O
 
 
 # id 5a760f23-2df1-4c2e-bdfc-4e887811e364	domain=fr
@@ -123077,6 +123873,40 @@ doyle _ _ I-Artist
 . _ _ O
 
 
+# id 29babcac-624a-4794-be60-d657a3799ae6	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2008 _ _ O
+. _ _ O
+
+
+# id ee3eee71-09d5-46f2-abc0-232fa8497b80	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1980 _ _ O
+. _ _ O
+
+
 # id 6aa423a4-1504-409f-b5a9-62db75c57a3f	domain=fr
 adapté _ _ O
 de _ _ O
@@ -123462,6 +124292,23 @@ en _ _ O
 vie. _ _ O
 
 
+# id 1f2cce2a-3268-4e1e-836e-c99f08b026e8	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1991 _ _ O
+. _ _ O
+
+
 # id 0d4ccee9-1cd0-4619-baed-111a19311018	domain=fr
 the _ _ B-WrittenWork
 washington _ _ I-WrittenWork
@@ -123569,6 +124416,23 @@ d'acquisition _ _ O
 millions _ _ O
 de _ _ O
 dollars. _ _ O
+
+
+# id 0b8a8562-e075-4073-9df2-9db7d8397280	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1984 _ _ O
+. _ _ O
 
 
 # id 67c46fe8-3e79-4301-adf2-6ef78df7a07d	domain=fr
@@ -123750,6 +124614,23 @@ l'auteur _ _ O
 de _ _ O
 behistun _ _ B-WrittenWork
 inscription _ _ I-WrittenWork
+. _ _ O
+
+
+# id 9d48cb4c-46f3-4f71-a3f3-96427653d983	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1974 _ _ O
 . _ _ O
 
 
@@ -124207,6 +125088,23 @@ la _ _ O
 noirceur. _ _ O
 
 
+# id b538f71f-9e6d-4a60-9e1f-e7457b01c71f	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2008 _ _ O
+. _ _ O
+
+
 # id 6bc0a253-d481-4b23-8404-3427de2580bc	domain=fr
 pourquoi _ _ O
 quelqu'un _ _ O
@@ -124356,6 +125254,23 @@ sur _ _ O
 : _ _ O
 
 
+# id e94f2c55-7148-4ee2-8c7d-52e0fb082057	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1999 _ _ O
+. _ _ O
+
+
 # id 00ff1c6a-92d4-43b9-95ed-dca6a3d2f469	domain=fr
 elle _ _ O
 le _ _ O
@@ -124451,6 +125366,23 @@ thank _ _ B-WrittenWork
 you _ _ I-WrittenWork
 for _ _ I-WrittenWork
 smoking _ _ I-WrittenWork
+. _ _ O
+
+
+# id b1055cc7-0579-46f2-bbca-336cf8d8bbdc	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1996 _ _ O
 . _ _ O
 
 
@@ -124596,6 +125528,23 @@ en _ _ O
 . _ _ O
 
 
+# id 79a44f77-f40e-4a37-adf0-11c03e1a2d15	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2002 _ _ O
+. _ _ O
+
+
 # id 2baeb4e8-4edc-4139-a155-1eaabcb9e2d8	domain=fr
 en _ _ O
 1998, _ _ O
@@ -124663,6 +125612,19 @@ de _ _ O
 l'exploration _ _ O
 de _ _ O
 texte. _ _ O
+
+
+# id f9651d0c-b46c-40b4-9f54-594709ffd6c1	domain=fr
+le _ _ O
+new _ _ B-WrittenWork
+international _ _ I-WrittenWork
+version _ _ I-WrittenWork
+traduit _ _ O
+le _ _ O
+passage _ _ O
+comme _ _ O
+suit _ _ O
+: _ _ O
 
 
 # id 5282f8da-60de-4094-a84c-b319e1dff3eb	domain=fr
@@ -124953,6 +125915,23 @@ suit _ _ O
 : _ _ O
 
 
+# id 38baba97-5703-4ca5-a4e4-8ed85edae8b6	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1980 _ _ O
+. _ _ O
+
+
 # id e0d4404b-4197-4882-bba2-0f40c9c0f17c	domain=fr
 al _ _ O
 mashriq _ _ O
@@ -125004,6 +125983,23 @@ propres _ _ O
 illustrations. _ _ O
 
 
+# id e787aa3d-08fe-494b-800d-cf4db7566591	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1984 _ _ O
+. _ _ O
+
+
 # id 60fe72ee-1028-485f-98a8-8dbba8870833	domain=fr
 basé _ _ O
 sur _ _ O
@@ -125011,6 +126007,23 @@ le _ _ O
 caractère _ _ O
 beetle _ _ B-WrittenWork
 bailey _ _ I-WrittenWork
+
+
+# id 06b43a61-1838-476e-9487-278b772c8558	domain=fr
+la _ _ O
+revue _ _ O
+est _ _ O
+résumée _ _ O
+et _ _ O
+indexée _ _ O
+dans _ _ O
+scopus _ _ B-WrittenWork
+et _ _ O
+science _ _ B-WrittenWork
+citation _ _ I-WrittenWork
+index _ _ I-WrittenWork
+expanded _ _ I-WrittenWork
+. _ _ O
 
 
 # id 785fdc7a-d50d-4bbb-8fdc-15c16be56fb2	domain=fr
@@ -125136,6 +126149,23 @@ sont _ _ O
 préservés. _ _ O
 
 
+# id 1b7e13fc-0971-4c79-b722-21dfd1c03946	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2012 _ _ O
+. _ _ O
+
+
 # id 9c4a2c92-f3d9-4a7a-bc91-b99735819fc5	domain=fr
 sa _ _ O
 première _ _ O
@@ -125242,6 +126272,23 @@ les _ _ O
 réactions _ _ O
 au _ _ O
 film. _ _ O
+
+
+# id 9ef85423-0bf7-4caf-9dc5-b893d5cf2f9b	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1973 _ _ O
+. _ _ O
 
 
 # id e8bdebcc-0191-4555-bb05-9f6877ed3f1b	domain=fr
@@ -125915,6 +126962,22 @@ et _ _ O
 l'élégant. _ _ O
 
 
+# id 5e5d1418-ec2e-4af0-b077-1acc82736266	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+ajouté _ _ O
+au _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1983 _ _ O
+. _ _ O
+
+
 # id 9960073a-6052-4686-95fb-9cce417a2bea	domain=fr
 il _ _ O
 a _ _ O
@@ -125928,6 +126991,23 @@ historic _ _ I-WrittenWork
 places _ _ I-WrittenWork
 en _ _ O
 1996 _ _ O
+. _ _ O
+
+
+# id 08d86867-5d3e-4396-940e-1fe5000d8671	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+dans _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1988 _ _ O
 . _ _ O
 
 
@@ -125950,6 +127030,23 @@ abus _ _ O
 émotionnels _ _ O
 et _ _ O
 sexuels. _ _ O
+
+
+# id f2f6d925-3d88-4f51-a08f-8eca1a2de9a6	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1999 _ _ O
+. _ _ O
 
 
 # id 06b002c4-6090-406b-9227-094f986d52b1	domain=fr
@@ -126024,6 +127121,23 @@ historic _ _ I-WrittenWork
 places _ _ I-WrittenWork
 en _ _ O
 2003 _ _ O
+. _ _ O
+
+
+# id 0ee526b7-9292-43cb-af88-9ca4274e163f	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1991 _ _ O
 . _ _ O
 
 
@@ -126127,6 +127241,40 @@ cela _ _ O
 causerait _ _ O
 des _ _ O
 problèmes. _ _ O
+
+
+# id e5d9372d-7eee-4059-95ed-dd6117293d66	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1996 _ _ O
+. _ _ O
+
+
+# id e5cd1d57-2a1e-4c50-9d86-4b96699fd178	domain=fr
+la _ _ O
+revue _ _ O
+est _ _ O
+résumée _ _ O
+et _ _ O
+indexée _ _ O
+dans _ _ O
+scopus _ _ B-WrittenWork
+et _ _ O
+science _ _ B-WrittenWork
+citation _ _ I-WrittenWork
+index _ _ I-WrittenWork
+expanded _ _ I-WrittenWork
+. _ _ O
 
 
 # id 8b814408-e16a-46eb-9227-83063ccf2f9e	domain=fr
@@ -126239,6 +127387,23 @@ entre _ _ O
 1936 _ _ B-WrittenWork
 et _ _ O
 1968 _ _ B-WrittenWork
+. _ _ O
+
+
+# id d885f61b-3931-4608-af76-98557117602c	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1986 _ _ O
 . _ _ O
 
 
@@ -126439,6 +127604,22 @@ les _ _ O
 temps. _ _ O
 
 
+# id 87387c5b-4a1d-4f1d-9143-6924a37d7fb1	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2015. _ _ O
+
+
 # id b930bf5c-0dd9-4b19-92c8-10ade0af5b64	domain=fr
 2019 _ _ O
 : _ _ O
@@ -126580,6 +127761,23 @@ premier _ _ O
 . _ _ O
 
 
+# id 7b05057c-10d7-4cf1-a9bf-4f1b4cc865b1	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2008 _ _ O
+. _ _ O
+
+
 # id eef69f98-9dc5-4539-a0e8-f618c5945dff	domain=fr
 l'album _ _ O
 n'a _ _ O
@@ -126639,6 +127837,23 @@ paroles _ _ O
 fatalistes. _ _ O
 
 
+# id 8c754efc-69a8-4b53-81fe-13b89603a6e6	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2008 _ _ O
+. _ _ O
+
+
 # id 0b42d1ec-a9d7-42bf-933a-8bebd99bb53d	domain=fr
 bendery _ _ O
 (bender) _ _ O
@@ -126671,6 +127886,22 @@ lucy _ _ B-Artist
 maud _ _ I-Artist
 montgomery _ _ I-Artist
 . _ _ O
+
+
+# id 3df93766-d37a-46c7-97f5-17480b7be68e	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2015. _ _ O
 
 
 # id 9b292de2-9f71-4b1e-a3ac-08f52f235043	domain=fr
@@ -126829,6 +128060,23 @@ register _ _ I-WrittenWork
 of _ _ I-WrittenWork
 historic _ _ I-WrittenWork
 places _ _ I-WrittenWork
+. _ _ O
+
+
+# id aef5a828-37e2-448f-b6c1-fa880fc772cd	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1986 _ _ O
 . _ _ O
 
 
@@ -127115,6 +128363,23 @@ en _ _ O
 . _ _ O
 
 
+# id 89f036e8-01be-42f1-af5a-5f8d242d2836	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2008 _ _ O
+. _ _ O
+
+
 # id d83cbdfb-c228-44c6-b88e-b87338c247bb	domain=fr
 il _ _ O
 a _ _ O
@@ -127129,6 +128394,19 @@ places _ _ I-WrittenWork
 en _ _ O
 1974 _ _ O
 . _ _ O
+
+
+# id 27067aa4-ebda-4905-ac3a-efbee8762324	domain=fr
+le _ _ O
+new _ _ B-WrittenWork
+international _ _ I-WrittenWork
+version _ _ I-WrittenWork
+traduit _ _ O
+le _ _ O
+passage _ _ O
+comme _ _ O
+suit _ _ O
+: _ _ O
 
 
 # id 25069b36-dd7e-4133-8737-613dd2227a9c	domain=fr
@@ -127295,6 +128573,23 @@ de _ _ O
 the _ _ B-WrittenWork
 american _ _ I-WrittenWork
 spectator _ _ I-WrittenWork
+. _ _ O
+
+
+# id c64e7fc5-63bb-45c0-b92b-d5789bf0d907	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2002 _ _ O
 . _ _ O
 
 
@@ -127465,6 +128760,23 @@ comme _ _ O
 un _ _ O
 look _ _ O
 désirable. _ _ O
+
+
+# id 812f23bc-e049-459c-b944-5d4773adb11a	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2002 _ _ O
+. _ _ O
 
 
 # id 3e4bd2f7-43ec-4642-a2fd-40f78034068f	domain=fr
@@ -128160,6 +129472,23 @@ subtilement _ _ O
 délicieux. _ _ O
 
 
+# id 657adf72-67e7-4949-9aca-9e1f96ccdb9b	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1981 _ _ O
+. _ _ O
+
+
 # id a0897c1f-1667-4d2f-a420-702cef6c8490	domain=fr
 la _ _ O
 légende _ _ O
@@ -128421,6 +129750,22 @@ au _ _ O
 détail. _ _ O
 
 
+# id 1d75b048-a298-47d1-aae5-7c19f3d06f9e	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+ajouté _ _ O
+au _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1983 _ _ O
+. _ _ O
+
+
 # id a51005aa-a697-44dc-a580-57977b90857c	domain=fr
 jusqu'à _ _ O
 la _ _ O
@@ -128518,6 +129863,22 @@ carl _ _ B-OtherPER
 linnaeus _ _ I-OtherPER
 en _ _ O
 1758 _ _ O
+. _ _ O
+
+
+# id 5c024bf7-f2fd-43e6-b9e1-7500e5169cbb	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+ajouté _ _ O
+au _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1983 _ _ O
 . _ _ O
 
 
@@ -128856,6 +130217,19 @@ familjebok _ _ I-WrittenWork
 1911). _ _ O
 
 
+# id 0d521251-6b96-48c0-b2b5-4f27ba8ec830	domain=fr
+le _ _ O
+new _ _ B-WrittenWork
+international _ _ I-WrittenWork
+version _ _ I-WrittenWork
+traduit _ _ O
+le _ _ O
+passage _ _ O
+comme _ _ O
+suit _ _ O
+: _ _ O
+
+
 # id 7addc23b-c340-4ab3-ae90-ebc1d844fe68	domain=fr
 un _ _ O
 segment _ _ O
@@ -129011,6 +130385,23 @@ la _ _ O
 réforme. _ _ O
 
 
+# id 34ee1cf3-ef86-41e3-864c-31a2d1304d7c	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1990 _ _ O
+. _ _ O
+
+
 # id f38df95b-54f5-493a-b615-2bc456867e3c	domain=fr
 the _ _ B-WrittenWork
 new _ _ I-WrittenWork
@@ -129036,6 +130427,22 @@ bien _ _ O
 colorés. _ _ O
 . _ _ O
 . _ _ O
+
+
+# id be63bee6-d23b-4366-b85c-dbaa77d74c8c	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2014. _ _ O
 
 
 # id 1eaa2db8-5b53-4907-a47a-1a8899cee4fe	domain=fr
@@ -129344,6 +130751,23 @@ et _ _ O
 harper _ _ B-WrittenWork
 's _ _ I-WrittenWork
 bazaar _ _ I-WrittenWork
+. _ _ O
+
+
+# id 79769fc4-2ec9-4600-b7b3-3cd87bf8744f	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+dans _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1988 _ _ O
 . _ _ O
 
 
@@ -129677,6 +131101,22 @@ après _ _ O
 sa _ _ O
 première _ _ O
 représentation. _ _ O
+
+
+# id f38a6976-9b53-40c1-8b8a-68c246c6124d	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+ajouté _ _ O
+au _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2005 _ _ O
+. _ _ O
 
 
 # id 0e08dc1f-24eb-4540-8eae-6ab8854e78cf	domain=fr
@@ -130128,6 +131568,23 @@ la _ _ O
 science-fiction. _ _ O
 
 
+# id 1f4f5ba5-34cf-4d8e-a516-367de8e0b8b6	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1994 _ _ O
+. _ _ O
+
+
 # id e281965b-87a5-47f3-9def-6865f5909b0e	domain=fr
 eksŭ _ _ O
 sérialisé _ _ O
@@ -130253,6 +131710,23 @@ le _ _ O
 1771 _ _ O
 encyclopædia _ _ B-WrittenWork
 britannica _ _ I-WrittenWork
+. _ _ O
+
+
+# id 6b040608-eba0-453b-b6e4-326978bea766	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1984 _ _ O
 . _ _ O
 
 
@@ -130699,6 +132173,23 @@ journal _ _ I-WrittenWork
 . _ _ O
 
 
+# id 67379cd6-2496-4dae-aac5-c1f9ef8c4432	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1986 _ _ O
+. _ _ O
+
+
 # id 7655a4b3-c492-4cf9-a8d6-20f7bb8b75c7	domain=fr
 les _ _ O
 différences _ _ O
@@ -130848,6 +132339,23 @@ comme _ _ O
 un _ _ O
 gâchis _ _ O
 indulgent. _ _ O
+
+
+# id a695656c-b2da-4f19-bf6f-e45212fb1880	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1974 _ _ O
+. _ _ O
 
 
 # id 1cf865ca-494a-4fba-bdc5-a1ea19c92f4b	domain=fr
@@ -131068,6 +132576,23 @@ un _ _ O
 extrait. _ _ O
 
 
+# id 1ac763b7-81a9-4d5f-83db-c05c91adcdfe	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1997 _ _ O
+. _ _ O
+
+
 # id bc6dd38b-30b9-422f-a0d1-91c43df6b25d	domain=fr
 des _ _ O
 reportages _ _ O
@@ -131189,6 +132714,23 @@ en _ _ O
 . _ _ O
 
 
+# id 3b4c29eb-b59a-49cf-adf8-034efdcb9bea	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1990 _ _ O
+. _ _ O
+
+
 # id 03daeed2-2806-4e0d-a2b5-c024afc11eed	domain=fr
 il _ _ O
 est _ _ O
@@ -131249,6 +132791,23 @@ revue _ _ O
 littéraire _ _ O
 martín _ _ B-WrittenWork
 fierro _ _ I-WrittenWork
+. _ _ O
+
+
+# id 1c3c4be2-21a5-4e03-b457-fbd04a736392	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1996 _ _ O
 . _ _ O
 
 
@@ -131364,6 +132923,22 @@ revue _ _ O
 mathematische _ _ B-WrittenWork
 zeitschrift _ _ I-WrittenWork
 . _ _ O
+
+
+# id baf137b7-d7d9-4a6f-9920-a68aaf78d461	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2015. _ _ O
 
 
 # id 85a27528-3867-43fc-9327-cddf52354734	domain=fr
@@ -131643,6 +133218,23 @@ echo _ _ I-WrittenWork
 . _ _ O
 
 
+# id 0366df7c-a749-4a6a-b37a-925270eb535e	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1997 _ _ O
+. _ _ O
+
+
 # id 0769fda4-c809-4c31-bc5e-1b47ab459a52	domain=fr
 cinquain _ _ O
 est _ _ O
@@ -131842,6 +133434,23 @@ historic _ _ I-WrittenWork
 places _ _ I-WrittenWork
 en _ _ O
 2007 _ _ O
+. _ _ O
+
+
+# id 3c763364-acf9-4b4e-bcec-9ef3dc9dbd09	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2008 _ _ O
 . _ _ O
 
 
@@ -132067,6 +133676,23 @@ confession _ _ I-WrittenWork
 . _ _ O
 
 
+# id 2c4ff06b-bae9-4ef0-a6e5-bea7c1d47dda	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2012 _ _ O
+. _ _ O
+
+
 # id e047a156-30ea-4339-a785-448b9eabe44d	domain=fr
 en _ _ O
 2006, _ _ O
@@ -132091,6 +133717,23 @@ mieux _ _ O
 conservés _ _ O
 des _ _ O
 États-Unis. _ _ O
+
+
+# id 74c2aa35-922b-413f-8fa3-f39fb7f41ea1	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2001 _ _ O
+. _ _ O
 
 
 # id 99f28aea-7150-4710-9b49-a6ba01aa3688	domain=fr
@@ -132163,6 +133806,23 @@ et _ _ O
 13) _ _ O
 
 
+# id 1e99988d-a557-4e06-9390-fc4d92265b44	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2001 _ _ O
+. _ _ O
+
+
 # id 5937268d-5a1a-418c-b833-06999da0cfd6	domain=fr
 pc _ _ B-WrittenWork
 player _ _ I-WrittenWork
@@ -132225,6 +133885,22 @@ of _ _ I-Artist
 seeing _ _ I-Artist
 her _ _ I-Artist
 again _ _ I-Artist
+. _ _ O
+
+
+# id 423770ef-6ec4-44cc-837a-1a78671f48f5	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+ajouté _ _ O
+au _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+2005 _ _ O
 . _ _ O
 
 
@@ -132306,6 +133982,23 @@ watan _ _ I-WrittenWork
 et _ _ O
 el _ _ B-WrittenWork
 moudjahid _ _ I-WrittenWork
+. _ _ O
+
+
+# id 24786319-94dc-45c1-9549-bf37566254e3	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+répertorié _ _ O
+sur _ _ O
+le _ _ O
+national _ _ B-WrittenWork
+register _ _ I-WrittenWork
+of _ _ I-WrittenWork
+historic _ _ I-WrittenWork
+places _ _ I-WrittenWork
+en _ _ O
+1981 _ _ O
 . _ _ O
 
 
@@ -137035,6 +138728,18 @@ concurrent _ _ O
 . _ _ O
 
 
+# id 15aa77c3-e36f-43b6-805e-00344df5f104	domain=fr
+la _ _ O
+série _ _ O
+est _ _ O
+diffusée _ _ O
+en _ _ O
+ligne _ _ O
+sur _ _ O
+youtube _ _ B-Software
+. _ _ O
+
+
 # id 0b4dc4cb-16e4-48fe-81f6-051dc23b7624	domain=fr
 kmixer _ _ O
 a _ _ O
@@ -137253,6 +138958,18 @@ suffit _ _ O
 également. _ _ O
 
 
+# id 49a8e60b-15df-4d9f-b934-f3a3d53cd6c4	domain=fr
+la _ _ O
+série _ _ O
+est _ _ O
+diffusée _ _ O
+en _ _ O
+ligne _ _ O
+sur _ _ O
+youtube _ _ B-Software
+. _ _ O
+
+
 # id 65c4132e-e3f4-4a57-8ccc-632df104a5a9	domain=fr
 jboss _ _ B-Software
 drools _ _ I-Software
@@ -137314,6 +139031,18 @@ a _ _ O
 des _ _ O
 capacités _ _ O
 furtives. _ _ O
+
+
+# id f1ca12f1-0303-44dc-838e-4ed77cfb9831	domain=fr
+la _ _ O
+série _ _ O
+est _ _ O
+diffusée _ _ O
+en _ _ O
+ligne _ _ O
+sur _ _ O
+youtube _ _ B-Software
+. _ _ O
 
 
 # id bb7ab3d4-942c-4cd6-9b57-bdde4f134e2f	domain=fr
@@ -138427,6 +140156,31 @@ blum _ _ I-Artist
 . _ _ O
 
 
+# id c0f7a784-be6e-4044-82f5-a469e35c04c2	domain=fr
+la _ _ O
+bande _ _ O
+originale _ _ O
+est _ _ O
+devenue _ _ O
+le _ _ O
+meilleur _ _ O
+téléchargement _ _ O
+de _ _ O
+sa _ _ O
+catégorie _ _ O
+sur _ _ O
+itunes _ _ B-Software
+au-dessus _ _ O
+de _ _ O
+la _ _ O
+bande _ _ O
+originale _ _ O
+de _ _ O
+casino _ _ B-VisualWork
+royale _ _ I-VisualWork
+. _ _ O
+
+
 # id e71addd0-d312-492e-b461-0db6b9bdff5f	domain=fr
 heroquest _ _ B-Software
 une _ _ O
@@ -139237,6 +140991,22 @@ border _ _ I-OtherLOC
 a _ _ O
 été _ _ O
 ouvert. _ _ O
+
+
+# id d852b82c-9854-4f72-821a-934fb8667e71	domain=fr
+le _ _ O
+lancement _ _ O
+a _ _ O
+réussi _ _ O
+à _ _ O
+placer _ _ O
+le _ _ O
+satellite _ _ O
+dans _ _ O
+un _ _ O
+molniya _ _ B-OtherLOC
+orbit _ _ I-OtherLOC
+. _ _ O
 
 
 # id 908618ec-24c9-4043-814c-549f8a6fb11a	domain=fr
@@ -140315,6 +142085,22 @@ la _ _ O
 construction _ _ O
 de _ _ O
 l'église. _ _ O
+
+
+# id e7e086c6-369f-4a69-a2ff-7889cd15e64e	domain=fr
+le _ _ O
+lancement _ _ O
+a _ _ O
+réussi _ _ O
+à _ _ O
+placer _ _ O
+le _ _ O
+satellite _ _ O
+dans _ _ O
+un _ _ O
+molniya _ _ B-OtherLOC
+orbit _ _ I-OtherLOC
+. _ _ O
 
 
 # id 9464ab66-8eaa-474c-b962-350a717817c7	domain=fr
@@ -169054,6 +170840,25 @@ plummet _ _ O
 . _ _ O
 
 
+# id 89489219-0b79-4f92-ae6c-24381316a9ff	domain=fr
+les _ _ O
+coureurs _ _ O
+de _ _ O
+l'équipe _ _ O
+en _ _ O
+tête _ _ O
+de _ _ O
+ce _ _ O
+classement _ _ O
+étaient _ _ O
+identifiés _ _ O
+par _ _ O
+le _ _ O
+jaune _ _ O
+caps _ _ B-Clothing
+. _ _ O
+
+
 # id 896e3ddd-5372-4f98-9b9b-cff6b6a29f41	domain=fr
 les _ _ O
 deux _ _ O
@@ -169064,6 +170869,25 @@ utilisés _ _ O
 pour _ _ O
 désigner _ _ O
 sunglasses _ _ B-Clothing
+. _ _ O
+
+
+# id fb1e87e6-0ce1-4aa4-be0d-5f07fe3831df	domain=fr
+les _ _ O
+coureurs _ _ O
+de _ _ O
+l'équipe _ _ O
+en _ _ O
+tête _ _ O
+de _ _ O
+ce _ _ O
+classement _ _ O
+étaient _ _ O
+identifiés _ _ O
+par _ _ O
+le _ _ O
+jaune _ _ O
+caps _ _ B-Clothing
 . _ _ O
 
 
@@ -169313,6 +171137,25 @@ fragmentaires _ _ O
 ou _ _ O
 par _ _ O
 scarabs _ _ B-Clothing
+. _ _ O
+
+
+# id efffcab9-f641-4f45-9e8f-d6f69e9c8376	domain=fr
+les _ _ O
+coureurs _ _ O
+de _ _ O
+l'équipe _ _ O
+en _ _ O
+tête _ _ O
+de _ _ O
+ce _ _ O
+classement _ _ O
+étaient _ _ O
+identifiés _ _ O
+par _ _ O
+le _ _ O
+jaune _ _ O
+caps _ _ B-Clothing
 . _ _ O
 
 
@@ -169961,6 +171804,19 @@ en _ _ O
 cadeau. _ _ O
 
 
+# id bc74805f-c6c7-48e1-8171-5d65c7e3964c	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+examiné _ _ O
+et _ _ O
+décrit _ _ O
+par _ _ O
+paulin _ _ B-Cleric
+martin _ _ I-Cleric
+. _ _ O
+
+
 # id e8319670-ee49-4be0-8178-ea19494c090f	domain=fr
 en _ _ O
 1901, _ _ O
@@ -170145,6 +172001,19 @@ au _ _ O
 nom _ _ O
 du _ _ O
 pape _ _ O
+. _ _ O
+
+
+# id 4733d41e-1bb0-405f-96d4-f8738ef7a1bc	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+examiné _ _ O
+et _ _ O
+décrit _ _ O
+par _ _ O
+paulin _ _ B-Cleric
+martin _ _ I-Cleric
 . _ _ O
 
 
@@ -171308,6 +173177,19 @@ iii _ _ I-Cleric
 au _ _ O
 9ème _ _ O
 siècle. _ _ O
+
+
+# id 8f196ed4-725e-4e8d-ab82-1aa0e7b01577	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+examiné _ _ O
+et _ _ O
+décrit _ _ O
+par _ _ O
+paulin _ _ B-Cleric
+martin _ _ I-Cleric
+. _ _ O
 
 
 # id 9e6287d0-a025-4b54-ba96-6025e00ce4ad	domain=fr
@@ -172864,6 +174746,24 @@ dont _ _ O
 l'ordination _ _ O
 des _ _ O
 rois. _ _ O
+
+
+# id f76b3a83-2692-4d89-9413-a0dd39f2daf5	domain=fr
+il _ _ O
+a _ _ O
+été _ _ O
+examiné _ _ O
+et _ _ O
+décrit _ _ O
+par _ _ O
+paulin _ _ B-Cleric
+martin _ _ I-Cleric
+collationné _ _ O
+par _ _ O
+eduard _ _ B-OtherPER
+de _ _ I-OtherPER
+muralt _ _ I-OtherPER
+. _ _ O
 
 
 # id 85cfedc2-6dca-4744-adcd-4db06640f7a7	domain=fr
@@ -176863,6 +178763,21 @@ contrôle _ _ O
 anti-aérienne. _ _ O
 
 
+# id 41985091-06e2-4d2c-a958-f07d25d6fefc	domain=fr
+cette _ _ O
+ligne _ _ O
+va _ _ O
+entre _ _ O
+midland _ _ B-Station
+railway _ _ I-Station
+station _ _ I-Station
+et _ _ O
+perth _ _ B-Station
+railway _ _ I-Station
+station _ _ I-Station
+. _ _ O
+
+
 # id 8b837eab-3026-4f1d-a181-4bdccbad84e3	domain=fr
 le _ _ O
 quartier _ _ O
@@ -177418,6 +179333,21 @@ la _ _ O
 communauté _ _ O
 
 
+# id 8298aa9d-3af8-4fa5-8a47-3037f529182d	domain=fr
+cette _ _ O
+ligne _ _ O
+va _ _ O
+entre _ _ O
+midland _ _ B-Station
+railway _ _ I-Station
+station _ _ I-Station
+et _ _ O
+perth _ _ B-Station
+railway _ _ I-Station
+station _ _ I-Station
+. _ _ O
+
+
 # id d1724197-0d7c-4e3f-953b-aeedc42dae1d	domain=fr
 la _ _ O
 station _ _ O
@@ -177770,6 +179700,24 @@ services _ _ O
 v/line _ _ B-ORG
 de _ _ O
 melbourne _ _ B-Station
+. _ _ O
+
+
+# id ede64586-12a5-4661-aaf3-b35d66d3e6c5	domain=fr
+c'est _ _ O
+une _ _ O
+gare _ _ O
+ferroviaire _ _ O
+de _ _ O
+classe _ _ O
+3 _ _ O
+située _ _ O
+à _ _ O
+partir _ _ O
+de _ _ O
+bangkok _ _ B-Station
+railway _ _ I-Station
+station _ _ I-Station
 . _ _ O
 
 
@@ -178382,6 +180330,24 @@ metro _ _ I-ORG
 . _ _ O
 
 
+# id 6a02cc4d-1233-4729-bc3a-d493a1e3961e	domain=fr
+c'est _ _ O
+une _ _ O
+gare _ _ O
+ferroviaire _ _ O
+de _ _ O
+classe _ _ O
+3 _ _ O
+située _ _ O
+à _ _ O
+partir _ _ O
+de _ _ O
+bangkok _ _ B-Station
+railway _ _ I-Station
+station _ _ I-Station
+. _ _ O
+
+
 # id 21517cdc-a50f-45df-96ba-badf7ca05ef7	domain=fr
 barth _ _ B-Station
 railway _ _ I-Station
@@ -178598,6 +180564,20 @@ terminus _ _ O
 san _ _ B-Station
 isidro _ _ I-Station
 . _ _ O
+
+
+# id ce614e48-2d06-459a-bfc0-84a35a7c9d50	domain=fr
+la _ _ O
+gare _ _ O
+de _ _ O
+nakodar _ _ O
+est _ _ O
+la _ _ O
+train _ _ B-Station
+station _ _ I-Station
+la _ _ O
+plus _ _ O
+proche. _ _ O
 
 
 # id 13774f41-a12e-4fb7-b662-8929eb65e1ad	domain=fr
@@ -179459,6 +181439,20 @@ new _ _ I-Station
 street _ _ I-Station
 station _ _ I-Station
 ci-dessous. _ _ O
+
+
+# id e3b84e7d-a6dc-41ae-8d60-ff3bc7c501c0	domain=fr
+la _ _ O
+gare _ _ O
+de _ _ O
+nakodar _ _ O
+est _ _ O
+la _ _ O
+train _ _ B-Station
+station _ _ I-Station
+la _ _ O
+plus _ _ O
+proche. _ _ O
 
 
 # id 8a389ef0-36dd-430f-9927-7bea6deba13a	domain=fr
@@ -189598,6 +191592,23 @@ goliath _ _ I-OtherPER
 . _ _ O
 
 
+# id 65398994-76c9-4188-8964-db040bad08a0	domain=fr
+il _ _ O
+est _ _ O
+l'un _ _ O
+des _ _ O
+personnages _ _ O
+du _ _ O
+célèbre _ _ O
+tableau _ _ O
+de _ _ O
+jan _ _ B-OtherPER
+matejko _ _ I-OtherPER
+prussian _ _ B-ArtWork
+homage _ _ I-ArtWork
+. _ _ O
+
+
 # id 7c858908-3d6a-46ab-b63f-a7dc935bffe0	domain=fr
 le _ _ O
 panneau _ _ O
@@ -189911,6 +191922,15 @@ succédé _ _ O
 à _ _ O
 chōjū-giga _ _ B-ArtWork
 . _ _ O
+
+
+# id e6fddf1d-ccf6-4ac2-ab90-efdb747c47dc	domain=fr
+une _ _ O
+encre _ _ O
+hanging _ _ B-ArtWork
+scroll _ _ I-ArtWork
+sur _ _ O
+papier _ _ O
 
 
 # id 829f7327-320d-4415-8248-e74d12fd5d86	domain=fr
@@ -190430,6 +192450,23 @@ roncalli _ _ I-OtherPER
 . _ _ O
 
 
+# id 084fff7a-a02d-488b-9456-b2968d5ec0e4	domain=fr
+il _ _ O
+est _ _ O
+l'un _ _ O
+des _ _ O
+personnages _ _ O
+du _ _ O
+célèbre _ _ O
+tableau _ _ O
+de _ _ O
+jan _ _ B-OtherPER
+matejko _ _ I-OtherPER
+prussian _ _ B-ArtWork
+homage _ _ I-ArtWork
+. _ _ O
+
+
 # id fbc04448-ebb6-45a5-a930-4de676a8967e	domain=fr
 le _ _ O
 tableau _ _ O
@@ -190883,6 +192920,15 @@ pays _ _ O
 . _ _ O
 
 
+# id 4150e63f-a7e5-4312-a172-1160593b9e52	domain=fr
+une _ _ O
+encre _ _ O
+hanging _ _ B-ArtWork
+scroll _ _ I-ArtWork
+sur _ _ O
+papier _ _ O
+
+
 # id 130a2975-93d4-4b14-b32c-1a9ae3ccce3a	domain=fr
 a _ _ B-ArtWork
 woman _ _ I-ArtWork
@@ -191027,6 +193073,31 @@ vidéo _ _ O
 par _ _ O
 raw _ _ B-PrivateCorp
 fury _ _ I-PrivateCorp
+
+
+# id 580d6db3-46b4-4578-a9ce-7219db55b5f6	domain=fr
+en _ _ O
+1989 _ _ O
+1990 _ _ O
+et _ _ O
+au _ _ O
+début _ _ O
+de _ _ O
+1991, _ _ O
+ils _ _ O
+ont _ _ O
+modelé _ _ O
+pour _ _ O
+chanel _ _ B-PrivateCorp
+thierry _ _ B-Artist
+mugler _ _ I-Artist
+jean _ _ B-Artist
+paul _ _ I-Artist
+gaultier _ _ I-Artist
+john _ _ B-Artist
+galliano _ _ I-Artist
+et _ _ O
+d'autres. _ _ O
 
 
 # id 71a6da5d-652c-4bd4-a5e7-66570ffd25b4	domain=fr

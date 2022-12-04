@@ -457,6 +457,8 @@ if RUN_GOOGLE_TRANSLATE:
 with open(JSON_FILE, 'r', encoding=ENCODING) as f:
     results = json.load(f)
 
+assert len(results) == len(sentences_to_translate) == len(sentences), f"The number of results, sentences to translate, and sentences as a whole do not match. ({len(results)}, {len(sentences_to_translate)}, {len(sentences)})"
+
 with open(LONDON_JSON_FILE, 'r', encoding=ENCODING) as f:
     london_results = json.load(f)
 
@@ -466,7 +468,11 @@ for result in london_results:
     key_sentence = result[INPUT_TEXT_KEY].replace(START_BRACKET, "").replace(END_BRACKET, "")
     if key_sentence not in london_results_dict:
         london_results_dict[key_sentence] = []
-    london_results_dict[key_sentence].append(result[TRANSLATED_TEXT_KEY])
+    translated_text = result[TRANSLATED_TEXT_KEY]
+    # some examples may be in the dataset multiple times
+    # we only want to add it once
+    if translated_text not in london_results_dict[key_sentence]:
+        london_results_dict[key_sentence].append(result[TRANSLATED_TEXT_KEY])
 
 skipped: List[Tuple[str, SkipReason]]= []
 
@@ -475,10 +481,6 @@ trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 
 # we want to put the results back into the CONLL format
 for sentence_index, sentence in enumerate(sentences):
-    # debugging
-    if sentence.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
-        print("DEALING WITH TRICKY")
-        print(sentence.get_entities())
     entities: List[str] = sentence.get_mulda_entities()
     categories: List[TagCategory] = sentence.get_entity_categories()
     result = results[sentence_index]
@@ -487,11 +489,16 @@ for sentence_index, sentence in enumerate(sentences):
     string_sentence = sentence.get_pure_string()
 
     if string_sentence not in london_results_dict:
-        warnings.warn(f"Skipping sentence because it was not found in the London results: {sentence}")
+        # TODO
+        # warnings.warn(f"Skipping sentence because it was not found in the London results: {sentence}")
         skipped.append((sentence.id_value, SkipReason.NotFoundInLondon))
         continue
 
     if len(entities) != len(london_results_dict[string_sentence]):
+        print("FOUND BUG")
+        print(sentence)
+        print(entities)
+        print(london_results_dict[string_sentence])
         # note that this should never really happen
         warnings.warn(f"Skipping sentence because the number of entities in it does not match the number of translated sentences: {sentence}")
         skipped.append((sentence.id_value, SkipReason.MismatchedEntities))
@@ -510,7 +517,8 @@ for sentence_index, sentence in enumerate(sentences):
                 entity_index_in_translated_mulda_entity_sentence = word_index
 
         if match_count != 1:
-            warnings.warn(f"Could not find entity {entity} in translated sentence exactly once:{translated_mulda_entity_sentence_str}")
+            # TODO
+            # warnings.warn(f"Could not find entity {entity} in translated sentence exactly once:{translated_mulda_entity_sentence_str}")
             skipped.append((sentence.id_value, SkipReason.EntityNotFound))
             valid = False
             break
@@ -519,11 +527,6 @@ for sentence_index, sentence in enumerate(sentences):
 
     if not valid:
         continue
-
-    # debugging
-    if sentence.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
-        print("HERE")
-        print(sentence.get_entities())
 
     # convert the translated MulDA string into an actual sentence
     translated_mulda_entity_sentence = Sentence(id_value=sentence.id_value, domain=sentence.domain)
@@ -534,23 +537,14 @@ for sentence_index, sentence in enumerate(sentences):
         new_word = Word(word, tag)
         translated_mulda_entity_sentence.add_word(new_word)
 
-    # debugging
-    if sentence.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
-        print("WHAT WENT WRONG")
-        print(translated_mulda_entity_sentence.get_entities())
-
     orig_entities = sentence.get_entities()
     try:
         trans_entities = [get_bracketed_entity(translated_sentence) for translated_sentence in london_results_dict[string_sentence]]
     except InvalidBracketingError:
-        warnings.warn(f"Skipping sentence because the entities in it could not be bracketed without confusion: {sentence}")
+        # TODO
+        # warnings.warn(f"Skipping sentence because the entities in it could not be bracketed without confusion: {sentence}")
         skipped.append((sentence.id_value, SkipReason.InvalidBracketing))
         continue
-
-    # debugging
-    if sentence.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
-        print("HERE AGAIN")
-        print(sentence.get_entities())
 
     domain = Domain(TARGET_LANGUAGE)
 
