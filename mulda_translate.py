@@ -4,7 +4,7 @@ import json
 import warnings
 from enum import Enum
 from dataclasses import dataclass
-from typing import List, Tuple
+from typing import List, Tuple, Dict
 from tqdm import tqdm
 from google.cloud import translate_v2 as translate
 
@@ -192,6 +192,15 @@ class Sentence:
     def __str__(self):
         return " ".join([str(word) for word in self.words])
 
+    def __len__(self):
+        return len(self.words)
+
+    def __getitem__(self, index):
+        return self.words[index]
+
+    def __iter__(self):
+        return iter(self.words)
+
     def get_pure_string(self):
         return " ".join([word.token for word in self.words])
 
@@ -200,7 +209,7 @@ class Sentence:
         if word.tag.tag_type == TagType.B:
             self.entity_indexes.append(len(self.words) - 1)
 
-    def replace_old_entities(self, new_entities) -> 'Sentence':
+    def replace_entities(self, new_entities) -> 'Sentence':
         '''Replace the entities in the old sentence with new entities'''
         assert len(new_entities) == len(self.entity_indexes)
         ret = Sentence(id_value=self.id_value, domain=self.domain)
@@ -225,7 +234,7 @@ class Sentence:
         '''
         mulda_entities = [f"{category.value}{index}" for index, category in enumerate(self.get_entity_categories())]
 
-        return self.replace_old_entities(mulda_entities)
+        return self.replace_entities(mulda_entities)
 
     def get_entity(self, entity_indexes_index: int) -> str:
         '''Return the entity at the given index'''
@@ -313,6 +322,7 @@ def list_to_generator(input_list):
 
 def add_conll_word(file_desc, word: Word):
     '''Add a word to the (open) file'''
+    assert isinstance(word, Word), word
     file_desc.write(f"{word.token} _ _ {word.tag.tag_format}\n")
 
 def add_conll_id_line(file_desc, id_value: str, domain: Domain):
@@ -464,10 +474,11 @@ trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 
 # we want to put the results back into the CONLL format
 for sentence_index, sentence in enumerate(sentences):
-    entities = sentence.get_mulda_entities()
+    entities: List[str] = sentence.get_mulda_entities()
+    categories: List[TagCategory] = sentence.get_entity_categories()
     result = results[sentence_index]
     # translated sentence with MulDA entities
-    translated_mulda_entity_sentence = result[TRANSLATED_TEXT_KEY]
+    translated_mulda_entity_sentence_str = result[TRANSLATED_TEXT_KEY]
     string_sentence = sentence.get_pure_string()
 
     if string_sentence not in london_results_dict:
@@ -481,27 +492,36 @@ for sentence_index, sentence in enumerate(sentences):
         skipped.append((sentence.id_value, SkipReason.MismatchedEntities))
         continue
 
-    entity_indexes_in_translated_mulda_entity_sentence = []
+    # format: {index of entity in translated mulda sentence: TagCategory}
+    entity_indexes_in_translated_mulda_entity_sentence: Dict[int, TagCategory] = {}
     valid = True
     # UPGRADE: this could be done more efficiently
-    for entity in entities:
+    for entity_index, entity in enumerate(entities):
         match_count = 0
         entity_index_in_translated_mulda_entity_sentence = None
-        for word_index, word in translated_mulda_entity_sentence.split():
+        for word_index, word in enumerate(translated_mulda_entity_sentence_str.split()):
             if entity in word:
                 match_count += 1
                 entity_index_in_translated_mulda_entity_sentence = word_index
 
         if match_count != 1:
-            warnings.warn(f"Could not find entity {entity} in translated sentence exactly once{translated_mulda_entity_sentence}")
+            warnings.warn(f"Could not find entity {entity} in translated sentence exactly once{translated_mulda_entity_sentence_str}")
             skipped.append((sentence.id_value, SkipReason.EntityNotFound))
             valid = False
             break
 
-        entity_indexes_in_translated_mulda_entity_sentence.append(entity_index_in_translated_mulda_entity_sentence)
+        entity_indexes_in_translated_mulda_entity_sentence[entity_index_in_translated_mulda_entity_sentence] = categories[entity_index]
 
     if not valid:
         continue
+
+    # convert the translated MulDA string into an actual sentence
+    translated_mulda_entity_sentence = Sentence(id_value=sentence.id_value, domain=sentence.domain)
+    for word_index, word in enumerate(translated_mulda_entity_sentence_str.split()):
+        tag_type = TagType.B if word_index in entity_indexes_in_translated_mulda_entity_sentence else TagType.O
+        tag = Tag(tag_type, entity_indexes_in_translated_mulda_entity_sentence[word_index])
+        new_word = Word(word, tag)
+        translated_mulda_entity_sentence.add_word(new_word)
 
     orig_entities = sentence.get_entities()
     try:
@@ -517,7 +537,7 @@ for sentence_index, sentence in enumerate(sentences):
     # now we just need to do the replacement
     for entities, file in [(orig_entities, orig_file), (trans_entities, trans_file)]:
         add_conll_id_line(file, sentence.id_value, domain)
-        new_sentence = sentence.replace_entities(entities)
+        new_sentence = translated_mulda_entity_sentence.replace_entities(entities)
         for new_word in new_sentence:
             add_conll_word(file, word)
         file.write("\n\n")
