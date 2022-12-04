@@ -475,8 +475,10 @@ for sentence_index, sentence in enumerate(sentences):
         continue
 
     if len(entities) != len(london_results_dict[string_sentence]):
-        if len(entities) < len(london_results_dict[string_sentence]):
+        if len(entities) > len(london_results_dict[string_sentence]):
             warnings.warn(f"Your dataset has some odd examples. Most likely you have two examples with the exact same text where one is labeled with more entities than the other text. Check id {sentence.id_value} for this.")
+            skipped.append((sentence.id_value, SkipReason.MismatchedEntities))
+            continue
         warnings.warn(f"Example {sentence.id_value} has {len(entities)} entities but the london_translation.py results produced {len(london_results_dict[string_sentence])} different translations. This is usually because the example was included twice for the london_translation. We're going to just use the first translation produced by london_translation.py.")
         london_results_dict[string_sentence] = london_results_dict[string_sentence][:len(entities)]
 
@@ -533,7 +535,7 @@ for sentence_index, sentence in enumerate(sentences):
 
 print(f"Skipped {len(skipped)}/{len(sentences)} sentences")
 print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.NotFoundInLondon])} sentences because they were not found in the London results - this is due to the stable London translation being unable to bracket the entities in the sentence. (london_translate should have displayed an InvalidBracketing warning for these sentence.)")
-print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.MismatchedEntities])} sentences because the number of entities in the sentence does not match the number of translated sentences. This should never happpen and is a sign that something is very wrong with matching the London examples to the MulDA examples. If this is more than 0, something is very wrong. Most likely, you have two examples with the exact same text but different IDs.")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.MismatchedEntities])} sentences because the number of entities in the sentence does not match the number of translated sentences. This should never happpen and is a sign that something is very wrong with matching the London examples to the MulDA examples. If this is more than 0, something is wrong. Most likely, you have two examples with the exact same text but labels.")
 print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.EntityNotFound])} sentences because the entity in the sentence could not be found in the translated sentence.")
 print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.InvalidBracketing])} sentences because the entities in the sentence could not be unbracketed without confusion. This is due to the translation done in london_translate not being clear.")
 with open(SKIPPED_FILE, 'w', encoding=ENCODING) as f:
