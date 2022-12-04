@@ -389,5 +389,58 @@ Here's another bad training example:
 Alright, I think I've got the main portions solid.
 
 I renamed the old outputs so it's clear that they're london outputs rather than MulDA outputs.
-TODO will need to rename these outputs in the london_translate script.
+Will need to rename these outputs in the london_translate script.
+
+So many issues:
+{
+  "translatedText": "OtherPER0 1939 Vainqueur de VisualWork1 et fondateur d'ORG2",
+  "input": "OtherPER0 1939 VisualWork1 winner and founder of ORG2"
+ },
+ {
+  "translatedText": "sous le r\u00e8gne de l'AutrePER0 ( r . 1861 \u2013 1875 ) :",
+  "input": "during the reign of the OtherPER0 ( r . 1861 \u2013 1875 ) :"
+ },
+
+So the question is whether or not we should fix them or just run with it.
+Lemme look at their code to see if they do anything special like putting "no translate" spans around it.
+
+Wow. Their code is a mess.
+I see why Asal tried to do all the fancy replacement stuff - they did too!
+That seems like an issue.
+
+There are also lines like:
+    if tl == 'nl':
+        t = t.replace("PERO","PER0")
+
+Which just make me think that they really messed up and had a really hacky codebase.
+
+Just used ChatGPT to try to understand some of it, and yeah, it's an absolute mess.
+
+So to just follow MulDA would likely result in a lot of dropped examples.
+Let's create a list of issues we see with French:
+    1. "l'" "d'" and other things like this being added.
+    2. Words like "OTHER" in "OTHERPER" or "POLITICIAN" being translated
+        Note that this is not consistent, even among labels:
+            {
+            "translatedText": "sa fille Politician0 a jou\u00e9 le r\u00f4le de premi\u00e8re dame pendant sa pr\u00e9sidence.",
+            "input": "her daughter Politician0 served in the role of first lady during her presidency ."
+            },
+            {
+            "translatedText": "19 juin \u2013 Politicien0 membre du congr\u00e8s (mort de WrittenWork1)",
+            "input": "june 19 \u2013 Politician0 congressman ( died WrittenWork1 )"
+            }
+
+Those seem to be the main issues found over and over again.
+So let's do two versions, lol.
+One where we deal with these issues, and one where we don't.
+
+Okay, so we know that French does the "d'" and "l'" (and "s'") thing when the next word starts with a vowel.
+However, the entities may start with a vowel when the term itself does not.
+
+Also, the "de", "le", and "se" are important for the translation.
+
+This seems like it's going to be really complex.
+So, for now, I think I'm just going to do it the simple way and then ask the group how they'd like to handle it later today.
+
+I was thinking that the function could just treat it as a single word, but then realized the liason would be all wrong for those examples where the entity doesn't start with a vowel.
 '''

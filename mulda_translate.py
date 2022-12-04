@@ -8,10 +8,18 @@ from typing import List, Tuple
 from tqdm import tqdm
 from google.cloud import translate_v2 as translate
 
-ENCODING = 'utf-8'
+
 # languages must be in Domain enum
 SOURCE_LANGUAGE = "en"
 TARGET_LANGUAGE = "fr"
+# set to False if you've already run Google Translate once
+RUN_GOOGLE_TRANSLATE = False
+# whether or not to try to limit the number of skipped examples by using handcrafted rules
+FIX_ISSUES = False
+FIX_ISSUES_STRING = "plain" if FIX_ISSUES else "fancy"
+# how many full sentences to translate at once
+# (each full sentence is translated once for each entity in the sentence)
+BATCH_SIZE = 100 # can be 100 here because there's only one sentence per translation
 INPUT_FOLDER = "data"
 OUTPUT_FOLDER = "output"
 INPUT_FILE_STRUCTURE = "{input_folder}/{source_language}-train.conll"
@@ -19,19 +27,17 @@ OUTPUT_FOLDER_STRUCTURE = "{output_folder}/{source_language}-{target_language}"
 INPUT_FILE = INPUT_FILE_STRUCTURE.format(input_folder=INPUT_FOLDER, source_language=SOURCE_LANGUAGE)
 OUTPUT_FOLDER = OUTPUT_FOLDER_STRUCTURE.format(output_folder=OUTPUT_FOLDER, source_language=SOURCE_LANGUAGE, target_language=TARGET_LANGUAGE)
 JSON_FILE_NAME = "mulda_results.json"
+LONDON_JSON_FILE_NAME = "london_results.json"
 SKIPPED_FILE_NAME = "mulda_skipped.csv"
 JSON_FILE = f"{OUTPUT_FOLDER}/{JSON_FILE_NAME}"
+LONDON_JSON_FILE = f"{OUTPUT_FOLDER}/{LONDON_JSON_FILE_NAME}"
 SKIPPED_FILE = f"{OUTPUT_FOLDER}/{SKIPPED_FILE_NAME}"
-UNTRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-orig-mulda.conll"
-TRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-trans-mulda.conll"
+UNTRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-orig-{FIX_ISSUES_STRING}-mulda.conll"
+TRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-trans-{FIX_ISSUES_STRING}-mulda.conll"
 UNTRANSLATED_CONLL_FILE = f"{OUTPUT_FOLDER}/{UNTRANSLATED_CONLL_FILE_NAME}"
 TRANSLATED_CONLL_FILE = f"{OUTPUT_FOLDER}/{TRANSLATED_CONLL_FILE_NAME}"
-# set to False if you've already run Google Translate once
-RUN_GOOGLE_TRANSLATE = True
-SECRET_JSON = "./secret/high-comfort-368404-39708e023588.json"
-# how many full sentences to translate at once
-# (each full sentence is translated once for each entity in the sentence)
-BATCH_SIZE = 100 # can be 100 here because there's only one sentence per translation
+SECRET_JSON = "./secret/google_api.json"
+ENCODING = 'utf-8'
 
 ID_VALUE_REGEX_KEY = "id_value"
 DOMAIN_REGEX_KEY = "domain"
@@ -139,7 +145,6 @@ class Tag:
     def tag_format(self):
         return f"{self.tag_type.value}{f'-{self.tag_category.value}' if self.tag_type != TagType.O else ''}"
     
-
 class Domain(Enum):
     '''The domains are:
     BN-Bangla
@@ -190,6 +195,7 @@ class Sentence:
         self.id_value = id_value
         self.domain = domain
         self.words = words
+        # each element of this list is the index (into self.words) of the start of an entity
         self.entity_indexes = entity_indexes
 
     def __str__(self):
@@ -342,6 +348,35 @@ def add_conll_id_line(file_desc, id_value: str, domain: Domain):
     # the output tabs displays slightly differently than the input tabs on my computer - unsure why
     file_desc.write(f"# id {id_value}\tdomain={domain.value}\n")
 
+def plain_word_check(word, entity):
+    '''See if the word and entity match'''
+    return word == entity
+
+def en_fr_word_check(given_word, entity):
+    '''
+    See if the word and entity match.
+    Deals with two cases specific to English --> French
+    1. The entity having l' or d' or other French articles with apostrophes in front of it.
+    2. The entity being translated
+    '''
+    splits = given_word.split("'")
+    if len(splits) != 1:
+        for word in splits:
+            if en_fr_word_check(word, entity):
+                return True
+    if "AUTRE" in given_word:
+        given_word.replace("AUTRE", "OTHER")
+    if "POLITICIEN" in given_word:
+        given_word.replace("POLITICIEN", "POLITICIAN")
+    return given_word == entity
+    
+    
+def get_word_check_function(source_domain: Domain, target_domain: Domain):
+    if not FIX_ISSUES:
+        return plain_word_check
+    if source_domain == Domain.EN and target_domain == Domain.FR:
+
+
 if RUN_GOOGLE_TRANSLATE:
     translator = translate.Client.from_service_account_json(SECRET_JSON)
 
@@ -390,8 +425,6 @@ for line in tqdm(input_file, total=num_lines):
 if sentence.words:
     sentences.append(sentence)
 
-skipped: List[Tuple[str, SkipReason]]= []
-
 # we now have a list of sentences
 # for each sentence, we want to replace all the entities with the name of the entity like they do in MulDA
 # "James went to Cali" -> "PER0 went to LOC1"
@@ -404,9 +437,13 @@ if RUN_GOOGLE_TRANSLATE:
     for i in tqdm(range(len(sentences_to_translate) // BATCH_SIZE + 1)):
         start = BATCH_SIZE * i
         end = min(BATCH_SIZE * (i + 1), len(sentences_to_translate))
-        # see https://stackoverflow.com/questions/1198777/double-iteration-in-list-comprehension
-        batch = [sentence for valid_sentences in sentences_to_translate[start:end] for sentence in valid_sentences]
+        batch = sentences_to_translate[start:end]
         results.extend(translator.translate(batch, TARGET_LANGUAGE, 'text', SOURCE_LANGUAGE))
+
+    os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+    with open(JSON_FILE, 'w', encoding=ENCODING) as f:
+        json.dump(results, f, indent=1)
+        print(f"Results saved to {JSON_FILE}")
 
 
 # USE LONDON_TRANSLATE.PY TO DO THIS PART
@@ -436,9 +473,15 @@ if RUN_GOOGLE_TRANSLATE:
 #         json.dump(results, f, indent=1)
 #         print(f"Results saved to {JSON_FILE}")
 
-# # we now have results in the json file
-# with open(JSON_FILE, 'r', encoding=ENCODING) as f:
-#     results = json.load(f)
+
+# we now have results in the json files
+with open(JSON_FILE, 'r', encoding=ENCODING) as f:
+    results = json.load(f)
+
+with open(LONDON_JSON_FILE, 'r', encoding=ENCODING) as f:
+    london_results = json.load(f)
+
+skipped: List[Tuple[str, SkipReason]]= []
 
 # we want to put the results back into the CONLL format
 trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
