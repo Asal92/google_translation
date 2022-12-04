@@ -443,4 +443,17 @@ This seems like it's going to be really complex.
 So, for now, I think I'm just going to do it the simple way and then ask the group how they'd like to handle it later today.
 
 I was thinking that the function could just treat it as a single word, but then realized the liason would be all wrong for those examples where the entity doesn't start with a vowel.
+
+Alright, after talking with team, we just decided to go the simple route.
+If it seems to drop too many examples, we may try to fix problem #2 (where it translates them).
+
+Wait. If the London translate skips over examples *before* the translation, then that will mess up the examples found.
+Because the London translate will have a different number of entities / will have less sentences.
+
+Well, then, maybe I just process the london results to make sure the sentences match.
+I'll I've done is put brackets around words. So if I remove all the brackets, I should get the original sentence.
+
+That's correct. The `check_brackets` function ensures that the brackets are the only ones in there.
+
+I could rename things "stable" instead of "London", but I think that would just take extra time with no functionality.
 '''

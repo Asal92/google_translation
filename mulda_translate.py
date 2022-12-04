@@ -75,6 +75,7 @@ class SkipReason(Enum):
     InvalidBracketing = "InvalidBracketing"
     BracketsNotFound = "BracketsNotFound"
     TranslationMismatch = "MismatchedSentences"
+    NotFoundInLondon = "NotFoundInLondon"
 
 class TagCategory(Enum):
     '''The tags are:
@@ -192,11 +193,11 @@ class Sentence:
         if entity_indexes is None:
             entity_indexes = []
 
-        self.id_value = id_value
-        self.domain = domain
-        self.words = words
+        self.id_value: str = id_value
+        self.domain: Domain = domain
+        self.words: List[Word] = words
         # each element of this list is the index (into self.words) of the start of an entity
-        self.entity_indexes = entity_indexes
+        self.entity_indexes: List[int] = entity_indexes
 
     def __str__(self):
         return " ".join([str(word) for word in self.words])
@@ -206,23 +207,32 @@ class Sentence:
         if word.tag.tag_type == TagType.B:
             self.entity_indexes.append(len(self.words) - 1)
 
+    def replace_old_entities(self, new_entities) -> 'Sentence':
+        '''Replace the entities in the old sentence with new entities'''
+        assert len(new_entities) == len(self.entity_indexes)
+        ret = Sentence(id_value=self.id_value, domain=self.domain)
+        for i, word in enumerate(self.words):
+            if i in self.entity_indexes:
+                assert word.tag.tag_type == TagType.B
+                new_entity = new_entities.pop(0)
+                new_entity_words = new_entity.split()
+                for word_index, new_word in new_entity_words:
+                    tag_type = TagType.B if word_index == 0 else TagType.I
+                    ret.add_word(Word(token=new_word, tag=Tag(tag_type=tag_type, tag_category=word.tag.tag_category)))
+            elif word.tag.tag_type == TagType.I:
+                pass
+            else:
+                ret.add_word(Word(token=word.token, tag=Tag(tag_type=TagType.O, tag_category=TagCategory.Empty)))
+        return ret
+
     def get_mulda_entity_sentence(self) -> str:
         '''
         Returns the sentence in the MulDA format.
         Jamie Valentine was born in London -> PER0 was born in LOC1
         '''
-        tag_index = 0
-        ret = ""
-        for word in self.words:
-            if word.tag.tag_type == TagType.B:
-                ret += f"{word.tag.tag_category.value}{tag_index} "
-                tag_index += 1
-            elif word.tag.tag_type == TagType.I:
-                pass
-            else:
-                ret += f"{word.token} "
+        mulda_entities = [f"{category.value}{index}" for index, category in enumerate(self.get_entity_categories())]
 
-        return ret.strip()
+        return self.replace_old_entities(mulda_entities)
 
     def get_bracketed_sentences(self) -> List[str]:
         '''For each entity in the sentence, return a string of the sentence with the entity bracketed'''
@@ -273,7 +283,7 @@ class Sentence:
     def get_entities(self) -> List[str]:
         return [self.get_entity(i) for i in range(len(self.entity_indexes))]
 
-    def get_mulda_entity_names(self) -> List[str]:
+    def get_mulda_entities(self) -> List[str]:
         '''
         Return the entities in the MulDA format
         "Jamie Valentine was born in London" -> ["PER0", "LOC1"]
@@ -348,34 +358,30 @@ def add_conll_id_line(file_desc, id_value: str, domain: Domain):
     # the output tabs displays slightly differently than the input tabs on my computer - unsure why
     file_desc.write(f"# id {id_value}\tdomain={domain.value}\n")
 
-def plain_word_check(word, entity):
-    '''See if the word and entity match'''
-    return word == entity
 
-def en_fr_word_check(given_word, entity):
-    '''
-    See if the word and entity match.
-    Deals with two cases specific to English --> French
-    1. The entity having l' or d' or other French articles with apostrophes in front of it.
-    2. The entity being translated
-    '''
-    splits = given_word.split("'")
-    if len(splits) != 1:
-        for word in splits:
-            if en_fr_word_check(word, entity):
-                return True
-    if "AUTRE" in given_word:
-        given_word.replace("AUTRE", "OTHER")
-    if "POLITICIEN" in given_word:
-        given_word.replace("POLITICIEN", "POLITICIAN")
-    return given_word == entity
-    
-    
-def get_word_check_function(source_domain: Domain, target_domain: Domain):
-    if not FIX_ISSUES:
-        return plain_word_check
-    if source_domain == Domain.EN and target_domain == Domain.FR:
+# TODO delete if not used
+# def plain_word_check(word, entity):
+#     '''See if the word and entity match'''
+#     return word == entity
 
+# TODO delete if not used
+# def en_fr_word_check(given_word, entity):
+#     '''
+#     See if the word and entity match.
+#     Deals with two cases specific to English --> French
+#     1. The entity having l' or d' or other French articles with apostrophes in front of it.
+#     2. The entity being translated
+#     '''
+#     splits = given_word.split("'")
+#     if len(splits) != 1:
+#         for word in splits:
+#             if en_fr_word_check(word, entity):
+#                 return True
+#     if "AUTRE" in given_word:
+#         given_word.replace("AUTRE", "OTHER")
+#     if "POLITICIEN" in given_word:
+#         given_word.replace("POLITICIEN", "POLITICIAN")
+#     return given_word == entity
 
 if RUN_GOOGLE_TRANSLATE:
     translator = translate.Client.from_service_account_json(SECRET_JSON)
@@ -430,7 +436,7 @@ if sentence.words:
 # "James went to Cali" -> "PER0 went to LOC1"
 sentences_to_translate: List[str] = []
 for sentence in tqdm(sentences, desc="Converting entities"):
-    sentences_to_translate.append(sentence.get_mulda_entity_sentence())
+    sentences_to_translate.append(str(sentence.get_mulda_entity_sentence()))
 
 if RUN_GOOGLE_TRANSLATE:
     results = []
@@ -481,92 +487,73 @@ with open(JSON_FILE, 'r', encoding=ENCODING) as f:
 with open(LONDON_JSON_FILE, 'r', encoding=ENCODING) as f:
     london_results = json.load(f)
 
+# format: {original sentence (no brackets): [translated sentence with entity 0 in brackets, translated sentence with entity 1 in brackets, ...]}
+london_results_dict = {}
+for result in london_results:
+    key_sentence = result[INPUT_TEXT_KEY].replace(START_BRACKET, "").replace(END_BRACKET, "")
+    if key_sentence not in london_results_dict:
+        london_results_dict[key_sentence] = []
+    london_results_dict[key_sentence].append(result[TRANSLATED_TEXT_KEY])
+
 skipped: List[Tuple[str, SkipReason]]= []
 
 # we want to put the results back into the CONLL format
-trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
-orig_file = open(UNTRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
-translations_index = 0
-total_translations_expected = sum([len(sentence.entity_indexes) for sentence in valid_sentences])
-total_translations_reality = len(results)
-assert total_translations_expected == total_translations_reality, f"Expected {total_translations_expected} translations, but got {total_translations_reality}"
-for sentence_index, sentence in enumerate(tqdm(valid_sentences)):
-    number_of_entities = len(sentence.entity_indexes)
-    # each one of these translations will have bracketed a single entity
-    translations = [result[TRANSLATED_TEXT_KEY] for result in results[translations_index:translations_index + number_of_entities]]
+for sentence_index, sentence in enumerate(sentences):
+    entities = sentence.get_mulda_entities()
+    result = results[sentence_index]
+    # translated sentence with MulDA entities
+    translated_mulda_entity_sentence = result[TRANSLATED_TEXT_KEY]
+    string_sentence = str(sentence)
 
-    assert len(translations) == number_of_entities, f"The number of translations ({len(translations)}) does not match the number of entities ({number_of_entities})"
-
-    translations_index += number_of_entities
-
-    # the translation without any of the entities
-    main_unbracketed_translation = None
-    skip = False
-    for translation in translations:
-        if not check_brackets(translation):
-            warnings.warn(f"Skipping! Could not find brackets in translated sentence: {translation}", BracketsNotFoundWarning)
-            skip = True
-            skipped.append((sentence.id_value, SkipReason.BracketsNotFound))
-            break
-        # check to make sure the translation is the same, regardless of which entity is bracketed
-        unbracketed_translation = remove_brackets(translation)
-        if main_unbracketed_translation is None:
-            main_unbracketed_translation = unbracketed_translation
-        if unbracketed_translation != main_unbracketed_translation:
-            warnings.warn(f"Skipping! Translated sentence ('{translation}') (unbracketed: '{unbracketed_translation}') does not match the unbracketed main translation ('{main_unbracketed_translation}')", TranslationMismatchWarning)
-            skip = True
-            skipped.append((sentence.id_value, SkipReason.TranslationMismatch))
-            break
-
-    if skip:
-        continue
-        
-    entity_categories = sentence.get_entity_categories()
-    original_entity_tokens = sentence.get_entities()
-    translated_entity_tokens = [get_bracketed_entity(translation) for translation in translations]
-
-    assert len(entity_categories) == len(original_entity_tokens) == len(translated_entity_tokens), f"The number of categories ({len(entity_categories)}), original entity tokens ({len(original_entity_tokens)}), and translated entity tokens ({len(translated_entity_tokens)}) do not match"
-
-    # create a template for the translated sentence
-    # this will be used to replace the original entity tokens with the translated entity tokens
-    template = main_unbracketed_translation
-    assert TEMPLATE_TOKEN not in template
-    for translated_entity_token in translated_entity_tokens:
-        # this will work even if there are duplicate entities because the order remains the same
-        # we add extra space around the template token so that it separates out from punctuation that may have been added right next to the entity
-        template = template.replace(translated_entity_token, f" {TEMPLATE_TOKEN} ", 1)
-
-    entity_indexes_index = -1
-    split_template = template.split()
-    if split_template.count(TEMPLATE_TOKEN) != number_of_entities:
-        # this is usually due to punctuation being added just after bracketing in the translation
-        warnings.warn(f"Skipping! The number of template tokens ({split_template.count(TEMPLATE_TOKEN)}) in the split template ({split_template}) does not match the number of entities ({number_of_entities}) in the template ({template}). This is usually due to punctuation just after the template in the split template.", TemplateTokenMismatchWarning)
-        skipped.append((sentence.id_value, SkipReason.TemplateTokenMismatch))
+    if string_sentence not in london_results_dict:
+        warnings.warn(f"Skipping sentence because it was not found in the London results: {sentence}")
+        skipped.append((sentence.id_value, SkipReason.NotFoundInLondon))
         continue
 
-    # there's no more skipping at this point
-    # add the id line
+    if len(entities) != len(london_results_dict[string_sentence]):
+        # note that this should never really happen
+        warnings.warn(f"Skipping sentence because the number of entities in it does not match the number of translated sentences: {sentence}")
+        skipped.append((sentence.id_value, SkipReason.MismatchedEntities))
+        continue
+
+    entity_indexes_in_translated_mulda_entity_sentence = []
+    valid = True
+    # UPGRADE: this could be done more efficiently
+    for entity in entities:
+        match_count = 0
+        entity_index_in_translated_mulda_entity_sentence = None
+        for word_index, word in translated_mulda_entity_sentence.split():
+            if entity in word:
+                match_count += 1
+                entity_index_in_translated_mulda_entity_sentence = word_index
+
+        if match_count != 1:
+            warnings.warn(f"Could not find entity {entity} in translated sentence exactly once{translated_mulda_entity_sentence}")
+            skipped.append((sentence.id_value, SkipReason.EntityNotFound))
+            valid = False
+            break
+
+        entity_indexes_in_translated_mulda_entity_sentence.append(entity_index_in_translated_mulda_entity_sentence)
+
+    if not valid:
+        continue
+
+    # at this point we know the entities in both the original sentence and the translated sentence are there.
+    # now we just need to do the replacement
+    orig_entities = sentence.get_entities()
+    trans_entities = [get_bracketed_entity(translated_sentence) for translated_sentence in london_results_dict[string_sentence]]
+
+    orig_file = open(UNTRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
+    trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
+
     domain = Domain(TARGET_LANGUAGE)
-    add_conll_id_line(trans_file, sentence.id_value, domain)
-    add_conll_id_line(orig_file, sentence.id_value, domain)
 
-    for word in split_template:
-        if word == TEMPLATE_TOKEN:
-            entity_indexes_index += 1
-            category = entity_categories[entity_indexes_index]
-            original_entity_tokens_split = original_entity_tokens[entity_indexes_index].split()
-            translated_entity_tokens_split = translated_entity_tokens[entity_indexes_index].split()
-            for tokens, file in zip([original_entity_tokens_split, translated_entity_tokens_split], [orig_file, trans_file]):
-                for token_index, token in enumerate(tokens):
-                    word = Word(token, Tag(TagType.B if token_index == 0 else TagType.I, category))
-                    add_conll_word(file, word)
-        else:
-            word = Word(word, Tag(TagType.O, TagCategory.Empty))
-            add_conll_word(orig_file, word)
-            add_conll_word(trans_file, word)
-
-    trans_file.write("\n\n")
-    orig_file.write("\n\n")
+    for entities, file in [(orig_entities, orig_file), (trans_entities, trans_file)]:
+        add_conll_id_line(file, sentence.id_value, domain)
+        new_sentence = sentence.replace_entities(entities)
+        for new_word in new_sentence:
+            add_conll_word(file, word)
+        file.write("\n\n")
 
 print(f"Skipped {len(skipped)}/{len(sentences)} sentences")
 print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.InvalidBracketing])} sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)")
