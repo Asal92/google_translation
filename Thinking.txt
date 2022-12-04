@@ -480,4 +480,43 @@ I think I'm just going to skip duplicate examples. I think that's the best way t
 It will trigger a few assertions for now, but I can just remove those.
 
 The other issue is the period at the end. That should also be able to be fixed.
+
+en-fr:
+    Skipped 6086/16767 sentences
+    Skipped 72 sentences because they were not found in the London results - this is due to the stable London translation being unable to bracket the entities in the sentence. (london_translate should have displayed an InvalidBracketing warning for these sentence.)
+    Skipped 0 sentences because the number of entities in the sentence does not match the number of translated sentences. This should never happpen and is a sign that something is very wrong with matching the London examples to the MulDA examples. If this is more than 0, something is very wrong. Most likely, you have two examples with the exact same text but different IDs.
+    Skipped 5984 sentences because the entity in the sentence could not be found in the translated sentence.
+    Skipped 19 sentences because the entities in the sentence could not be unbracketed without confusion. This is due to the translation done in london_translate not being clear.
+
+fr-en:
+    Duplicate sentence id: e10abc93-6256-43a0-b0ac-d935dc94dd45
+    Duplicate sentence id: dd775963-340f-4a69-aa8d-5037d3624a2e
+    Duplicate sentence id: 0b581054-c451-41b9-bf7f-4857e4ff74c7
+    Duplicate sentence id: b2f6f9ca-6d14-42bc-a117-6e8b153bcfc4
+    Duplicate sentence id: 29041eca-f7a9-4ec3-a60f-e6c1ea1d4097
+    Duplicate sentence id: 27e8edf1-3f22-49ef-bcaa-079ce1304f9c
+    Duplicate sentence id: d541a48c-646f-46ac-8e48-a88e324147a3
+    Duplicate sentence id: 0edbca16-ac11-46af-a042-3041d62d6291
+    Duplicate sentence id: 2346a1ac-df75-46f6-9092-f6ca2f4322cc
+    Duplicate sentence id: fc31d647-f1c2-4587-9f8d-528e4b867a00
+    Duplicate sentence id: 1870982f-51c8-4722-8e41-f0d5f07fbaa3
+    Duplicate sentence id: 059562b5-2bc4-4058-ad6b-9898934bb161
+    Duplicate sentence id: 21379213-006d-4723-aa44-92f334b52c1f
+    Duplicate sentence id: d5a34638-3bfe-421e-a9f9-a90941b4f9b8
+    Duplicate sentence id: 8cbeb5ba-1cdb-41ff-a5d3-6db3522cf1ef
+    Duplicate sentence id: 2a1090ac-3ea4-41ee-b560-a0fc14e6395a
+    Duplicate sentence id: 5e2aee93-a9b0-4f21-afbd-c8c8410d41dc
+    Duplicate sentence id: 77e81bf8-0a2b-41ab-9b9e-23c051bde708
+    Duplicate sentence id: 3db2fe38-abdb-4077-8457-a041b637a058
+    Duplicate sentence id: 6e63361e-b7bb-4534-bab5-cbac088bfa60
+    Duplicate sentence id: 591da156-d990-4634-b7b7-6ace69cf5142
+    Duplicate sentence id: dc6b7e04-c201-4c2c-b868-50984c03fa3e
+    Duplicate sentence id: f3cbdb5b-2b6f-4c49-848d-e793d8257c93
+    Duplicate sentence id: f9e30990-bdde-44ea-9768-05a834f88ac8
+    Duplicate sentence id: 75627163-90bd-46d1-b7a6-e70c64dd2e2c
+    Duplicate sentence id: ba49f431-c785-4416-8a9e-6ce9a18525ea
+    Duplicate sentence id: 675709f9-d577-4dbc-8da6-5a0d550d028e
+    Duplicate sentence id: c38f698c-37c5-40fb-a64d-47dbcbc29596
+
+Great, another assertion failed.
 '''
