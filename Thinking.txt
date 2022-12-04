@@ -478,4 +478,6 @@ Sometimes, the same example is translated differently.
 
 I think I'm just going to skip duplicate examples. I think that's the best way to handle this.
 It will trigger a few assertions for now, but I can just remove those.
+
+The other issue is the period at the end. That should also be able to be fixed.
 '''
