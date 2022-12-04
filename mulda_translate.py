@@ -475,15 +475,10 @@ for sentence_index, sentence in enumerate(sentences):
         continue
 
     if len(entities) != len(london_results_dict[string_sentence]):
-        assert len(entities) < len(london_results_dict[string_sentence]), f"Sentence entities: {entities}, London results: {london_results_dict[string_sentence]}"
+        if len(entities) < len(london_results_dict[string_sentence]):
+            warnings.warn(f"Your dataset has some odd examples. Most likely you have two examples with the exact same text where one is labeled with more entities than the other text. Check id {sentence.id_value} for this.")
         warnings.warn(f"Example {sentence.id_value} has {len(entities)} entities but the london_translation.py results produced {len(london_results_dict[string_sentence])} different translations. This is usually because the example was included twice for the london_translation. We're going to just use the first translation produced by london_translation.py.")
         london_results_dict[string_sentence] = london_results_dict[string_sentence][:len(entities)]
-        # TODO
-        # print("FOUND BUG")
-        # print(sentence)
-        # print(entities)
-        # print(london_results_dict[string_sentence])
-        # note that this should never really happen
 
     # format: {index of entity in translated mulda sentence: TagCategory}
     entity_indexes_in_translated_mulda_entity_sentence: Dict[int, TagCategory] = {}

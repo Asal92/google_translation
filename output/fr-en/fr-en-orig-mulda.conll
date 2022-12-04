@@ -159609,3 +159609,3247 @@ the _ _ O
 grille. _ _ O
 
 
+# id c31e84aa-35f9-49d4-a250-4bc054ec6cde	domain=en
+for _ _ O
+ford _ _ B-CarManufacturer
+cosworth _ _ B-ORG
+as _ _ O
+engine _ _ O
+manufacturer. _ _ O
+
+
+# id d2ce3e6a-414a-4b9e-be8a-1a330822e778	domain=en
+it _ _ O
+was _ _ O
+the _ _ O
+time _ _ O
+when _ _ O
+audi _ _ B-CarManufacturer
+and _ _ O
+peugeot _ _ B-CarManufacturer
+competed _ _ O
+in _ _ O
+performance. _ _ O
+
+
+# id 06256210-4f68-4788-9ff7-e3b9170ab5aa	domain=en
+the _ _ O
+race _ _ O
+was _ _ O
+won _ _ O
+by _ _ O
+albert _ _ B-Athlete
+divo _ _ I-Athlete
+in _ _ O
+a _ _ O
+sunbeam _ _ B-CarManufacturer
+with _ _ O
+an _ _ O
+average _ _ O
+speed _ _ O
+of _ _ O
+156 _ _ O
+km/h. _ _ O
+
+
+# id b45adcfd-26ff-4452-b7c3-a0c17df3aa65	domain=en
+cottereau _ _ B-CarManufacturer
+dijon _ _ B-HumanSettlement
+manufacturer _ _ O
+of _ _ O
+car(ette)s _ _ O
+motorcycles _ _ O
+and _ _ O
+bicycles. _ _ O
+
+
+# id 609a969d-f29b-4158-8d13-b640ac468411	domain=en
+riley _ _ B-CarManufacturer
+English _ _ O
+car _ _ O
+brand _ _ O
+that _ _ O
+disappeared. _ _ O
+
+
+# id 6fbb70f0-af53-446a-828e-d81880bf8d95	domain=en
+Attached _ _ O
+from _ _ O
+mid _ _ O
+1968 _ _ O
+to _ _ O
+the _ _ O
+brand _ _ O
+new _ _ O
+competition _ _ O
+department _ _ O
+of _ _ O
+the _ _ O
+simca _ _ B-CarManufacturer
+brand, _ _ O
+he _ _ O
+won _ _ O
+several _ _ O
+rally _ _ O
+events _ _ O
+between _ _ O
+1971 _ _ O
+and _ _ O
+1973. _ _ O
+
+
+# id fd682d80-a6e8-450a-ac17-54b4d5b7a40b	domain=en
+their _ _ O
+plane _ _ O
+was _ _ O
+fitted _ _ O
+with _ _ O
+two _ _ O
+rolls-royce _ _ B-CarManufacturer
+engines _ _ O
+each. _ _ O
+
+
+# id fae907a9-e198-4fdd-aa2c-dbc67d5578be	domain=en
+porsche _ _ B-CarManufacturer
+volkswagen _ _ B-CarManufacturer
+ferdinand _ _ B-Scientist
+porsche _ _ I-Scientist
+ferry _ _ B-Scientist
+porsche _ _ I-Scientist
+ferdinand _ _ B-Artist
+alexander _ _ I-Artist
+porsche _ _ I-Artist
+ferdinand _ _ B-Scientist
+piëch _ _ I-Scientist
+
+
+# id 7f2b9f33-ef11-484b-9a34-94dcf49b6c36	domain=en
+underwater, _ _ O
+each _ _ O
+propeller _ _ O
+was _ _ O
+driven _ _ O
+by _ _ O
+a _ _ O
+160 _ _ O
+horsepower _ _ O
+( _ _ O
+) _ _ O
+ansaldo _ _ B-CarManufacturer
+electric _ _ O
+motor. _ _ O
+
+
+# id 4e3db3e5-2b30-46ba-9f8b-399bc36e0107	domain=en
+his _ _ O
+mother _ _ O
+works _ _ O
+in _ _ O
+the _ _ O
+IT _ _ O
+field _ _ O
+in _ _ O
+the _ _ O
+fiat _ _ B-CarManufacturer
+car _ _ O
+factory. _ _ O
+
+
+# id 3faa477e-d97e-42af-bbee-5cb9b0a587f9	domain=en
+bentley _ _ O
+badge _ _ O
+and _ _ O
+hood _ _ O
+ornament _ _ O
+bw _ _ O
+. _ _ O
+jpg _ _ O
+| _ _ O
+winged _ _ O
+b _ _ O
+bentley _ _ B-CarManufacturer
+
+
+# id 44655140-6adc-49f8-9110-63466e108c60	domain=en
+versailles _ _ B-Vehicle
+is _ _ O
+the _ _ O
+name _ _ O
+of _ _ O
+a _ _ O
+French _ _ O
+passenger _ _ O
+car _ _ O
+built _ _ O
+by _ _ O
+simca _ _ B-CarManufacturer
+from _ _ O
+1954 _ _ O
+to _ _ O
+1957. _ _ O
+
+
+# id 675bffd8-fdd0-43c4-a33d-e93fe637c799	domain=en
+representing _ _ O
+a _ _ O
+third _ _ O
+of _ _ O
+the _ _ O
+world's _ _ O
+resource, _ _ O
+it _ _ O
+is _ _ O
+of _ _ O
+particular _ _ O
+interest _ _ O
+to _ _ O
+the _ _ O
+bolloré _ _ B-CarManufacturer
+group. _ _ O
+
+
+# id 11acdfc0-9bbe-463d-a6e2-16d8ccdb01dd	domain=en
+ultimately _ _ O
+the _ _ O
+service _ _ B-AerospaceManufacturer
+technique _ _ I-AerospaceManufacturer
+de _ _ I-AerospaceManufacturer
+l'aéronautique _ _ I-AerospaceManufacturer
+ordered _ _ O
+a _ _ O
+real _ _ O
+fighter _ _ O
+equipped _ _ O
+with _ _ O
+a _ _ O
+hispano-suiza _ _ B-CarManufacturer
+engine _ _ O
+from _ _ O
+. _ _ O
+
+
+# id 234fe011-423c-4002-aa6e-7e420bae36a5	domain=en
+5: _ _ O
+location _ _ O
+of _ _ O
+cycles _ _ B-CarManufacturer
+peerless _ _ I-CarManufacturer
+at _ _ O
+the _ _ O
+beginning _ _ O
+of _ _ O
+. _ _ O
+
+
+# id 0b18a6fb-9b06-4546-8454-7de7d6a8875c	domain=en
+perdisa _ _ B-Athlete
+maserati _ _ B-CarManufacturer
+min _ _ O
+36 _ _ O
+sec _ _ O
+4 _ _ O
+
+
+# id 07e8a99e-3801-4c7a-8eff-d623f0ee27a5	domain=en
+bel _ _ B-OtherPROD
+air _ _ I-OtherPROD
+car _ _ O
+produced _ _ O
+by _ _ O
+chevrolet _ _ B-CarManufacturer
+from _ _ O
+1950 _ _ O
+to _ _ O
+1976 _ _ O
+at _ _ O
+états-unis _ _ B-HumanSettlement
+and _ _ O
+until _ _ O
+1981 _ _ O
+at _ _ O
+canada _ _ B-HumanSettlement
+
+
+# id bd8a9fa1-ea03-4ad9-980c-2a298df2f5fc	domain=en
+the _ _ O
+model _ _ O
+is _ _ O
+the _ _ O
+result _ _ O
+of _ _ O
+an _ _ O
+order _ _ O
+from _ _ O
+a _ _ O
+harley-davidson _ _ B-CarManufacturer
+dealer _ _ O
+who _ _ O
+wanted _ _ O
+a _ _ O
+resistant _ _ O
+jacket _ _ O
+for _ _ O
+the _ _ O
+motorcyclist _ _ O
+in _ _ O
+the _ _ O
+event _ _ O
+of _ _ O
+a _ _ O
+fall. _ _ O
+
+
+# id f14a9d29-9ff8-4703-806a-22bbd9274ae9	domain=en
+phillipe _ _ O
+auber _ _ O
+( _ _ O
+t _ _ O
+) _ _ O
+won _ _ O
+the _ _ O
+competition _ _ O
+three _ _ O
+consecutive _ _ O
+times _ _ O
+and _ _ O
+bugatti _ _ B-CarManufacturer
+six _ _ O
+overall _ _ O
+. _ _ O
+
+
+# id e4f0dbeb-5ed2-441a-a933-2069cf06223c	domain=en
+he _ _ O
+is _ _ O
+the _ _ O
+father _ _ O
+of _ _ O
+chevrolet _ _ B-CarManufacturer
+
+
+# id cd498c1c-2718-410f-81a5-3f4789d7ae50	domain=en
+salvadori _ _ B-Athlete
+aston _ _ B-CarManufacturer
+martin _ _ I-CarManufacturer
+min _ _ O
+44 _ _ O
+s _ _ O
+7 _ _ O
+
+
+# id e8e4558e-6c4e-4721-84aa-07665ca1995b	domain=en
+schell _ _ B-Athlete
+maserati _ _ B-CarManufacturer
+min _ _ O
+28 _ _ O
+s _ _ O
+7 _ _ O
+
+
+# id a2e00d61-8fc6-4336-b19d-42dae6342dae	domain=en
+Trump _ _ O
+then _ _ O
+ordered _ _ O
+automaker _ _ O
+general _ _ B-CarManufacturer
+motors _ _ I-CarManufacturer
+to _ _ O
+make _ _ O
+ventilators. _ _ O
+
+
+# id 1d561651-049b-48b5-b3dc-dcc5dc353651	domain=en
+in _ _ O
+1963 _ _ O
+a _ _ O
+restyling _ _ O
+brought _ _ O
+it _ _ O
+closer _ _ O
+to _ _ O
+the _ _ O
+cadillac _ _ B-CarManufacturer
+style. _ _ O
+
+
+# id 3b81e5f1-2244-49b5-86c5-59a7c3c17d90	domain=en
+a _ _ O
+niche _ _ O
+where _ _ O
+honda _ _ B-CarManufacturer
+with _ _ O
+cr-v _ _ B-Vehicle
+and _ _ O
+land _ _ B-CarManufacturer
+rover _ _ I-CarManufacturer
+and _ _ O
+its _ _ O
+freelander _ _ B-Vehicle
+subsequently _ _ O
+rushed. _ _ O
+
+
+# id 277ee19d-6d18-4a75-a196-9497ff676e0a	domain=en
+the _ _ O
+first _ _ O
+resulted _ _ O
+in _ _ O
+an _ _ O
+abandonment _ _ O
+on _ _ O
+ariès _ _ B-CarManufacturer
+3l. _ _ O
+with _ _ O
+the _ _ O
+experienced _ _ O
+arthur _ _ B-Athlete
+duray _ _ I-Athlete
+at _ _ O
+the _ _ O
+end _ _ O
+of _ _ O
+his _ _ O
+career. _ _ O
+
+
+# id 3c4fa2c5-3fcc-4489-bec9-0a74e3375fe7	domain=en
+Argentina _ _ O
+continued _ _ O
+to _ _ O
+negotiate _ _ O
+with _ _ O
+the _ _ O
+Italian _ _ O
+company _ _ O
+ansaldo _ _ B-CarManufacturer
+with _ _ O
+the _ _ O
+aim _ _ O
+of _ _ O
+acquiring _ _ O
+two _ _ O
+more _ _ O
+powerful _ _ O
+battleships. _ _ O
+
+
+# id 205bb51d-411b-4bc3-923c-a4bdd376a2cb	domain=en
+his _ _ O
+successes _ _ O
+were _ _ O
+achieved _ _ O
+mainly _ _ O
+in _ _ O
+ford _ _ B-CarManufacturer
+lotus _ _ B-Vehicle
+cortina _ _ I-Vehicle
+. _ _ O
+
+
+# id 749a498b-57fe-4507-b01b-dbd13ca05b61	domain=en
+the _ _ O
+two-litre _ _ O
+engines _ _ O
+prepared _ _ O
+by _ _ O
+irmscher _ _ B-CarManufacturer
+develop _ _ O
+170 _ _ O
+to _ _ O
+180 _ _ O
+horsepower _ _ O
+(against _ _ O
+240 _ _ O
+for _ _ O
+the _ _ O
+group _ _ O
+4 _ _ O
+versions). _ _ O
+
+
+# id 43f71f50-863e-4845-9f05-ac51bcf554b6	domain=en
+advertisement _ _ O
+on _ _ O
+a _ _ O
+golf _ _ O
+course _ _ O
+for _ _ O
+ford _ _ B-CarManufacturer
+
+
+# id 46a06e2c-858d-4f76-a347-3bdcff5fd4f0	domain=en
+convention _ _ O
+of _ _ O
+the _ _ O
+German _ _ O
+automotive _ _ O
+company _ _ O
+audi _ _ B-CarManufacturer
+September _ _ O
+9 _ _ O
+
+
+# id b77c6296-b216-42ea-9820-ed0f524ad8d5	domain=en
+beaufort _ _ B-Athlete
+porsche _ _ B-CarManufacturer
+min _ _ O
+43 _ _ O
+s _ _ O
+4 _ _ O
+
+
+# id 20e042b6-30cd-42e0-96a1-df41b5a46208	domain=en
+general _ _ B-CarManufacturer
+motors _ _ I-CarManufacturer
+decided _ _ O
+to _ _ O
+stop _ _ O
+production _ _ O
+of _ _ O
+the _ _ O
+ion _ _ O
+after _ _ O
+the _ _ O
+2007 _ _ O
+model _ _ O
+year. _ _ O
+
+
+# id 387b4f73-fcfb-4d66-9286-e526646f4b1a	domain=en
+the _ _ O
+alan _ _ B-CarManufacturer
+is _ _ O
+a _ _ O
+German _ _ O
+automobile _ _ O
+manufactured _ _ O
+in _ _ O
+limited _ _ O
+numbers _ _ O
+between _ _ O
+1923 _ _ O
+and _ _ O
+1925. _ _ O
+
+
+# id 69a8726f-c10b-4047-ba67-b26ad1e121bb	domain=en
+the _ _ O
+rear _ _ O
+part _ _ O
+of _ _ O
+the _ _ O
+car _ _ O
+had _ _ O
+also _ _ O
+been _ _ O
+modified _ _ O
+similar _ _ O
+to _ _ O
+the _ _ O
+ferrari _ _ B-CarManufacturer
+sports _ _ O
+coupe. _ _ O
+
+
+# id 0d537267-dd05-49a5-bf88-3566246cabf4	domain=en
+nevertheless _ _ O
+the _ _ O
+two _ _ O
+manufacturers _ _ O
+audi _ _ B-CarManufacturer
+and _ _ O
+peugeot _ _ B-CarManufacturer
+were _ _ O
+able _ _ O
+to _ _ O
+gauge _ _ O
+each _ _ O
+other _ _ O
+in _ _ O
+anticipation _ _ O
+of _ _ O
+the _ _ O
+race. _ _ O
+
+
+# id 3ac6b533-bfaf-4bd6-ba1e-4d0b41170b8d	domain=en
+the _ _ O
+production _ _ O
+continued _ _ O
+between _ _ O
+1962 _ _ O
+and _ _ O
+1968 _ _ O
+but _ _ O
+chevrolet _ _ B-CarManufacturer
+decided _ _ O
+during _ _ O
+this _ _ O
+period _ _ O
+to _ _ O
+remove _ _ O
+the _ _ O
+names _ _ O
+specific _ _ O
+to _ _ O
+the _ _ O
+station _ _ O
+wagons. _ _ O
+
+
+# id 2cb081bb-6a2a-4bf0-ac6d-84056996685f	domain=en
+the _ _ O
+following _ _ O
+year _ _ O
+agreements _ _ O
+were _ _ O
+signed _ _ O
+for _ _ O
+the _ _ O
+production _ _ O
+of _ _ O
+a _ _ O
+fiat _ _ B-CarManufacturer
+model _ _ O
+from _ _ O
+1950. _ _ O
+
+
+# id 802034b5-6efa-49e8-b6d3-dd7c15a8779b	domain=en
+volkswagen _ _ B-CarManufacturer
+audi _ _ B-CarManufacturer
+seat _ _ B-CarManufacturer
+skoda _ _ B-CarManufacturer
+bentley _ _ B-CarManufacturer
+motors _ _ I-CarManufacturer
+lamborghini _ _ B-CarManufacturer
+and _ _ O
+bugatti _ _ B-CarManufacturer
+
+
+# id cc4144f6-c5f3-44c3-b56c-81b526365418	domain=en
+yourassoff _ _ O
+on _ _ O
+peugeot _ _ B-CarManufacturer
+in _ _ O
+(59 _ _ O
+1 _ _ O
+km/h). _ _ O
+
+
+# id 4e98be05-0f9d-426c-bb2a-608c9e0aac2d	domain=en
+it _ _ O
+acquired _ _ O
+a _ _ O
+certain _ _ O
+notoriety _ _ O
+by _ _ O
+appearing _ _ O
+in _ _ O
+a _ _ O
+filmed _ _ O
+advertisement _ _ O
+for _ _ O
+citroën _ _ B-CarManufacturer
+and _ _ O
+has _ _ O
+been _ _ O
+the _ _ O
+subject _ _ O
+of _ _ O
+numerous _ _ O
+covers. _ _ O
+
+
+# id c2b5729c-c249-4863-816c-e1038a6cf779	domain=en
+This _ _ O
+is _ _ O
+the _ _ O
+first _ _ O
+victory _ _ O
+for _ _ O
+a _ _ O
+opel _ _ B-CarManufacturer
+driver _ _ O
+in _ _ O
+this _ _ O
+championship. _ _ O
+
+
+# id 5ab043d3-d1ef-4f3d-a4ac-0e489c75e24c	domain=en
+propulsion _ _ O
+is _ _ O
+provided _ _ O
+by _ _ O
+two _ _ O
+moteurs _ _ B-OtherPROD
+outboard _ _ O
+yamaha _ _ B-CarManufacturer
+of _ _ O
+which _ _ O
+provide _ _ O
+a _ _ O
+speed _ _ O
+greater _ _ O
+than _ _ O
+. _ _ O
+
+
+# id 61ed13a7-954d-4547-9b7e-dd1b3a357262	domain=en
+the _ _ O
+company _ _ O
+is _ _ O
+also _ _ O
+recognized _ _ O
+as _ _ O
+a _ _ O
+préparateur _ _ B-CarManufacturer
+automobile _ _ I-CarManufacturer
+specializing _ _ O
+in _ _ O
+the _ _ O
+lamborghini _ _ B-CarManufacturer
+brand. _ _ O
+
+
+# id 12ccae14-9339-4a0a-a39a-189c7527e42b	domain=en
+ansaldo _ _ B-CarManufacturer
+trasporti _ _ I-CarManufacturer
+sistemi _ _ I-CarManufacturer
+ferroviari _ _ I-CarManufacturer
+manufacturer _ _ O
+of _ _ O
+railway _ _ O
+and _ _ O
+signaling _ _ O
+equipment _ _ O
+
+
+# id 79cc4bcd-52de-40a6-b554-4fd0ae484b70	domain=en
+lamborghini _ _ B-CarManufacturer
+( _ _ O
+) _ _ O
+sports _ _ O
+(supercars) _ _ O
+since _ _ O
+1998; _ _ O
+
+
+# id 65a4a0a3-6d22-4fb9-9f14-48710bab3192	domain=en
+a _ _ O
+car _ _ O
+modèle _ _ B-OtherPROD
+from _ _ O
+the _ _ O
+renault _ _ B-CarManufacturer
+brand. _ _ O
+
+
+# id 97fb896a-1e87-4c8d-902e-80125ef3641d	domain=en
+f. _ _ O
+203 _ _ O
+engined _ _ O
+version _ _ O
+lorraine _ _ B-CarManufacturer
+5pc _ _ O
+
+
+# id 99caa4cb-fe93-4d17-b9e7-ea4a501310d2	domain=en
+the _ _ O
+following _ _ O
+season _ _ O
+will _ _ O
+be _ _ O
+identical _ _ O
+against _ _ O
+the _ _ O
+march _ _ B-SportsGRP
+alfa _ _ B-CarManufacturer
+romeo _ _ I-CarManufacturer
+/ _ _ O
+novamotor _ _ O
+of _ _ O
+the _ _ O
+argentin _ _ B-HumanSettlement
+oscar _ _ B-Athlete
+larrauri _ _ I-Athlete
+driver. _ _ O
+
+
+# id da0a6a0c-4d26-41f0-a6b2-1d7b12550584	domain=en
+in _ _ O
+2020 _ _ O
+he _ _ O
+was _ _ O
+appointed _ _ O
+CEO _ _ O
+of _ _ O
+the _ _ O
+jaguar _ _ B-CarManufacturer
+land _ _ I-CarManufacturer
+rover _ _ I-CarManufacturer
+group. _ _ O
+
+
+# id 6bdb3832-dab7-4ad3-a838-0242c0c05191	domain=en
+ira _ _ B-ORG
+mistook _ _ O
+their _ _ O
+land _ _ B-CarManufacturer
+rover _ _ I-CarManufacturer
+for _ _ O
+a _ _ O
+military _ _ O
+vehicle. _ _ O
+
+
+# id b0c64860-a54d-4b08-8d60-d0dd1342be5c	domain=en
+the _ _ O
+automotive _ _ O
+industry _ _ O
+and _ _ O
+especially _ _ O
+the _ _ O
+canadian _ _ O
+division _ _ O
+of _ _ O
+general _ _ B-CarManufacturer
+motors _ _ I-CarManufacturer
+are _ _ O
+central _ _ O
+to _ _ O
+the _ _ O
+oshawa _ _ O
+economy. _ _ O
+
+
+# id ff542821-8915-4734-af6f-5cb6560660f8	domain=en
+the _ _ O
+chevrolet _ _ B-Vehicle
+colorado _ _ I-Vehicle
+is _ _ O
+a _ _ O
+pickup _ _ O
+produced _ _ O
+by _ _ O
+chevrolet _ _ B-CarManufacturer
+
+
+# id d5809318-353c-497f-9467-595e936cbe3e	domain=en
+these _ _ O
+trucks _ _ O
+were _ _ O
+manufactured _ _ O
+by _ _ O
+the _ _ O
+Spanish _ _ O
+manufacturer _ _ O
+enasa _ _ B-CarManufacturer
+from _ _ O
+1972 _ _ O
+until _ _ O
+1983. _ _ O
+
+
+# id ae313eaf-329c-4bf4-b90a-3283a56f1fb1	domain=en
+in _ _ O
+1996 _ _ O
+the _ _ O
+renault _ _ B-CarManufacturer
+group _ _ O
+had _ _ O
+60 _ _ O
+subsidiaries _ _ O
+
+
+# id 0b1288b6-bfdc-496b-9883-f7fa60096df6	domain=en
+avia _ _ O
+b. _ _ O
+434: _ _ O
+avia _ _ O
+b. _ _ O
+34 _ _ O
+fitted _ _ O
+with _ _ O
+a _ _ O
+690 _ _ O
+hp _ _ O
+hispano-suiza _ _ B-CarManufacturer
+12xbrs _ _ O
+engine. _ _ O
+
+
+# id f7a01121-02c9-43c2-a8e4-9adf32fee5f9	domain=en
+Passionate _ _ O
+about _ _ O
+cars, _ _ O
+he _ _ O
+has _ _ O
+a _ _ O
+large _ _ O
+collection _ _ O
+of _ _ O
+ferrari _ _ B-CarManufacturer
+models. _ _ O
+
+
+# id 2f6f4bb3-2560-4bef-a09c-ffbfff8fc62b	domain=en
+farmer _ _ O
+f. _ _ O
+350 _ _ O
+version _ _ O
+of _ _ O
+the _ _ O
+farmer _ _ O
+f. _ _ O
+230 _ _ O
+with _ _ O
+renault _ _ B-CarManufacturer
+engine _ _ O
+
+
+# id b0f6d5ba-6344-432f-83bc-a1b79c29e044	domain=en
+a _ _ O
+third _ _ O
+series, _ _ O
+the _ _ O
+kia _ _ B-CarManufacturer
+élan, _ _ O
+was _ _ O
+then _ _ O
+produced _ _ O
+in _ _ O
+corée _ _ B-HumanSettlement
+du _ _ I-HumanSettlement
+sud _ _ I-HumanSettlement
+in _ _ O
+around _ _ O
+1,000 _ _ O
+units. _ _ O
+
+
+# id 9510c608-3d3a-4d1f-a1eb-89fa93fac2cd	domain=en
+the _ _ O
+van _ _ B-Vehicle
+hool _ _ I-Vehicle
+linea _ _ I-Vehicle
+bus _ _ O
+model _ _ O
+a _ _ O
+bus _ _ O
+from _ _ O
+the _ _ O
+Belgian _ _ O
+brand _ _ O
+van _ _ B-CarManufacturer
+hool _ _ I-CarManufacturer
+. _ _ O
+
+
+# id e1c08b2d-266c-42fd-b15f-f84984e1bea7	domain=en
+the _ _ O
+rolls-royce _ _ B-CarManufacturer
+car _ _ O
+becomes _ _ O
+the _ _ O
+symbol _ _ O
+of _ _ O
+rockstar _ _ O
+life. _ _ O
+
+
+# id f6a5c12f-f2fe-44e5-a821-1c4b9ac5140e	domain=en
+and _ _ O
+unique _ _ O
+victory _ _ O
+in _ _ O
+the _ _ O
+world _ _ O
+championship _ _ O
+for _ _ O
+porsche _ _ B-CarManufacturer
+as _ _ O
+a _ _ O
+constructor _ _ O
+and _ _ O
+as _ _ O
+an _ _ O
+engine _ _ O
+manufacturer. _ _ O
+
+
+# id 77f42425-34b2-48f2-94e0-36618a70358b	domain=en
+most _ _ O
+of _ _ O
+it _ _ O
+was _ _ O
+subcontracted _ _ O
+by _ _ O
+renault _ _ B-CarManufacturer
+or _ _ O
+lorraine-dietrich _ _ B-CarManufacturer
+. _ _ O
+
+
+# id 4174a6a0-a801-4721-a5af-0cc2519415f3	domain=en
+de _ _ B-CarManufacturer
+dion-bouton _ _ I-CarManufacturer
+was _ _ O
+the _ _ O
+main _ _ O
+manufacturer _ _ O
+of _ _ O
+coaches _ _ O
+on _ _ O
+rails. _ _ O
+
+
+# id 1cbb10b9-9b3e-4eb5-aea0-fc83fedfa5ca	domain=en
+subaru _ _ B-OtherPROD
+xt _ _ I-OtherPROD
+a _ _ O
+sports _ _ O
+car _ _ O
+from _ _ O
+subaru _ _ B-CarManufacturer
+
+
+# id b865cd64-ea4b-4844-a95a-380000be8baf	domain=en
+in _ _ O
+1991 _ _ O
+he _ _ O
+was _ _ O
+recruited _ _ O
+by _ _ O
+volkswagen _ _ B-CarManufacturer
+and _ _ O
+tried _ _ O
+to _ _ O
+breathe _ _ O
+new _ _ O
+inspiration _ _ O
+into _ _ O
+the _ _ O
+group _ _ O
+which _ _ O
+he _ _ O
+left _ _ O
+in _ _ O
+1993. _ _ O
+
+
+# id d16dabdf-cc17-4d87-83a2-2d57cc166a57	domain=en
+the _ _ O
+machines _ _ O
+are _ _ O
+manufactured _ _ O
+by _ _ O
+krups _ _ B-PrivateCorp
+. _ _ O
+
+
+# id 828bf525-ebb3-4b12-ba54-b8314e4635e3	domain=en
+huawei _ _ B-PrivateCorp
+develops _ _ O
+and _ _ O
+markets _ _ O
+its _ _ O
+“safe _ _ O
+city” _ _ O
+concept _ _ O
+based _ _ O
+on _ _ O
+intelligent _ _ O
+video _ _ O
+surveillance. _ _ O
+
+
+# id 2d4afbf4-8b0b-41bd-8be1-0a187a30b83a	domain=en
+Sébastien _ _ O
+has _ _ O
+been _ _ O
+a _ _ O
+hohner _ _ B-PrivateCorp
+artist _ _ O
+since _ _ O
+2004. _ _ O
+
+
+# id a0ed48c4-89b6-4d0d-8173-47b68c0405b6	domain=en
+he _ _ O
+is _ _ O
+known _ _ O
+for _ _ O
+his _ _ O
+work _ _ O
+at _ _ O
+chanel _ _ B-PrivateCorp
+and _ _ O
+inspired _ _ O
+the _ _ O
+profession. _ _ O
+
+
+# id 8630aea1-5f24-45f1-97f0-1f720af54d84	domain=en
+in _ _ O
+the _ _ O
+early _ _ O
+1970s _ _ O
+programmer _ _ O
+at _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+he _ _ O
+worked _ _ O
+with _ _ O
+ken _ _ B-Scientist
+thompson _ _ I-Scientist
+on _ _ O
+the _ _ O
+development _ _ O
+of _ _ O
+unix. _ _ O
+
+
+# id 0ffb7691-688c-4f06-adb0-0491afd9f6b9	domain=en
+it _ _ O
+is _ _ O
+for _ _ O
+example _ _ O
+mitsubishi _ _ B-PrivateCorp
+mitsui _ _ B-ORG
+sumitomo _ _ B-ORG
+yasuda _ _ B-ORG
+. _ _ O
+
+
+# id 97b65d2b-6da6-45ff-ad5b-ed7fa0c242ef	domain=en
+in _ _ O
+she _ _ O
+takes _ _ O
+the _ _ O
+presidency _ _ O
+of _ _ O
+chanel _ _ B-PrivateCorp
+post _ _ O
+which _ _ O
+she _ _ O
+leaves _ _ O
+in _ _ O
+. _ _ O
+
+
+# id 5cc75f1c-c46e-4e0f-809f-844dc0d696e1	domain=en
+this _ _ O
+lighthouse _ _ O
+was _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+maritime _ _ O
+aid _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id bfa8825c-4a90-4087-9745-e079b616d618	domain=en
+the _ _ O
+company _ _ O
+lego _ _ B-PrivateCorp
+offers _ _ O
+a _ _ O
+similar _ _ O
+assembly _ _ O
+to _ _ O
+assemble _ _ O
+with _ _ O
+spare _ _ O
+parts; _ _ O
+
+
+# id 05f32022-a1cb-45e9-909a-1673e8ea9e50	domain=en
+for _ _ O
+the _ _ O
+next _ _ O
+four _ _ O
+years _ _ O
+he _ _ O
+worked _ _ O
+as _ _ O
+an _ _ O
+architect _ _ O
+in _ _ O
+the _ _ O
+real _ _ O
+estate _ _ O
+division _ _ O
+of _ _ O
+the _ _ O
+mitsubishi _ _ B-PrivateCorp
+group. _ _ O
+
+
+# id ecd9e13c-7049-41b1-baee-1c616a64ac7d	domain=en
+This _ _ O
+ship _ _ O
+was _ _ O
+built _ _ O
+by _ _ O
+mitsubishi _ _ B-PrivateCorp
+at _ _ O
+the _ _ O
+nagasaki _ _ B-HumanSettlement
+shipyard _ _ O
+at _ _ O
+japon _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 119b7880-a727-47dd-958d-cc68aacde5a9	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+operated _ _ O
+by _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+at _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+england _ _ O
+coastal _ _ O
+maritime _ _ O
+aid _ _ O
+organization. _ _ O
+
+
+# id 8f238221-d40c-4bc9-8d96-5446b46e74ba	domain=en
+he _ _ O
+immediately _ _ O
+joined _ _ O
+the _ _ O
+at&t _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+laboratories _ _ I-PrivateCorp
+research _ _ O
+center. _ _ O
+
+
+# id 1c105bf7-f015-4547-a3d7-a84bb4d47448	domain=en
+constitution _ _ O
+of _ _ O
+zaibatsu _ _ B-ORG
+such _ _ O
+as _ _ O
+mitsubishi _ _ B-PrivateCorp
+mitsui _ _ B-ORG
+sumitomo _ _ B-ORG
+yasuda _ _ B-ORG
+. _ _ O
+
+
+# id 53f5591d-6e58-4797-b485-391dfe06ec2a	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+maritime _ _ O
+aid _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id 3ad5a46b-920e-4933-9b51-f8ec4a9060f4	domain=en
+finally _ _ O
+the _ _ O
+brand _ _ O
+passed _ _ O
+into _ _ O
+the _ _ O
+hands _ _ O
+of _ _ O
+georgia-pacific _ _ B-PrivateCorp
+in _ _ O
+2002 _ _ O
+
+
+# id 65680fc4-96f7-4af1-9824-32bad3ec2b49	domain=en
+she _ _ O
+became _ _ O
+a _ _ O
+billionaire _ _ O
+in _ _ O
+May _ _ O
+2021 _ _ O
+following _ _ O
+the _ _ O
+donation _ _ O
+via _ _ O
+the _ _ O
+cascade _ _ B-PrivateCorp
+investment _ _ I-PrivateCorp
+holding _ _ O
+company _ _ O
+of _ _ O
+nearly _ _ O
+2.4 _ _ O
+billion _ _ O
+dollars _ _ O
+in _ _ O
+shares _ _ O
+by _ _ O
+her _ _ O
+ex-husband. _ _ O
+
+
+# id 83f59def-da0b-4a5d-957f-41b3d7dc0348	domain=en
+permission _ _ O
+is _ _ O
+required _ _ O
+from _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+to _ _ O
+come _ _ O
+to _ _ O
+the _ _ O
+island _ _ O
+and _ _ O
+only _ _ O
+two _ _ O
+botanists _ _ O
+are _ _ O
+known _ _ O
+to _ _ O
+have _ _ O
+visited. _ _ O
+
+
+# id a5931780-3505-4ee7-ad51-0b91f69e9ac2	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+maritime _ _ O
+aid _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id 737d651b-1e39-452a-b95f-838140376323	domain=en
+then _ _ O
+the _ _ O
+remaining _ _ O
+85 _ _ O
+years _ _ O
+of _ _ O
+the _ _ O
+lease _ _ O
+were _ _ O
+sold _ _ O
+to _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+around _ _ O
+1829 _ _ O
+. _ _ O
+
+
+# id 9fdfc113-ce1f-41d6-ac2f-b81171c069fb	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+maritime _ _ O
+aid _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id 746ded01-8cb7-4825-817e-cee664d5cf9c	domain=en
+the _ _ O
+company _ _ O
+was _ _ O
+renamed _ _ O
+mitsubishi _ _ B-PrivateCorp
+in _ _ O
+1873. _ _ O
+
+
+# id 2ecd5b27-356e-4c44-9c08-cdaa06e43410	domain=en
+Gaga _ _ O
+performs _ _ O
+the _ _ O
+song _ _ O
+with _ _ O
+a _ _ O
+pink _ _ O
+steinway _ _ B-PrivateCorp
+& _ _ I-PrivateCorp
+sons _ _ I-PrivateCorp
+piano _ _ O
+decorated _ _ O
+with _ _ O
+butterflies. _ _ O
+
+
+# id 1b347847-368a-4de9-9de7-2293537b871d	domain=en
+it _ _ O
+was _ _ O
+created _ _ O
+in _ _ O
+1952 _ _ O
+by _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+and _ _ O
+bears _ _ O
+the _ _ O
+name _ _ O
+of _ _ O
+one _ _ O
+of _ _ O
+its _ _ O
+presidents: _ _ O
+. _ _ O
+
+
+# id 94ff25ed-4987-45ff-aca3-66a80efc8501	domain=en
+the _ _ O
+piano _ _ O
+used _ _ O
+during _ _ O
+the _ _ O
+show _ _ O
+is _ _ O
+a _ _ O
+steinway _ _ B-PrivateCorp
+& _ _ I-PrivateCorp
+sons _ _ I-PrivateCorp
+d _ _ O
+called _ _ O
+concert _ _ O
+piano. _ _ O
+
+
+# id 7eb55754-6251-4e43-ab28-c9da791048ef	domain=en
+it _ _ O
+was _ _ O
+then _ _ O
+the _ _ O
+last _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ O
+to _ _ O
+be _ _ O
+powered _ _ O
+by _ _ O
+oil. _ _ O
+
+
+# id 484f0860-5c39-41de-9aae-b783c029c132	domain=en
+in _ _ O
+2008 _ _ O
+the _ _ O
+association _ _ O
+took _ _ O
+on _ _ O
+the _ _ O
+status _ _ O
+of _ _ O
+sarl _ _ B-PrivateCorp
+and _ _ O
+the _ _ O
+various _ _ O
+activities _ _ O
+were _ _ O
+separated. _ _ O
+
+
+# id 09e0ed32-cb8e-4295-9ae2-46d426149dc8	domain=en
+haymarket _ _ B-PrivateCorp
+publications _ _ I-PrivateCorp
+the _ _ O
+editors _ _ O
+of _ _ O
+autosport _ _ B-WrittenWork
+have _ _ O
+been _ _ O
+involved _ _ O
+almost _ _ O
+from _ _ O
+the _ _ O
+start. _ _ O
+
+
+# id 34cb5b20-8f1b-4ad1-baac-afabe5653713	domain=en
+in _ _ O
+argentina _ _ O
+opposes _ _ O
+plans _ _ O
+by _ _ O
+clothing _ _ O
+retailer _ _ O
+patagonia _ _ B-PrivateCorp
+to _ _ O
+acquire _ _ O
+the _ _ O
+.patagonia _ _ O
+top-level _ _ O
+domain. _ _ O
+
+
+# id 20bf63b9-ec29-4561-9a5b-7b0bf1110d51	domain=en
+animatronics _ _ O
+from _ _ O
+symbolica _ _ B-Facility
+to _ _ O
+efteling _ _ B-PrivateCorp
+(netherlands) _ _ O
+in _ _ O
+2017 _ _ O
+
+
+# id d4748839-b95c-4e44-81b7-ab0f42e8db2f	domain=en
+wal _ _ B-PrivateCorp
+an _ _ O
+English _ _ O
+bass _ _ O
+guitar _ _ O
+manufacturer _ _ O
+
+
+# id e85c4722-38af-4fcf-93c1-66d9dd6fd8d7	domain=en
+in _ _ O
+early _ _ O
+2013 _ _ O
+his _ _ O
+participation _ _ O
+in _ _ O
+a _ _ O
+chanel _ _ B-PrivateCorp
+campaign _ _ O
+aroused _ _ O
+reservations _ _ O
+due _ _ O
+to _ _ O
+his _ _ O
+young _ _ O
+age. _ _ O
+
+
+# id 26d39248-fefb-40df-b763-7fdcc80396c5	domain=en
+She _ _ O
+mainly _ _ O
+posed _ _ O
+for _ _ O
+the _ _ O
+brand _ _ O
+chanel _ _ B-PrivateCorp
+(clothing, _ _ O
+accessories _ _ O
+and _ _ O
+perfume). _ _ O
+
+
+# id 6008707a-c8a8-4295-8c95-c0b8b0b3e9fc	domain=en
+the _ _ O
+group _ _ O
+was _ _ O
+compared _ _ O
+to _ _ O
+the _ _ O
+new _ _ B-SportsGRP
+world _ _ I-SportsGRP
+order _ _ I-SportsGRP
+( _ _ O
+nwo _ _ O
+) _ _ O
+of _ _ O
+the _ _ O
+wcw _ _ B-PrivateCorp
+. _ _ O
+
+
+# id 9fc741fc-2644-4ec7-8a07-982a3cc6c398	domain=en
+birkenstock _ _ B-PrivateCorp
+investment _ _ O
+estimated _ _ O
+at _ _ O
+four _ _ O
+billion _ _ O
+euros _ _ O
+by _ _ O
+analysts _ _ O
+
+
+# id 442e433c-25a6-45b0-a07d-2fa87eef4e7c	domain=en
+sloane _ _ O
+joined _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+in _ _ O
+1968 _ _ O
+and _ _ O
+joined _ _ O
+in _ _ O
+1998. _ _ O
+
+
+# id 4212af6b-733e-47cf-8769-5c2b2dcdcb01	domain=en
+it _ _ O
+is _ _ O
+owned _ _ O
+by _ _ O
+terra _ _ B-PrivateCorp
+firma _ _ I-PrivateCorp
+capital _ _ I-PrivateCorp
+partners _ _ I-PrivateCorp
+. _ _ O
+
+
+# id 18b76a56-df21-431b-be71-47b24653ea7a	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+operated _ _ O
+by _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+at _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+england _ _ O
+coastal _ _ O
+maritime _ _ O
+aid _ _ O
+organization. _ _ O
+
+
+# id ea9444a7-3362-44a1-b110-672335f41f0d	domain=en
+its _ _ O
+name _ _ O
+comes _ _ O
+from _ _ O
+the _ _ O
+logo _ _ O
+of _ _ O
+their _ _ O
+owner _ _ O
+mitsubishi _ _ B-PrivateCorp
+whose _ _ O
+name _ _ O
+means _ _ O
+3 _ _ O
+diamonds. _ _ O
+
+
+# id 52c68cce-e1e1-4b95-95d5-0f55e3d3fe59	domain=en
+she _ _ O
+has _ _ O
+been _ _ O
+an _ _ O
+ambassador _ _ O
+for _ _ O
+chanel _ _ B-PrivateCorp
+since _ _ O
+2015. _ _ O
+
+
+# id 4378e828-6eaa-4710-b9b5-2f6039c72ec7	domain=en
+we _ _ O
+find _ _ O
+her _ _ O
+accompanied _ _ O
+in _ _ O
+many _ _ O
+photos _ _ O
+of _ _ O
+the _ _ O
+muse _ _ O
+of _ _ O
+the _ _ O
+clarins _ _ B-PrivateCorp
+brand. _ _ O
+
+
+# id 13463c44-7f8a-4142-a0ec-d32c98b20e91	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+maritime _ _ O
+aid _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id ceed6228-4b2f-4740-b1d6-a95b49afbc18	domain=en
+On _ _ O
+a _ _ O
+1985 _ _ O
+efteling _ _ B-PrivateCorp
+fairy _ _ O
+tale _ _ O
+album, _ _ O
+however, _ _ O
+there _ _ O
+is _ _ O
+a _ _ O
+story _ _ O
+about _ _ O
+a _ _ O
+dragon _ _ O
+and _ _ O
+a _ _ O
+treasure _ _ O
+chest. _ _ O
+
+
+# id b0e39725-01f1-404c-8157-f1db04ba991e	domain=en
+Danish _ _ O
+toymaker _ _ O
+lego _ _ B-PrivateCorp
+uses _ _ O
+it _ _ O
+to _ _ O
+make _ _ O
+its _ _ O
+building _ _ O
+bricks. _ _ O
+
+
+# id dccc08b4-5266-4843-8005-59dddcfba39c	domain=en
+a _ _ O
+year _ _ O
+later _ _ O
+efteling _ _ B-PrivateCorp
+produced _ _ O
+a _ _ O
+musical _ _ O
+around _ _ O
+the _ _ O
+story. _ _ O
+
+
+# id e97e605b-4d4c-4f64-86da-2be124ee94d0	domain=en
+the _ _ O
+same _ _ O
+year _ _ O
+he _ _ O
+became _ _ O
+a _ _ O
+steinway _ _ B-PrivateCorp
+artist. _ _ O
+
+
+# id 33211f5d-d540-4f81-a78b-c2261dc04448	domain=en
+251,001 _ _ O
+and _ _ O
+251,002: _ _ O
+mitsubishi _ _ B-PrivateCorp
+1982 _ _ O
+
+
+# id ae4059f7-312a-4427-98a3-b141e327814b	domain=en
+it _ _ O
+must _ _ O
+be _ _ O
+said _ _ O
+that _ _ O
+at _ _ O
+the _ _ O
+beginning _ _ O
+of _ _ O
+the _ _ O
+century _ _ O
+the _ _ O
+brand _ _ O
+rivaled _ _ O
+steinway _ _ B-PrivateCorp
+& _ _ I-PrivateCorp
+sons _ _ I-PrivateCorp
+in _ _ O
+the _ _ O
+United _ _ O
+States. _ _ O
+
+
+# id b72d08d3-ac54-4ab0-bf62-a49083cc7e4c	domain=en
+located _ _ O
+in _ _ O
+the _ _ O
+efteling _ _ B-PrivateCorp
+complex, _ _ O
+spectators _ _ O
+can _ _ O
+admire _ _ O
+shows _ _ O
+and _ _ O
+musicals _ _ O
+there. _ _ O
+
+
+# id 84629bc1-bd45-4016-8a9b-49999b09aa5a	domain=en
+sam _ _ O
+is _ _ O
+a _ _ O
+éditeur _ _ B-Software
+de _ _ I-Software
+texte _ _ I-Software
+designed _ _ O
+by _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+. _ _ O
+
+
+# id 33cfc400-d468-4741-a972-8733e6f52cd9	domain=en
+inès _ _ B-Artist
+de _ _ I-Artist
+la _ _ I-Artist
+fressange _ _ I-Artist
+model _ _ O
+muse _ _ O
+of _ _ O
+chanel _ _ B-PrivateCorp
+designer _ _ O
+fashion _ _ O
+designer _ _ O
+
+
+# id dfaea0c9-0af5-4b40-b177-3225a14ccd7a	domain=en
+eddie _ _ B-PrivateCorp
+bauer _ _ I-PrivateCorp
+(1899 _ _ O
+1986) _ _ O
+American _ _ O
+clothing _ _ O
+manufacturer _ _ O
+
+
+# id b9ef93e6-494c-43d2-a87a-4307b57adb4b	domain=en
+his _ _ O
+company _ _ O
+the _ _ B-PrivateCorp
+lego _ _ I-PrivateCorp
+group _ _ I-PrivateCorp
+has _ _ O
+become _ _ O
+one _ _ O
+of _ _ O
+the _ _ O
+largest _ _ O
+in _ _ O
+the _ _ O
+world. _ _ O
+
+
+# id be76b8aa-b58d-4e42-be09-abc748a507d5	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+maritime _ _ O
+aid _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id 269e3926-1d46-4192-bd30-1d44432e468a	domain=en
+he _ _ O
+made _ _ O
+a _ _ O
+few _ _ O
+appearances _ _ O
+at _ _ O
+world _ _ B-PrivateCorp
+championship _ _ I-PrivateCorp
+wrestling _ _ I-PrivateCorp
+during _ _ O
+the _ _ O
+year _ _ O
+2001 _ _ O
+where _ _ O
+he _ _ O
+teamed _ _ O
+up _ _ O
+with _ _ O
+. _ _ O
+
+
+# id 2b866cd9-73bf-4763-a4e9-092e11eee8e4	domain=en
+she _ _ O
+began _ _ O
+her _ _ O
+career _ _ O
+at _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+where _ _ O
+she _ _ O
+was _ _ O
+the _ _ O
+first _ _ O
+female _ _ O
+technical _ _ O
+editor _ _ O
+( _ _ O
+). _ _ O
+
+
+# id 0d8406a8-60e2-4fda-9b28-507d1cf815ce	domain=en
+the _ _ O
+archaic _ _ O
+letter _ _ O
+ijitsa _ _ O
+ѵ _ _ B-PrivateCorp
+also _ _ O
+derives _ _ O
+from _ _ O
+it. _ _ O
+
+
+# id 26878ce2-588c-4744-8d6f-9052d167804d	domain=en
+max _ _ B-OtherPROD
+& _ _ I-OtherPROD
+moritz _ _ I-OtherPROD
+a _ _ O
+roller _ _ O
+coaster _ _ O
+type _ _ O
+attraction _ _ O
+in _ _ O
+the _ _ O
+efteling _ _ B-PrivateCorp
+park _ _ O
+at _ _ O
+the _ _ O
+pays-bas _ _ B-HumanSettlement
+. _ _ O
+
+
+# id b63c9f1e-a598-4c40-96c0-ece705c2cf82	domain=en
+in _ _ O
+December _ _ O
+2021 _ _ O
+he _ _ O
+was _ _ O
+appointed _ _ O
+Sporting _ _ O
+Director _ _ O
+of _ _ O
+ineos _ _ B-PrivateCorp
+overseeing _ _ O
+a _ _ O
+growing _ _ O
+range _ _ O
+of _ _ O
+Group-sponsored _ _ O
+teams _ _ O
+and _ _ O
+disciplines. _ _ O
+
+
+# id a2f459ce-2a22-4607-82d9-26869319a8f3	domain=en
+the _ _ O
+proposal _ _ O
+for _ _ O
+a _ _ O
+lighthouse _ _ O
+in _ _ O
+this _ _ O
+region _ _ O
+had _ _ O
+already _ _ O
+been _ _ O
+requested _ _ O
+in _ _ O
+1900 _ _ O
+but _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+then _ _ O
+refused _ _ O
+this _ _ O
+request. _ _ O
+
+
+# id ebda7dff-f188-48f7-9e6f-d77ab5299b5d	domain=en
+and _ _ O
+the _ _ O
+American _ _ O
+harry _ _ B-Scientist
+nyquist _ _ I-Scientist
+of _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+in _ _ O
+1932. _ _ O
+
+
+# id 41946953-8768-41b2-bfb3-484f087a2e94	domain=en
+after _ _ O
+years _ _ O
+of _ _ O
+local _ _ O
+petitions _ _ O
+to _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+it _ _ O
+has _ _ O
+recognized _ _ O
+the _ _ O
+need _ _ O
+for _ _ O
+a _ _ O
+lighthouse _ _ O
+on _ _ O
+this _ _ O
+peninsula. _ _ O
+
+
+# id 284062bb-624e-4f2f-88aa-57ddff01a8b5	domain=en
+his _ _ O
+workshop _ _ O
+is _ _ O
+now _ _ O
+part _ _ O
+of _ _ O
+the _ _ O
+chanel _ _ B-PrivateCorp
+house _ _ O
+through _ _ O
+its _ _ O
+paraffection _ _ B-ORG
+group. _ _ O
+
+
+# id 1fd97f91-de0c-4f05-a814-dc6e1a67d9b2	domain=en
+shortly _ _ O
+after, _ _ O
+mitsubishi _ _ B-PrivateCorp
+proposed _ _ O
+a _ _ O
+plan _ _ O
+for _ _ O
+a _ _ O
+350 _ _ O
+tower _ _ O
+that _ _ O
+would _ _ O
+be _ _ O
+loaned _ _ O
+for _ _ O
+the _ _ O
+duration _ _ O
+of _ _ O
+the _ _ O
+exhibition. _ _ O
+
+
+# id 4893c457-6d65-4fde-8bf8-53147063cef3	domain=en
+higgins _ _ O
+was _ _ O
+also _ _ O
+criticized _ _ O
+for _ _ O
+posing _ _ O
+in _ _ O
+uniform _ _ O
+for _ _ O
+newspapers _ _ O
+and _ _ O
+creating _ _ O
+a _ _ O
+llc _ _ B-PrivateCorp
+to _ _ O
+sell _ _ O
+merchandise. _ _ O
+
+
+# id 591f58a4-4f2e-4cc8-949f-c96697a245ef	domain=en
+lifetime _ _ B-PrivateCorp
+buys _ _ O
+46% _ _ O
+of _ _ O
+the _ _ O
+company _ _ O
+that _ _ O
+publishes _ _ O
+the _ _ O
+women _ _ O
+website. _ _ O
+com. _ _ O
+
+
+# id 07f9b430-ec78-43a1-ad85-2a364d229700	domain=en
+she _ _ O
+is _ _ O
+the _ _ O
+same _ _ O
+month _ _ O
+on _ _ O
+the _ _ O
+cover _ _ O
+of _ _ O
+the _ _ O
+Chinese _ _ O
+edition _ _ O
+of _ _ O
+elle _ _ B-WrittenWork
+with _ _ O
+and _ _ O
+she _ _ O
+parades _ _ O
+for _ _ O
+chanel _ _ B-PrivateCorp
+in _ _ O
+December. _ _ O
+
+
+# id 0afce712-0dc0-4931-8404-adb9e021f954	domain=en
+some _ _ O
+manufacturers _ _ O
+who _ _ O
+lend _ _ O
+their _ _ O
+image _ _ O
+like _ _ O
+mitsubishi _ _ B-PrivateCorp
+or _ _ O
+audi _ _ B-CarManufacturer
+are _ _ O
+opposed _ _ O
+or _ _ O
+reluctant _ _ O
+to _ _ O
+have _ _ O
+their _ _ O
+vehicles _ _ O
+destroyed _ _ O
+in _ _ O
+the _ _ O
+game. _ _ O
+
+
+# id b2bd852d-c01a-4507-9c44-99bd4ab71487	domain=en
+the _ _ O
+first _ _ O
+mitsubishi _ _ B-PrivateCorp
+automobile _ _ O
+built _ _ O
+by _ _ O
+mitsubishi _ _ B-Facility
+heavy _ _ I-Facility
+industries _ _ I-Facility
+appeared _ _ O
+in _ _ O
+1917. _ _ O
+
+
+# id 4d2ad144-1e62-4644-a441-d2860f826b2f	domain=en
+baron _ _ O
+1898 _ _ O
+is _ _ O
+a _ _ O
+course _ _ O
+from _ _ O
+montagnes _ _ B-Facility
+russes _ _ I-Facility
+en _ _ B-OtherPROD
+métal _ _ I-OtherPROD
+to _ _ O
+the _ _ O
+efteling _ _ B-PrivateCorp
+park _ _ O
+located _ _ O
+at _ _ O
+pays-bas _ _ B-HumanSettlement
+. _ _ O
+
+
+# id 9977dbd5-3292-4923-80f9-a3b7d27835a1	domain=en
+after _ _ O
+being _ _ O
+featured _ _ O
+by _ _ O
+donatella _ _ B-Artist
+versace _ _ I-Artist
+she _ _ O
+appears _ _ O
+in _ _ O
+a _ _ O
+metallic _ _ O
+versace _ _ B-PrivateCorp
+dress. _ _ O
+
+
+# id 972630b5-f512-4b0f-a764-1dea78913880	domain=en
+armadillo _ _ B-PrivateCorp
+aerospace _ _ I-PrivateCorp
+masten _ _ B-ORG
+space _ _ I-ORG
+systems _ _ I-ORG
+and _ _ O
+xcor _ _ B-ORG
+aerospace _ _ I-ORG
+have _ _ O
+donated _ _ O
+flights _ _ O
+to _ _ O
+teachers _ _ O
+in _ _ O
+the _ _ O
+new _ _ O
+space _ _ O
+project. _ _ O
+
+
+# id e5515fab-e208-4e7e-9833-840d567f1355	domain=en
+in _ _ O
+2008 _ _ O
+ula _ _ B-PrivateCorp
+the _ _ O
+structure _ _ O
+that _ _ O
+markets _ _ O
+the _ _ O
+launcher _ _ O
+still _ _ O
+has _ _ O
+half _ _ O
+a _ _ O
+dozen _ _ O
+assembled _ _ O
+and _ _ O
+unsold _ _ O
+launchers. _ _ O
+
+
+# id fc224c51-0b32-4dc9-8bc2-74644be4c641	domain=en
+mibici _ _ O
+at _ _ O
+guadalajara _ _ B-HumanSettlement
+pbsc _ _ B-PrivateCorp
+system. _ _ O
+
+
+# id c909bb8c-15aa-44a7-bf91-7059a34429c6	domain=en
+large _ _ O
+corporations _ _ O
+like _ _ O
+mitsubishi _ _ B-PrivateCorp
+mitsui _ _ B-ORG
+and _ _ O
+others _ _ O
+say _ _ O
+the _ _ O
+blame _ _ O
+should _ _ O
+lie _ _ O
+with _ _ O
+the _ _ O
+government, _ _ O
+not _ _ O
+the _ _ O
+private _ _ O
+companies. _ _ O
+
+
+# id 30650e9c-5264-4629-a6c1-8c32c88ed432	domain=en
+john _ _ B-OtherPER
+casablancas _ _ I-OtherPER
+founder _ _ O
+of _ _ O
+the _ _ O
+agency _ _ O
+elite _ _ B-PrivateCorp
+(°). _ _ O
+
+
+# id 8e963d0f-be28-433e-8c7d-b98628940529	domain=en
+She _ _ O
+was _ _ O
+named _ _ O
+in _ _ O
+the _ _ O
+top _ _ O
+50 _ _ O
+albums _ _ O
+of _ _ O
+the _ _ O
+year _ _ O
+by _ _ O
+the _ _ B-PrivateCorp
+wire _ _ I-PrivateCorp
+in _ _ O
+2001. _ _ O
+
+
+# id bea0c4d3-281c-43c0-9fa2-52f4d53ccdaf	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+maritime _ _ O
+aid _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id 81ec9995-265e-4b7e-b626-24d97c6856bb	domain=en
+since _ _ O
+1991 _ _ O
+she _ _ O
+has _ _ O
+been _ _ O
+one _ _ O
+of _ _ O
+the _ _ O
+official _ _ O
+models _ _ O
+of _ _ O
+the _ _ O
+chanel _ _ B-PrivateCorp
+brand. _ _ O
+
+
+# id d7a963df-b286-4023-af7d-5d01b4bae976	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+maritime _ _ O
+aid _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id 3c0f71eb-2304-4dd3-aa5b-c577561c9010	domain=en
+This _ _ O
+lighthouse _ _ O
+is _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+maritime _ _ O
+aid _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id 8c8714e8-28b4-4df5-8157-e1ff0e64294b	domain=en
+clarins _ _ B-PrivateCorp
+also _ _ O
+called _ _ O
+on _ _ O
+him _ _ O
+to _ _ O
+customize _ _ O
+the _ _ O
+energizing _ _ O
+water _ _ O
+bottle _ _ O
+for _ _ O
+the _ _ O
+25th _ _ O
+anniversary _ _ O
+of _ _ O
+the _ _ O
+brand's _ _ O
+flagship _ _ O
+product. _ _ O
+
+
+# id d423dd3b-b742-4286-afac-3afd3ab8f376	domain=en
+for _ _ O
+the _ _ O
+2018 _ _ O
+season _ _ O
+it _ _ O
+is _ _ O
+the _ _ O
+company _ _ O
+sofi _ _ B-PrivateCorp
+which _ _ O
+takes _ _ O
+over _ _ O
+the _ _ O
+sponsorship _ _ O
+while _ _ O
+renaming _ _ O
+the _ _ O
+bowl. _ _ O
+
+
+# id 159ec9bd-59b5-4fbb-a7e7-f8fe387d71d3	domain=en
+He _ _ O
+did _ _ O
+a _ _ O
+TV _ _ O
+commercial _ _ O
+for _ _ O
+versace _ _ B-PrivateCorp
+branded _ _ O
+sunglasses _ _ O
+that _ _ O
+aired _ _ O
+across _ _ O
+Europe. _ _ O
+
+
+# id d6791c98-999d-4bff-8a19-5bf0200d5856	domain=en
+he _ _ O
+now _ _ O
+works _ _ O
+for _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+d _ _ O
+alcatel-lucent _ _ B-PublicCorp
+. _ _ O
+
+
+# id 7abf2820-6273-4e93-b33c-9377f3850f00	domain=en
+The _ _ O
+he _ _ O
+marries _ _ O
+his _ _ O
+fiancée _ _ O
+of _ _ O
+longtime _ _ O
+actress _ _ O
+and _ _ O
+former _ _ O
+elite _ _ B-PrivateCorp
+model. _ _ O
+
+
+# id 83869293-0785-413b-b996-02df56775ce6	domain=en
+the _ _ O
+album _ _ O
+was _ _ O
+voted _ _ O
+Best _ _ O
+Electronic _ _ O
+Album _ _ O
+of _ _ O
+the _ _ O
+Year _ _ O
+2000 _ _ B-WrittenWork
+by _ _ O
+the _ _ B-PrivateCorp
+wire _ _ I-PrivateCorp
+magazine. _ _ O
+
+
+# id 828436b5-c207-45c7-822c-dc72b5932198	domain=en
+conglomerates _ _ O
+like _ _ O
+mitsubishi _ _ B-PrivateCorp
+or _ _ O
+mitsui _ _ B-ORG
+are _ _ O
+getting _ _ O
+stronger _ _ O
+through _ _ O
+this. _ _ O
+
+
+# id db7ec1c7-7b4e-4193-95ae-63dec60fb235	domain=en
+draftkings _ _ B-PrivateCorp
+announces _ _ O
+that _ _ O
+it _ _ O
+will _ _ O
+pay _ _ O
+espn _ _ B-ORG
+$250 _ _ O
+million _ _ O
+over _ _ O
+two _ _ O
+years _ _ O
+to _ _ O
+run _ _ O
+ads. _ _ O
+
+
+# id e946a8d0-aed1-4ab0-be3d-10a7603b2eb8	domain=en
+during _ _ O
+the _ _ O
+last _ _ O
+ten _ _ O
+years _ _ O
+of _ _ O
+her _ _ O
+life _ _ O
+her _ _ O
+schedule _ _ O
+was _ _ O
+overloaded _ _ O
+with _ _ O
+concerts _ _ O
+and _ _ O
+she _ _ O
+was _ _ O
+able _ _ O
+to _ _ O
+buy _ _ O
+a _ _ O
+steinway _ _ B-PrivateCorp
+piano. _ _ O
+
+
+# id f00638cf-7f9d-42a9-bb7e-86ec2a30db71	domain=en
+the _ _ O
+range _ _ O
+is _ _ O
+part _ _ O
+of _ _ O
+a _ _ O
+digitization _ _ O
+of _ _ O
+lego _ _ B-PrivateCorp
+group _ _ I-PrivateCorp
+productions _ _ O
+started _ _ O
+in _ _ O
+2014 _ _ O
+with _ _ O
+the _ _ O
+creation _ _ O
+of _ _ O
+a _ _ O
+digital _ _ O
+ecosystem. _ _ O
+
+
+# id 22be1f24-915c-48f1-a4b4-74cfe7ad818d	domain=en
+it _ _ O
+was _ _ O
+introduced _ _ O
+by _ _ O
+richard _ _ B-Scientist
+hamming _ _ I-Scientist
+(1915 _ _ O
+1998) _ _ O
+in _ _ O
+1950 _ _ O
+as _ _ O
+part _ _ O
+of _ _ O
+his _ _ O
+work _ _ O
+for _ _ O
+bell _ _ B-PrivateCorp
+Laboratories. _ _ O
+
+
+# id 69f4c51c-cab5-40bc-ae2d-d7913fb3472b	domain=en
+he _ _ O
+worked _ _ O
+at _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+from _ _ O
+1959 _ _ O
+to _ _ O
+1986 _ _ O
+when _ _ O
+he _ _ O
+retired. _ _ O
+
+
+# id e955ad55-2fb4-4a15-86ec-f9f08a04930e	domain=en
+since _ _ O
+the _ _ O
+site _ _ O
+therefore _ _ O
+belongs _ _ O
+to _ _ O
+the _ _ O
+Norwegian _ _ O
+group _ _ O
+aker _ _ B-PrivateCorp
+yards _ _ I-PrivateCorp
+. _ _ O
+
+
+# id 90892f90-1049-49e7-a3d5-5315ddd2481f	domain=en
+this _ _ O
+company _ _ O
+belongs _ _ O
+to _ _ O
+the _ _ O
+chanel _ _ B-PrivateCorp
+group. _ _ O
+
+
+# id cea3699a-96ff-4d12-883f-4b421fa2af01	domain=en
+it _ _ O
+thus _ _ O
+changes _ _ O
+its _ _ O
+name _ _ O
+and _ _ O
+becomes _ _ O
+stx _ _ B-PrivateCorp
+europe _ _ I-PrivateCorp
+. _ _ O
+
+
+# id aadb05d6-8d9d-4f7c-9d6e-45edbddebb3b	domain=en
+a _ _ O
+efteling _ _ B-PrivateCorp
+park _ _ O
+attraction: _ _ O
+pagode _ _ B-Facility
+
+
+# id 8babc7de-2067-40d6-91d0-804858ca5126	domain=en
+across _ _ O
+the _ _ O
+Atlantic _ _ O
+at _ _ O
+the _ _ O
+same _ _ O
+time, _ _ O
+teams _ _ O
+from _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+were _ _ O
+working _ _ O
+on _ _ O
+multi-channel _ _ O
+auditory _ _ O
+perspective _ _ O
+systems. _ _ O
+
+
+# id 371694cc-990b-464c-b194-caead6aeca3d	domain=en
+the _ _ O
+group _ _ O
+included _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+. _ _ O
+
+
+# id 9aebd59b-a0e2-403f-b207-ebdc5bfb3ee9	domain=en
+This _ _ O
+lighthouse _ _ O
+was _ _ O
+managed _ _ O
+by _ _ O
+the _ _ O
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+lighthouse _ _ I-PrivateCorp
+service _ _ I-PrivateCorp
+of _ _ O
+londres _ _ B-HumanSettlement
+the _ _ O
+maritime _ _ O
+aid _ _ O
+organization _ _ O
+of _ _ O
+the _ _ O
+coasts _ _ O
+of _ _ O
+england. _ _ O
+
+
+# id 2ebdbbc7-86c7-43e0-a20b-3b4a3d1c3947	domain=en
+it _ _ O
+has _ _ O
+always _ _ O
+evolved _ _ O
+on _ _ O
+mitsubishi _ _ B-PrivateCorp
+vehicles. _ _ O
+
+
+# id 9a9ca115-917c-48e8-9adb-b8886aeb34c5	domain=en
+a _ _ O
+particular _ _ O
+sound _ _ O
+was _ _ O
+obtained _ _ O
+by _ _ O
+placing _ _ O
+the _ _ O
+microphone _ _ O
+inside _ _ O
+an _ _ O
+empty _ _ O
+water _ _ O
+bottle _ _ O
+placed _ _ O
+under _ _ O
+a _ _ O
+steinway _ _ B-PrivateCorp
+piano. _ _ O
+
+
+# id 2dbe5b4f-c36a-48e3-9830-4bb24918f747	domain=en
+in _ _ O
+1936 _ _ O
+at _ _ O
+the _ _ O
+états-unis _ _ B-HumanSettlement
+a _ _ O
+patent _ _ O
+was _ _ O
+filed _ _ O
+for _ _ O
+a _ _ O
+petrol _ _ O
+lighter _ _ O
+derived _ _ O
+from _ _ O
+the _ _ O
+storm _ _ O
+lighter: _ _ O
+the _ _ O
+zippo _ _ B-PrivateCorp
+which _ _ O
+was _ _ O
+a _ _ O
+lasting _ _ O
+success. _ _ O
+
+
+# id 443f41ea-3a46-448e-b19a-e7b1e89c16a2	domain=en
+the _ _ O
+competition _ _ O
+between _ _ O
+these _ _ O
+agencies _ _ O
+whose _ _ O
+main _ _ O
+instigator _ _ O
+elite _ _ B-PrivateCorp
+will _ _ O
+impose _ _ O
+the _ _ O
+name _ _ O
+of _ _ O
+the _ _ O
+models _ _ O
+on _ _ O
+the _ _ O
+magazines. _ _ O
+
+
+# id a36c73cb-64c0-47d1-9ad7-447f092b3607	domain=en
+he _ _ O
+joined _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+in _ _ O
+1958. _ _ O
+
+
+# id 6ece4a0a-d1e4-4f98-8061-763d8efbbea0	domain=en
+several _ _ O
+start-up _ _ B-ORG
+including _ _ O
+southern _ _ B-PrivateCorp
+launch _ _ I-PrivateCorp
+founded _ _ O
+in _ _ O
+2017 _ _ O
+develops _ _ O
+a _ _ O
+modest _ _ O
+activity _ _ O
+in _ _ O
+the _ _ O
+space _ _ O
+sector. _ _ O
+
+
+# id 500220c5-3271-46f3-8ec7-1aef1cc64d6a	domain=en
+January _ _ O
+12, _ _ O
+2022 _ _ O
+gsc _ _ B-PrivateCorp
+game _ _ I-PrivateCorp
+world _ _ I-PrivateCorp
+announces _ _ O
+that _ _ O
+the _ _ O
+game _ _ O
+is _ _ O
+postponed _ _ O
+to _ _ O
+December _ _ O
+8, _ _ O
+2022. _ _ O
+
+
+# id df716362-05e0-445a-8ca0-58f76e8081b8	domain=en
+bmc _ _ B-CarManufacturer
+subaru _ _ B-CarManufacturer
+mitsubishi _ _ B-PrivateCorp
+citroën _ _ B-CarManufacturer
+renault _ _ B-CarManufacturer
+skoda _ _ B-CarManufacturer
+
+
+# id 824dfe61-f941-41a6-8882-1cc251738976	domain=en
+she _ _ O
+signs _ _ O
+with _ _ O
+the _ _ O
+agency _ _ O
+elite _ _ B-PrivateCorp
+model _ _ I-PrivateCorp
+management _ _ I-PrivateCorp
+and _ _ O
+begins _ _ O
+a _ _ O
+career _ _ O
+as _ _ O
+a _ _ O
+model. _ _ O
+
+
+# id 7c228673-b860-4bc0-8088-86bae4793e66	domain=en
+in _ _ O
+1947 _ _ O
+he _ _ O
+was _ _ O
+invited _ _ O
+to _ _ O
+a _ _ O
+demonstration _ _ O
+of _ _ O
+transistors _ _ O
+at _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+and _ _ O
+upon _ _ O
+his _ _ O
+return _ _ O
+wrote _ _ O
+a _ _ O
+report _ _ O
+predicting _ _ O
+the _ _ O
+obsolescence _ _ O
+of _ _ O
+the _ _ O
+tubes. _ _ O
+
+
+# id 9ef120cc-7486-4a0c-bad6-f005d073ae3d	domain=en
+trinity _ _ B-PrivateCorp
+house _ _ I-PrivateCorp
+accepted _ _ O
+the _ _ O
+project _ _ O
+but _ _ O
+it _ _ O
+was _ _ O
+very _ _ O
+late _ _ O
+in _ _ O
+its _ _ O
+realization _ _ O
+
+
+# id 45965ae0-74f8-439b-9d50-7d274bc569c7	domain=en
+efteling _ _ B-PrivateCorp
+is _ _ O
+then _ _ O
+on _ _ O
+the _ _ O
+first _ _ O
+step _ _ O
+of _ _ O
+the _ _ O
+European _ _ O
+podium _ _ O
+in _ _ O
+terms _ _ O
+of _ _ O
+attendance _ _ O
+with _ _ O
+. _ _ O
+
+
+# id 037676a5-2dfc-40d2-9b3f-f20552755481	domain=en
+robert _ _ B-OtherPER
+bigelow _ _ I-OtherPER
+(1945) _ _ O
+founder _ _ O
+of _ _ O
+the _ _ O
+hotel _ _ O
+group _ _ O
+budget _ _ B-ORG
+suites _ _ I-ORG
+of _ _ I-ORG
+america _ _ I-ORG
+and _ _ O
+the _ _ O
+company _ _ O
+bigelow _ _ B-PrivateCorp
+aerospace _ _ I-PrivateCorp
+
+
+# id fd88dc18-e391-475c-9cea-a7e8183b5b2c	domain=en
+for _ _ O
+the _ _ O
+first _ _ O
+time _ _ O
+efteling _ _ B-PrivateCorp
+wanted _ _ O
+an _ _ O
+original _ _ O
+creation. _ _ O
+
+
+# id 741dce85-7bad-4f5c-b207-1aeb40cfa10f	domain=en
+it _ _ O
+belongs _ _ O
+to _ _ O
+an _ _ O
+coentreprise _ _ B-ORG
+between _ _ O
+xstrata _ _ B-PrivateCorp
+itochu _ _ B-PublicCorp
+and _ _ O
+sumitomo _ _ B-ORG
+. _ _ O
+
+
+# id 12af5f39-21c2-4593-a7fa-72df3681da48	domain=en
+Austin _ _ O
+left _ _ O
+USWA _ _ O
+in _ _ O
+1990 _ _ O
+and _ _ O
+signed _ _ O
+with _ _ O
+world _ _ B-PrivateCorp
+championship _ _ I-PrivateCorp
+wrestling _ _ I-PrivateCorp
+the _ _ O
+following _ _ O
+year. _ _ O
+
+
+# id afa90c17-b197-44c2-9376-438cbb632afe	domain=en
+henry _ _ B-Artist
+e. _ _ I-Artist
+steinway _ _ I-Artist
+( _ _ O
+1797 _ _ O
+1871 _ _ O
+) _ _ O
+founder _ _ O
+of _ _ O
+piano _ _ O
+manufacturer _ _ O
+steinway _ _ B-PrivateCorp
+& _ _ I-PrivateCorp
+sons _ _ I-PrivateCorp
+
+
+# id d2fbab37-a7d5-4f99-bcca-5b239d402420	domain=en
+its _ _ O
+main _ _ O
+competitor _ _ O
+fanduel _ _ B-PrivateCorp
+has _ _ O
+existed _ _ O
+since _ _ O
+2009. _ _ O
+
+
+# id ce90ff8d-fae8-4f58-b349-8873d59108cb	domain=en
+in _ _ O
+2012 _ _ O
+he _ _ O
+co-founded _ _ O
+bytedance _ _ B-PrivateCorp
+which _ _ O
+is _ _ O
+valued _ _ O
+at _ _ O
+75 _ _ O
+billion _ _ O
+dollars. _ _ O
+
+
+# id 578d4f7d-4a42-4dd5-a2dc-8362b019d1db	domain=en
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+build _ _ O
+the _ _ O
+first _ _ O
+panneau _ _ B-OtherPROD
+solaire _ _ I-OtherPROD
+but _ _ O
+it _ _ O
+is _ _ O
+too _ _ O
+expensive _ _ O
+to _ _ O
+be _ _ O
+mass-produced. _ _ O
+
+
+# id a16776a0-f313-4815-822c-d1371e9a5d64	domain=en
+the _ _ O
+album _ _ O
+is _ _ O
+classified _ _ O
+in _ _ O
+the _ _ O
+list _ _ O
+of _ _ O
+compiled _ _ O
+by _ _ O
+the _ _ B-PrivateCorp
+wire _ _ I-PrivateCorp
+and _ _ O
+is _ _ O
+cited _ _ O
+as _ _ O
+. _ _ O
+
+
+# id 707bc4ec-826d-4eda-9e49-3c02aff3cc19	domain=en
+its _ _ O
+output _ _ O
+is _ _ O
+supported _ _ O
+by _ _ O
+raw _ _ B-PrivateCorp
+fury _ _ I-PrivateCorp
+and _ _ O
+microsoft _ _ B-PublicCorp
+. _ _ O
+
+
+# id 46b6f81b-d08b-4db3-8bfa-31d4c7612ddd	domain=en
+the _ _ O
+partenariat _ _ B-PrivateCorp
+can _ _ O
+be _ _ O
+used _ _ O
+as _ _ O
+a _ _ O
+communication _ _ O
+tool. _ _ O
+
+
+# id 248079fa-097b-41bf-80b9-5b141c6924b6	domain=en
+moreover, _ _ O
+some _ _ O
+creators _ _ O
+like _ _ O
+roland _ _ B-Artist
+mouret _ _ I-Artist
+versace _ _ B-PrivateCorp
+or _ _ O
+often _ _ O
+victoria _ _ B-Artist
+beckham _ _ I-Artist
+include _ _ O
+it _ _ O
+in _ _ O
+their _ _ O
+collections. _ _ O
+
+
+# id a7a0bbf5-6d9c-43af-8324-4168b76f9f86	domain=en
+he _ _ O
+returned _ _ O
+the _ _ O
+same _ _ O
+year _ _ O
+to _ _ O
+wcw _ _ B-PrivateCorp
+for _ _ O
+the _ _ O
+third _ _ O
+and _ _ O
+final _ _ O
+time. _ _ O
+
+
+# id 32195b48-18e1-4e30-bcca-c60f009fc766	domain=en
+ranked _ _ O
+among _ _ O
+the _ _ O
+top _ _ O
+50 _ _ O
+recordings _ _ O
+of _ _ O
+the _ _ O
+year _ _ O
+by _ _ O
+the _ _ B-PrivateCorp
+wire _ _ I-PrivateCorp
+
+
+# id bfdbeaf7-87df-4499-93f7-d7b35f048aab	domain=en
+then _ _ O
+and _ _ O
+for _ _ O
+five _ _ O
+years _ _ O
+he _ _ O
+worked _ _ O
+at _ _ O
+laboratoires _ _ B-PrivateCorp
+bell _ _ I-PrivateCorp
+a _ _ O
+scientifically _ _ O
+very _ _ O
+productive _ _ O
+period. _ _ O
+
+
+# id 15eef18e-9582-4cfe-9ec1-ee75e585ad46	domain=en
+chanel _ _ B-PrivateCorp
+incorporates _ _ O
+the _ _ O
+tuxedo _ _ O
+into _ _ O
+its _ _ O
+1972 _ _ O
+women's _ _ O
+collection. _ _ O
+
+

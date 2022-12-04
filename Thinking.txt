@@ -519,4 +519,31 @@ fr-en:
     Duplicate sentence id: c38f698c-37c5-40fb-a64d-47dbcbc29596
 
 Great, another assertion failed.
+
+assert len(entities) < len(london_results_dict[string_sentence]), f"Sentence entities: {entities}, London results: {london_results_dict[string_sentence]}"
+AssertionError: Sentence entities: ['CarManufacturer0', 'ORG1'], London results: ['for [ford cosworth] as an engine builder.']
+
+That assertion actually should have failed. This dataset is wild.
+Here's the examples that caused that assertion to fail:
+    # id c31e84aa-35f9-49d4-a250-4bc054ec6cde	domain=fr
+    pour _ _ O
+    ford _ _ B-CarManufacturer
+    cosworth _ _ B-ORG
+    en _ _ O
+    tant _ _ O
+    que _ _ O
+    motoriste _ _ O
+    . _ _ O
+
+    # id 24bd2421-099b-4538-b920-bb506da5f469	domain=fr
+    pour _ _ O
+    ford _ _ B-ORG
+    cosworth _ _ I-ORG
+    en _ _ O
+    tant _ _ O
+    que _ _ O
+    motoriste _ _ O
+    . _ _ O
+
+
 '''
