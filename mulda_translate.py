@@ -10,10 +10,10 @@ from google.cloud import translate_v2 as translate
 
 
 # languages must be in Domain enum
-SOURCE_LANGUAGE = "en"
-TARGET_LANGUAGE = "fr"
+SOURCE_LANGUAGE = "fr"
+TARGET_LANGUAGE = "en"
 # set to False if you've already run Google Translate once
-RUN_GOOGLE_TRANSLATE = False
+RUN_GOOGLE_TRANSLATE = True
 # how many full sentences to translate at once
 # (each full sentence is translated once for each entity in the sentence)
 BATCH_SIZE = 100 # can be 100 here because there's only one sentence per translation
