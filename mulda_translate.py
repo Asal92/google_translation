@@ -53,29 +53,19 @@ INPUT_TEXT_KEY = "input"
 
 TEMPLATE_TOKEN = "<#TEMPLATE#>"
 
-class BracketsNotFoundWarning(UserWarning):
-    '''Raised when brackets are not found in a string'''
-    pass
-
-class TranslationMismatchWarning(UserWarning):
-    '''Raised when the translations of a sentence don't match each other'''
-    pass
-
-class TemplateTokenMismatchWarning(UserWarning):
-    '''Raised when the number of template tokens in the original sentence and the split template don't match.
-    This is usually due to punctuation being added just after the bracketing.'''
-    pass
-
 class InvalidBracketingError(ValueError):
     '''Raised when the bracketing is invalid, usually due to the text already containing brackets'''
     pass
 
 class SkipReason(Enum):
-    TemplateTokenMismatch = "TemplateTokenMismatch"
+    # the stable London translation (after translation) had unclear (un)bracketing
     InvalidBracketing = "InvalidBracketing"
-    BracketsNotFound = "BracketsNotFound"
-    TranslationMismatch = "MismatchedSentences"
+    # the stable London translation (before translation) couldn't bracket the sentence
     NotFoundInLondon = "NotFoundInLondon"
+    # the MulDA entity could not be found after translation
+    EntityNotFound = "EntityNotFound"
+    # the MulDA sentence had a different number of entities than were found in the stable London translation
+    MismatchedEntities = "MismatchedEntities"
 
 class TagCategory(Enum):
     '''The tags are:
@@ -234,38 +224,6 @@ class Sentence:
 
         return self.replace_old_entities(mulda_entities)
 
-    def get_bracketed_sentences(self) -> List[str]:
-        '''For each entity in the sentence, return a string of the sentence with the entity bracketed'''
-        bracketed_sentences = []
-        for entity_index in self.entity_indexes:
-            bracketed_sentence = ""
-            bracketing = False
-            for i, word in enumerate(self.words):
-                bracketed_sentence += " "
-                if i == entity_index:
-                    bracketed_sentence += f"{START_BRACKET}{word.token}"
-                    bracketing = True
-                elif bracketing:
-                    if word.tag.tag_type != TagType.I:
-                        assert word.tag.tag_type == TagType.O or word.tag.tag_type == TagType.B
-                        # remove the trailing space
-                        bracketed_sentence = bracketed_sentence[:-1]
-                        bracketed_sentence += f"{END_BRACKET} {word.token}"
-                        bracketing = False
-                    else:
-                        bracketed_sentence += word.token
-                else:
-                    bracketed_sentence += word.token
-            if bracketing:
-                # close bracket if the entity is at the end of the sentence
-                bracketed_sentence += END_BRACKET
-            bracketed_sentence = bracketed_sentence.strip()
-            if not check_brackets(bracketed_sentence):
-                raise InvalidBracketingError(f"Brackets were not done correctly in {bracketed_sentence}")
-            bracketed_sentences.append(bracketed_sentence)
-        assert len(bracketed_sentences) == len(self.entity_indexes)
-        return bracketed_sentences
-
     def get_entity(self, entity_indexes_index: int) -> str:
         '''Return the entity at the given index'''
         entity_index = self.entity_indexes[entity_indexes_index]
@@ -332,7 +290,8 @@ def remove_bracketed_entity(s: str) -> str:
     return s[:start_bracket_index] + s[end_bracket_index + len(END_BRACKET):]
 
 def get_bracketed_entity(s: str) -> str:
-    assert check_brackets(s), s
+    if not check_brackets(s):
+        raise InvalidBracketingError(s)
     start_bracket_index, end_bracket_index = get_bracket_indexes(s)
     ret = s[start_bracket_index + len(START_BRACKET):end_bracket_index]
     return ret
@@ -497,6 +456,9 @@ for result in london_results:
 
 skipped: List[Tuple[str, SkipReason]]= []
 
+orig_file = open(UNTRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
+trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
+
 # we want to put the results back into the CONLL format
 for sentence_index, sentence in enumerate(sentences):
     entities = sentence.get_mulda_entities()
@@ -538,16 +500,18 @@ for sentence_index, sentence in enumerate(sentences):
     if not valid:
         continue
 
-    # at this point we know the entities in both the original sentence and the translated sentence are there.
-    # now we just need to do the replacement
     orig_entities = sentence.get_entities()
-    trans_entities = [get_bracketed_entity(translated_sentence) for translated_sentence in london_results_dict[string_sentence]]
-
-    orig_file = open(UNTRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
-    trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
+    try:
+        trans_entities = [get_bracketed_entity(translated_sentence) for translated_sentence in london_results_dict[string_sentence]]
+    except InvalidBracketingError:
+        warnings.warn(f"Skipping sentence because the entities in it could not be bracketed without confusion: {sentence}")
+        skipped.append((sentence.id_value, SkipReason.InvalidBracketing))
+        continue
 
     domain = Domain(TARGET_LANGUAGE)
 
+    # at this point we know the entities in both the original sentence and the translated sentence are there.
+    # now we just need to do the replacement
     for entities, file in [(orig_entities, orig_file), (trans_entities, trans_file)]:
         add_conll_id_line(file, sentence.id_value, domain)
         new_sentence = sentence.replace_entities(entities)
@@ -556,10 +520,10 @@ for sentence_index, sentence in enumerate(sentences):
         file.write("\n\n")
 
 print(f"Skipped {len(skipped)}/{len(sentences)} sentences")
-print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.InvalidBracketing])} sentences due to invalid bracketing (usually from the original sentence containing the bracket characters)")
-print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.BracketsNotFound])} sentences due to brackets not being found")
-print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.TranslationMismatch])} sentences due to translations not matching")
-print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.TemplateTokenMismatch])} sentences due to template token mismatch (usually from punctuation added after an entity)")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.NotFoundInLondon])} sentences because they were not found in the London results - this is due to the stable London translation being unable to bracket the entities in the sentence. (london_translate should have displayed an InvalidBracketing warning for these sentence.)")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.MismatchedEntities])} sentences because the number of entities in the sentence does not match the number of translated sentences. This should never happpen and is a sign that something is very wrong with matching the London examples to the MulDA examples. If this is more than 0, something is very wrong.")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.EntityNotFound])} sentences because the entity in the sentence could not be found in the translated sentence.")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.InvalidBracketing])} sentences because the entities in the sentence could not be unbracketed without confusion. This is due to the translation done in london_translate not being clear.")
 with open(SKIPPED_FILE, 'w', encoding=ENCODING) as f:
     f.write("Sentence ID, Reason\n")
     f.write("\n".join([f"{id_value}, {reason.value}" for id_value, reason in skipped]))
