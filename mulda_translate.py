@@ -63,6 +63,8 @@ class SkipReason(Enum):
     EntityNotFound = "EntityNotFound"
     # the MulDA sentence had a different number of entities than were found in the stable London translation
     MismatchedEntities = "MismatchedEntities"
+    # the example was in the dataset twice
+    DuplicateID = "DuplicateID"
 
 class TagCategory(Enum):
     '''The tags are:
@@ -245,10 +247,6 @@ class Sentence:
                     break
                 else:
                     entity += f" {word.token}"
-        # TODO debugging
-        if self.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
-            print(str(self))
-            print(f"Entity {entity_indexes_index} at word index {entity_index}: {entity}")
         return entity
 
     def get_entities(self) -> List[str]:
@@ -332,30 +330,6 @@ def add_conll_id_line(file_desc, id_value: str, domain: Domain):
     file_desc.write(f"# id {id_value}\tdomain={domain.value}\n")
 
 
-# TODO delete if not used
-# def plain_word_check(word, entity):
-#     '''See if the word and entity match'''
-#     return word == entity
-
-# TODO delete if not used
-# def en_fr_word_check(given_word, entity):
-#     '''
-#     See if the word and entity match.
-#     Deals with two cases specific to English --> French
-#     1. The entity having l' or d' or other French articles with apostrophes in front of it.
-#     2. The entity being translated
-#     '''
-#     splits = given_word.split("'")
-#     if len(splits) != 1:
-#         for word in splits:
-#             if en_fr_word_check(word, entity):
-#                 return True
-#     if "AUTRE" in given_word:
-#         given_word.replace("AUTRE", "OTHER")
-#     if "POLITICIEN" in given_word:
-#         given_word.replace("POLITICIEN", "POLITICIAN")
-#     return given_word == entity
-
 if RUN_GOOGLE_TRANSLATE:
     translator = translate.Client.from_service_account_json(SECRET_JSON)
 
@@ -404,6 +378,23 @@ for line in tqdm(input_file, total=num_lines):
 if sentence.words:
     sentences.append(sentence)
 
+# format [(sentence id, SkipReason), ...]
+skipped: List[Tuple[str, SkipReason]]= []
+
+# remove sentences with duplicate ids
+existing_sentence_ids = set()
+sentences_to_remove = []
+for sentence_id, sentence in enumerate(sentences):
+    if sentence.id_value in existing_sentence_ids:
+        warnings.warn(f"Duplicate sentence id: {sentence.id_value}")
+        skipped.append((sentence.id_value, SkipReason.DuplicateID))
+        sentences_to_remove.append(sentence_id)
+
+    existing_sentence_ids.add(sentence.id_value)
+
+for sentence_id in reversed(sentences_to_remove):
+    del sentences[sentence_id]
+
 # we now have a list of sentences
 # for each sentence, we want to replace all the entities with the name of the entity like they do in MulDA
 # "James went to Cali" -> "PER0 went to LOC1"
@@ -425,33 +416,32 @@ if RUN_GOOGLE_TRANSLATE:
         print(f"Results saved to {JSON_FILE}")
 
 
-# USE LONDON_TRANSLATE.PY TO DO THIS PART
-# # for each entity in each sentence, we want to put the entity in brackets and translate it
-# sentences_to_translate: List[List[str]] = []
-# valid_sentences = []
-# for sentence in sentences:
-#     try:
-#         sentences_to_translate.append(sentence.get_bracketed_sentences())
-#         valid_sentences.append(sentence)
-#     except InvalidBracketingError:
-#         warnings.warn(f"Skipping sentence because the entities in it could not be bracketed without confusion: {sentence}")
-#         skipped.append((sentence.id_value, SkipReason.InvalidBracketing))
+# USE LONDON_TRANSLATE.PY TO DO THIS PART (make sure brackets and file names are set correctly)
+    # # for each entity in each sentence, we want to put the entity in brackets and translate it
+    # sentences_to_translate: List[List[str]] = []
+    # valid_sentences = []
+    # for sentence in sentences:
+    #     try:
+    #         sentences_to_translate.append(sentence.get_bracketed_sentences())
+    #         valid_sentences.append(sentence)
+    #     except InvalidBracketingError:
+    #         warnings.warn(f"Skipping sentence because the entities in it could not be bracketed without confusion: {sentence}")
+    #         skipped.append((sentence.id_value, SkipReason.InvalidBracketing))
 
-# valid_sentences
-# if RUN_GOOGLE_TRANSLATE:
-#     results = []
-#     for i in tqdm(range(len(sentences_to_translate) // BATCH_SIZE + 1)):
-#         start = BATCH_SIZE * i
-#         end = min(BATCH_SIZE * (i + 1), len(sentences_to_translate))
-#         # see https://stackoverflow.com/questions/1198777/double-iteration-in-list-comprehension
-#         batch = [sentence for valid_sentences in sentences_to_translate[start:end] for sentence in valid_sentences]
-#         results.extend(translator.translate(batch, TARGET_LANGUAGE, 'text', SOURCE_LANGUAGE))
-    
-#     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
-#     with open(JSON_FILE, 'w', encoding=ENCODING) as f:
-#         json.dump(results, f, indent=1)
-#         print(f"Results saved to {JSON_FILE}")
-
+    # valid_sentences
+    # if RUN_GOOGLE_TRANSLATE:
+    #     results = []
+    #     for i in tqdm(range(len(sentences_to_translate) // BATCH_SIZE + 1)):
+    #         start = BATCH_SIZE * i
+    #         end = min(BATCH_SIZE * (i + 1), len(sentences_to_translate))
+    #         # see https://stackoverflow.com/questions/1198777/double-iteration-in-list-comprehension
+    #         batch = [sentence for valid_sentences in sentences_to_translate[start:end] for sentence in valid_sentences]
+    #         results.extend(translator.translate(batch, TARGET_LANGUAGE, 'text', SOURCE_LANGUAGE))
+        
+    #     os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+    #     with open(JSON_FILE, 'w', encoding=ENCODING) as f:
+    #         json.dump(results, f, indent=1)
+    #         print(f"Results saved to {JSON_FILE}")
 
 # we now have results in the json files
 with open(JSON_FILE, 'r', encoding=ENCODING) as f:
@@ -469,12 +459,7 @@ for result in london_results:
     if key_sentence not in london_results_dict:
         london_results_dict[key_sentence] = []
     translated_text = result[TRANSLATED_TEXT_KEY]
-    # some examples may be in the dataset multiple times
-    # we only want to add it once
-    if translated_text not in london_results_dict[key_sentence]:
-        london_results_dict[key_sentence].append(result[TRANSLATED_TEXT_KEY])
-
-skipped: List[Tuple[str, SkipReason]]= []
+    london_results_dict[key_sentence].append(translated_text)
 
 orig_file = open(UNTRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
@@ -489,8 +474,7 @@ for sentence_index, sentence in enumerate(sentences):
     string_sentence = sentence.get_pure_string()
 
     if string_sentence not in london_results_dict:
-        # TODO
-        # warnings.warn(f"Skipping sentence because it was not found in the London results: {sentence}")
+        warnings.warn(f"Skipping sentence because it was not found in the London results: {sentence}")
         skipped.append((sentence.id_value, SkipReason.NotFoundInLondon))
         continue
 
@@ -517,8 +501,7 @@ for sentence_index, sentence in enumerate(sentences):
                 entity_index_in_translated_mulda_entity_sentence = word_index
 
         if match_count != 1:
-            # TODO
-            # warnings.warn(f"Could not find entity {entity} in translated sentence exactly once:{translated_mulda_entity_sentence_str}")
+            warnings.warn(f"Could not find entity {entity} in translated sentence exactly once:{translated_mulda_entity_sentence_str}")
             skipped.append((sentence.id_value, SkipReason.EntityNotFound))
             valid = False
             break
@@ -541,8 +524,7 @@ for sentence_index, sentence in enumerate(sentences):
     try:
         trans_entities = [get_bracketed_entity(translated_sentence) for translated_sentence in london_results_dict[string_sentence]]
     except InvalidBracketingError:
-        # TODO
-        # warnings.warn(f"Skipping sentence because the entities in it could not be bracketed without confusion: {sentence}")
+        warnings.warn(f"Skipping sentence because the entities in it could not be bracketed without confusion: {sentence}")
         skipped.append((sentence.id_value, SkipReason.InvalidBracketing))
         continue
 
@@ -559,7 +541,7 @@ for sentence_index, sentence in enumerate(sentences):
 
 print(f"Skipped {len(skipped)}/{len(sentences)} sentences")
 print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.NotFoundInLondon])} sentences because they were not found in the London results - this is due to the stable London translation being unable to bracket the entities in the sentence. (london_translate should have displayed an InvalidBracketing warning for these sentence.)")
-print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.MismatchedEntities])} sentences because the number of entities in the sentence does not match the number of translated sentences. This should never happpen and is a sign that something is very wrong with matching the London examples to the MulDA examples. If this is more than 0, something is very wrong.")
+print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.MismatchedEntities])} sentences because the number of entities in the sentence does not match the number of translated sentences. This should never happpen and is a sign that something is very wrong with matching the London examples to the MulDA examples. If this is more than 0, something is very wrong. Most likely, you have two examples with the exact same text but different IDs.")
 print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.EntityNotFound])} sentences because the entity in the sentence could not be found in the translated sentence.")
 print(f"Skipped {len([s for s in skipped if s[1] == SkipReason.InvalidBracketing])} sentences because the entities in the sentence could not be unbracketed without confusion. This is due to the translation done in london_translate not being clear.")
 with open(SKIPPED_FILE, 'w', encoding=ENCODING) as f:
