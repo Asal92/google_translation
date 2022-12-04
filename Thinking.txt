@@ -458,4 +458,6 @@ That's correct. The `check_brackets` function ensures that the brackets are the 
 I could rename things "stable" instead of "London", but I think that would just take extra time with no functionality.
 
 The code's not finding anything from the London results, so I'll have to look into that.
+
+Athlète is another one in addition to Politicien and AutrePER.
 '''

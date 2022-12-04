@@ -14,9 +14,6 @@ SOURCE_LANGUAGE = "en"
 TARGET_LANGUAGE = "fr"
 # set to False if you've already run Google Translate once
 RUN_GOOGLE_TRANSLATE = False
-# whether or not to try to limit the number of skipped examples by using handcrafted rules
-FIX_ISSUES = False
-FIX_ISSUES_STRING = "plain" if FIX_ISSUES else "fancy"
 # how many full sentences to translate at once
 # (each full sentence is translated once for each entity in the sentence)
 BATCH_SIZE = 100 # can be 100 here because there's only one sentence per translation
@@ -32,8 +29,8 @@ SKIPPED_FILE_NAME = "mulda_skipped.csv"
 JSON_FILE = f"{OUTPUT_FOLDER}/{JSON_FILE_NAME}"
 LONDON_JSON_FILE = f"{OUTPUT_FOLDER}/{LONDON_JSON_FILE_NAME}"
 SKIPPED_FILE = f"{OUTPUT_FOLDER}/{SKIPPED_FILE_NAME}"
-UNTRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-orig-{FIX_ISSUES_STRING}-mulda.conll"
-TRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-trans-{FIX_ISSUES_STRING}-mulda.conll"
+UNTRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-orig-mulda.conll"
+TRANSLATED_CONLL_FILE_NAME = f"{SOURCE_LANGUAGE}-{TARGET_LANGUAGE}-trans-mulda.conll"
 UNTRANSLATED_CONLL_FILE = f"{OUTPUT_FOLDER}/{UNTRANSLATED_CONLL_FILE_NAME}"
 TRANSLATED_CONLL_FILE = f"{OUTPUT_FOLDER}/{TRANSLATED_CONLL_FILE_NAME}"
 SECRET_JSON = "./secret/google_api.json"
@@ -211,7 +208,7 @@ class Sentence:
 
     def replace_entities(self, new_entities) -> 'Sentence':
         '''Replace the entities in the old sentence with new entities'''
-        assert len(new_entities) == len(self.entity_indexes)
+        assert len(new_entities) == len(self.entity_indexes), f"Old entities: {self.get_entities()}, new entities: {new_entities}"
         ret = Sentence(id_value=self.id_value, domain=self.domain)
         for word_index, word in enumerate(self.words):
             if word_index in self.entity_indexes:
@@ -248,6 +245,10 @@ class Sentence:
                     break
                 else:
                     entity += f" {word.token}"
+        # TODO debugging
+        if self.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
+            print(str(self))
+            print(f"Entity {entity_indexes_index} at word index {entity_index}: {entity}")
         return entity
 
     def get_entities(self) -> List[str]:
@@ -474,6 +475,10 @@ trans_file = open(TRANSLATED_CONLL_FILE, 'w', encoding=ENCODING)
 
 # we want to put the results back into the CONLL format
 for sentence_index, sentence in enumerate(sentences):
+    # debugging
+    if sentence.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
+        print("DEALING WITH TRICKY")
+        print(sentence.get_entities())
     entities: List[str] = sentence.get_mulda_entities()
     categories: List[TagCategory] = sentence.get_entity_categories()
     result = results[sentence_index]
@@ -500,12 +505,12 @@ for sentence_index, sentence in enumerate(sentences):
         match_count = 0
         entity_index_in_translated_mulda_entity_sentence = None
         for word_index, word in enumerate(translated_mulda_entity_sentence_str.split()):
-            if entity in word:
+            if entity == word:
                 match_count += 1
                 entity_index_in_translated_mulda_entity_sentence = word_index
 
         if match_count != 1:
-            warnings.warn(f"Could not find entity {entity} in translated sentence exactly once{translated_mulda_entity_sentence_str}")
+            warnings.warn(f"Could not find entity {entity} in translated sentence exactly once:{translated_mulda_entity_sentence_str}")
             skipped.append((sentence.id_value, SkipReason.EntityNotFound))
             valid = False
             break
@@ -515,13 +520,24 @@ for sentence_index, sentence in enumerate(sentences):
     if not valid:
         continue
 
+    # debugging
+    if sentence.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
+        print("HERE")
+        print(sentence.get_entities())
+
     # convert the translated MulDA string into an actual sentence
     translated_mulda_entity_sentence = Sentence(id_value=sentence.id_value, domain=sentence.domain)
     for word_index, word in enumerate(translated_mulda_entity_sentence_str.split()):
         tag_type = TagType.B if word_index in entity_indexes_in_translated_mulda_entity_sentence else TagType.O
-        tag = Tag(tag_type, entity_indexes_in_translated_mulda_entity_sentence[word_index])
+        tag_category = entity_indexes_in_translated_mulda_entity_sentence[word_index] if word_index in entity_indexes_in_translated_mulda_entity_sentence else None
+        tag = Tag(tag_type, tag_category)
         new_word = Word(word, tag)
         translated_mulda_entity_sentence.add_word(new_word)
+
+    # debugging
+    if sentence.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
+        print("WHAT WENT WRONG")
+        print(translated_mulda_entity_sentence.get_entities())
 
     orig_entities = sentence.get_entities()
     try:
@@ -531,6 +547,11 @@ for sentence_index, sentence in enumerate(sentences):
         skipped.append((sentence.id_value, SkipReason.InvalidBracketing))
         continue
 
+    # debugging
+    if sentence.id_value == "fbec1921-8a37-46b3-83ef-80c82cc2a69f":
+        print("HERE AGAIN")
+        print(sentence.get_entities())
+
     domain = Domain(TARGET_LANGUAGE)
 
     # at this point we know the entities in both the original sentence and the translated sentence are there.
@@ -539,7 +560,7 @@ for sentence_index, sentence in enumerate(sentences):
         add_conll_id_line(file, sentence.id_value, domain)
         new_sentence = translated_mulda_entity_sentence.replace_entities(entities)
         for new_word in new_sentence:
-            add_conll_word(file, word)
+            add_conll_word(file, new_word)
         file.write("\n\n")
 
 print(f"Skipped {len(skipped)}/{len(sentences)} sentences")
