@@ -192,6 +192,9 @@ class Sentence:
     def __str__(self):
         return " ".join([str(word) for word in self.words])
 
+    def get_pure_string(self):
+        return " ".join([word.token for word in self.words])
+
     def add_word(self, word: Word):
         self.words.append(word)
         if word.tag.tag_type == TagType.B:
@@ -201,13 +204,13 @@ class Sentence:
         '''Replace the entities in the old sentence with new entities'''
         assert len(new_entities) == len(self.entity_indexes)
         ret = Sentence(id_value=self.id_value, domain=self.domain)
-        for i, word in enumerate(self.words):
-            if i in self.entity_indexes:
+        for word_index, word in enumerate(self.words):
+            if word_index in self.entity_indexes:
                 assert word.tag.tag_type == TagType.B
                 new_entity = new_entities.pop(0)
                 new_entity_words = new_entity.split()
-                for word_index, new_word in new_entity_words:
-                    tag_type = TagType.B if word_index == 0 else TagType.I
+                for new_word_index, new_word in enumerate(new_entity_words):
+                    tag_type = TagType.B if new_word_index == 0 else TagType.I
                     ret.add_word(Word(token=new_word, tag=Tag(tag_type=tag_type, tag_category=word.tag.tag_category)))
             elif word.tag.tag_type == TagType.I:
                 pass
@@ -395,7 +398,7 @@ if sentence.words:
 # "James went to Cali" -> "PER0 went to LOC1"
 sentences_to_translate: List[str] = []
 for sentence in tqdm(sentences, desc="Converting entities"):
-    sentences_to_translate.append(str(sentence.get_mulda_entity_sentence()))
+    sentences_to_translate.append(sentence.get_mulda_entity_sentence().get_pure_string())
 
 if RUN_GOOGLE_TRANSLATE:
     results = []
@@ -465,7 +468,7 @@ for sentence_index, sentence in enumerate(sentences):
     result = results[sentence_index]
     # translated sentence with MulDA entities
     translated_mulda_entity_sentence = result[TRANSLATED_TEXT_KEY]
-    string_sentence = str(sentence)
+    string_sentence = sentence.get_pure_string()
 
     if string_sentence not in london_results_dict:
         warnings.warn(f"Skipping sentence because it was not found in the London results: {sentence}")
