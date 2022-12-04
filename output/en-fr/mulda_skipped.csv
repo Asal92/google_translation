@@ -1,4 +1,15 @@
 Sentence ID, Reason
+a35f79c2-0657-4f57-97b4-70aff2c6b166, DuplicateID
+2329a743-c723-4d65-acab-1d55558fd322, DuplicateID
+6330bbd4-0245-4e82-b5ba-523631df3321, DuplicateID
+ea3d766b-2b00-43e4-a487-465a8c53ca35, DuplicateID
+4e24e0f1-818d-4cd6-87fb-a767c900c57f, DuplicateID
+f58776ad-0929-464c-bae3-d15fdc3e33bb, DuplicateID
+c0f7a784-be6e-4044-82f5-a469e35c04c2, DuplicateID
+f76b3a83-2692-4d89-9413-a0dd39f2daf5, DuplicateID
+f1da298b-3109-48bd-9d21-bcc7a8e960ef, DuplicateID
+39dfab03-809f-423c-a949-7f3ba2f38895, DuplicateID
+580d6db3-46b4-4578-a9ce-7219db55b5f6, DuplicateID
 309f5b26-951e-472b-948e-47632249862b, EntityNotFound
 bb81b9a7-e73d-4977-b6a8-0f7937123dfe, EntityNotFound
 07ed0448-4651-4bfa-b2a2-484c233bdf60, EntityNotFound
@@ -74,6 +85,7 @@ e80c062e-6578-4cfe-8d52-b720e13e60b2, EntityNotFound
 0395060a-911b-4413-a9f2-7378132ce5db, EntityNotFound
 1a339923-a049-4ced-9612-54ee4c9ea580, EntityNotFound
 009709a9-0164-4f80-83bf-39724e8f5338, EntityNotFound
+57b87701-005f-4e0a-b325-f2c4de55b534, EntityNotFound
 217ec7d7-bce0-4c58-83a6-21836a6634ed, EntityNotFound
 e370bf2b-18a8-468c-abc7-af8b31648adf, EntityNotFound
 e38193eb-2a7d-4d3b-a36c-6285de334caf, EntityNotFound
@@ -286,7 +298,6 @@ d0901acd-c5c5-45bd-bd3b-4d2f80bb3ad9, EntityNotFound
 25a7906b-1dd9-467a-b109-9ef385826f8c, EntityNotFound
 d27a9776-ab9f-49e0-922c-741a48af1a21, EntityNotFound
 19c86c9c-53c8-4ef1-95fc-bbc17be9a08e, EntityNotFound
-7818d318-f4a5-497b-a29a-1dd18b2a93ed, EntityNotFound
 3173dd8a-d4e4-4ff8-858e-c6694709c616, EntityNotFound
 e44c2b81-fc8e-4526-bc34-6eded5720acc, EntityNotFound
 fe4c7179-392e-4265-b849-3d92a1ff1783, EntityNotFound
@@ -490,6 +501,7 @@ d58d82e9-1ae5-4387-8941-385bab983dea, EntityNotFound
 07a27c84-ff1c-4d84-9648-ed14d00555a5, EntityNotFound
 e4794989-3496-4ea0-b728-0cb0eb7817c3, NotFoundInLondon
 12aab403-4f13-407d-99bd-510d2e239ab0, EntityNotFound
+fff294f8-20a2-4f28-a171-206ab5d3f401, EntityNotFound
 77dd9098-d1fe-426b-afe8-9ca1ff4acb6a, NotFoundInLondon
 01e66ef4-e9d4-4e50-9990-9425a6516a11, EntityNotFound
 10c45a7f-e541-4233-9119-9673b16ded06, EntityNotFound
@@ -592,7 +604,7 @@ a2a1ecd5-adb1-48ab-a54f-5768c22bda86, EntityNotFound
 aea25127-fbd6-4ab0-bc54-e08d7bdeed4f, EntityNotFound
 51e69190-3f1f-4563-b156-8c24fbc8f370, EntityNotFound
 d92176c8-b22c-40e6-ac4c-10d90287d9a1, EntityNotFound
-39dfab03-809f-423c-a949-7f3ba2f38895, MismatchedEntities
+39dfab03-809f-423c-a949-7f3ba2f38895, EntityNotFound
 2aaae810-8ed8-45ef-a89e-35ce4006f08d, EntityNotFound
 f6d50bbe-70f8-482a-bcb6-8c69c8fc39f4, EntityNotFound
 aba15c70-e97f-4dc1-a606-a3e50f66776a, EntityNotFound
@@ -737,6 +749,7 @@ a39a9d01-8292-4402-b45d-bb037ed62ca3, EntityNotFound
 86948e24-82b6-4ca1-b787-3f2c547ff2fd, EntityNotFound
 f59c56b4-0c2c-4eed-a8af-10da794630b6, EntityNotFound
 2066a11a-dc55-4e32-b67e-4ca9c09bdd74, EntityNotFound
+fba11785-aacf-4eae-9181-c2130d0cce05, EntityNotFound
 0f7bb3b8-6688-49dd-b812-ed86e3a3ced0, EntityNotFound
 a9ec3349-e3ec-4fc5-9172-e4c1b8c1e773, EntityNotFound
 85685e18-ced2-41a2-9fe8-4fbea80cba3d, EntityNotFound
@@ -960,7 +973,6 @@ f925d5b7-2069-436c-8a36-7e67093cfe51, EntityNotFound
 249c2505-0e8c-43d0-92c0-2373a7100c85, EntityNotFound
 65855856-a4b9-4384-803c-b419297c7572, EntityNotFound
 1092ca2c-1023-4ee0-862a-917eee2bf48c, EntityNotFound
-c2115442-b8b9-4118-b8c1-af44132968c4, EntityNotFound
 5433e40b-67e7-4c64-a9b8-fca4904422db, EntityNotFound
 b0515ba4-f0f7-44bc-9ddd-82f1cb6edccf, EntityNotFound
 aea9a02b-38b1-41bc-a0a7-e82f5a346be3, EntityNotFound
@@ -1939,6 +1951,7 @@ e56851c8-9d50-4fa9-912e-7dbe82a58225, EntityNotFound
 2a58e610-a91a-49e9-9abe-fe6b38a5b408, EntityNotFound
 add394fd-ff45-42d2-a9da-6889a0618624, EntityNotFound
 efc9f368-4ea1-4f1f-87da-126a58447ee0, EntityNotFound
+4f3b07a7-8bf4-42e7-ba06-86967615cd1a, EntityNotFound
 a3490dca-2876-495a-aba1-ca17e987e573, EntityNotFound
 19d736f4-c4f9-4a3a-842e-45ee99a62e8f, EntityNotFound
 38b251e7-6073-43ee-9df9-d4207eb52835, EntityNotFound
@@ -3480,6 +3493,7 @@ c5124fd0-95d8-4b0c-948b-fe254fb7d0b0, EntityNotFound
 5ae52bcf-0ebc-472a-b887-cdf055fc8352, EntityNotFound
 371c0e11-df5e-4f2e-9d26-957da2425c31, EntityNotFound
 92661fbf-3186-4fc9-8e74-0b2f044fcb77, EntityNotFound
+7b16b2bb-d6a3-4e0b-b6df-e75e4c6ccb0b, EntityNotFound
 647f9e9a-2b11-4c6e-9db0-99f8346ef2bc, EntityNotFound
 5e695852-bd55-476a-9892-c82a9506583b, EntityNotFound
 ccd41d34-93f5-4e14-994d-38f9dfd86f42, EntityNotFound
@@ -3708,8 +3722,8 @@ e637a068-7a11-4ece-8c8b-98a321d04c97, EntityNotFound
 ae5297da-9ecb-4ca9-b26d-388276d80893, EntityNotFound
 c213b177-7306-46d4-a397-6a7b3b83667c, EntityNotFound
 f891f60e-fadf-41f2-ba30-0708a290425a, EntityNotFound
+e23e2bec-f8dd-4cc8-b7cd-e507f4ff1aea, EntityNotFound
 51748868-ecff-45b2-84d9-4c69e32f8076, EntityNotFound
-0689a8f9-97b2-4c4e-9b77-962fafd4f842, EntityNotFound
 9b834219-168f-4bdd-b34b-c584f188e1e3, EntityNotFound
 61ab31a4-4ac4-4fcb-aa7e-72eaf3927e83, EntityNotFound
 727454d8-0c71-4881-9381-d956d579a877, EntityNotFound
@@ -3955,7 +3969,6 @@ b6d09df3-f48b-4456-b3ec-8235073b799c, EntityNotFound
 4a119d27-86a9-4463-be59-ad7e7c01a4c3, EntityNotFound
 4dfdd0a8-508b-42bc-bece-6c417adb9b44, EntityNotFound
 336bfd99-19e8-4309-89fc-cc28cd474bf4, EntityNotFound
-ea3d766b-2b00-43e4-a487-465a8c53ca35, EntityNotFound
 a2755824-f8fd-4072-9441-e4efb33ce198, EntityNotFound
 a3122d5d-f24c-4bb0-b1a7-d0b6ebb36710, EntityNotFound
 74cf7b2c-50e8-4ba7-89cc-99d206c98ae4, EntityNotFound
@@ -3996,7 +4009,6 @@ cc1c45ba-e713-42d5-9c3b-1779e2df71d0, EntityNotFound
 d9dc5261-d9e3-4deb-9472-7c4fbd8b58e9, EntityNotFound
 ed7deb02-f058-4829-ae9f-315fa623ab50, EntityNotFound
 a568eef5-6328-4543-9c0e-43657812ec31, EntityNotFound
-d42e80d6-4744-404c-a697-79eeb981fd40, EntityNotFound
 ffccb17e-944c-4f06-87ed-441dbd2df0d1, EntityNotFound
 e4289c27-f3a2-429d-ad45-32f688b302a3, EntityNotFound
 dec1cf44-ba33-4735-a436-06e51ee4e1a0, EntityNotFound
@@ -4232,7 +4244,6 @@ b63ee1b1-a356-411a-a02d-34d7bbc38b5e, EntityNotFound
 583f17c3-6dfc-4f82-8480-c3af4059947d, EntityNotFound
 884fb7d6-4cf7-4b26-a797-1d7dc451d89e, EntityNotFound
 54e23c0c-00ea-4dd2-82c8-fbef47bd2eec, EntityNotFound
-f58776ad-0929-464c-bae3-d15fdc3e33bb, EntityNotFound
 7d4b5627-1a97-4ca2-9799-38faded291fa, EntityNotFound
 7e7fc79d-3972-4a3f-99b4-3c17ac6e1155, EntityNotFound
 2d445ad2-3893-47fc-9966-4f326ac92ef7, EntityNotFound
@@ -5264,6 +5275,7 @@ aa4d3076-2379-4903-9eab-92b34db631dd, EntityNotFound
 b9d2f3cd-3a47-4411-98a0-ffcf9fbc91cd, EntityNotFound
 a9d1fcbb-b723-4c97-a40b-aca91e74d86e, EntityNotFound
 b05982cc-a456-47b9-9a5a-f1420edeecb7, EntityNotFound
+49b52be0-83dc-44eb-bec8-873ca16ac040, EntityNotFound
 1341752c-112c-47a5-9130-8f11565bd9fe, EntityNotFound
 d709c049-7bd7-4719-a19b-661be2872b8d, EntityNotFound
 a18c512a-45fb-404a-ad28-1357db9cb54c, EntityNotFound
@@ -5663,7 +5675,6 @@ b2fba491-b2c4-4b62-9925-b495927a5b01, EntityNotFound
 38019750-a775-4007-927b-04cd791fb700, EntityNotFound
 fa892c57-1e81-4c42-8813-575e3dae6d56, EntityNotFound
 73c77c59-0a30-4255-954b-fdf0adc262a4, EntityNotFound
-dbd7001e-02cf-467b-b496-0637ad183fa4, EntityNotFound
 34d7a09b-823e-44f0-9205-7314f976854d, EntityNotFound
 c1d7ee85-b198-4dd1-9a2f-9a35c13428ae, EntityNotFound
 da9d08fb-1a4e-4096-afa3-3d10cce6d341, EntityNotFound
@@ -5789,6 +5800,7 @@ cddcdbd2-1fa3-4a90-a29f-580003638650, EntityNotFound
 f28a2264-9659-4580-a588-d4fac03b3bbd, EntityNotFound
 283cf47b-4370-4236-8f51-142e6aa4b0c2, EntityNotFound
 931efd7b-0a26-4c7a-87e7-6981a3c05f8e, EntityNotFound
+b920d3ae-32d9-42f2-9c95-b50d1d7e1691, EntityNotFound
 4a5e2165-bfd6-42a3-9234-4f441bb81879, EntityNotFound
 e530bcf5-04aa-42c7-af79-332e8b676150, EntityNotFound
 16248e94-3b41-4a87-8aec-e83d9f5fbf30, EntityNotFound
@@ -5873,7 +5885,6 @@ a4d7c876-3099-4126-8d91-ca35cbaaf82e, EntityNotFound
 83ce77cc-bc3f-4bc0-ab3c-44a95b9e3a7c, EntityNotFound
 24f9c5bc-36bb-46b9-ae22-79a3db5e9d54, EntityNotFound
 20445b35-ace8-45f5-8dfe-12331033331d, EntityNotFound
-f1da298b-3109-48bd-9d21-bcc7a8e960ef, EntityNotFound
 878835f5-8235-4d74-b45d-046097509b04, EntityNotFound
 0b08217f-2d7c-48c9-a133-1b316b32fc75, EntityNotFound
 8b3794ff-a932-4cee-9417-cea376a1d9ac, EntityNotFound
@@ -5979,7 +5990,6 @@ bab6ffd2-7b3b-4af8-8544-08f0ff93c5cb, EntityNotFound
 d558e078-e580-49e2-a503-df00ff0f3fb9, EntityNotFound
 1ceddc7b-3239-47d3-aea1-0cc47f6bc9b1, EntityNotFound
 f7be3d5d-5ea4-4a7f-9102-5d4b6c9b3b99, EntityNotFound
-39dfab03-809f-423c-a949-7f3ba2f38895, MismatchedEntities
 e6cf0240-2f31-4382-94c4-01fb85210136, EntityNotFound
 3c3d5e71-f220-48a0-bd74-3692a9361c9a, EntityNotFound
 f4ea6517-8864-4226-8530-d7ebb60a8486, NotFoundInLondon

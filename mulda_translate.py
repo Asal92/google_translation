@@ -267,10 +267,6 @@ class Sentence:
     def get_entity_categories(self) -> List[TagCategory]:
         return [self.get_entity_category(i) for i in range(len(self.entity_indexes))]
 
-    # UNNEEDED
-    # def get_all_entity_data(self) -> List[Tuple[str, TagCategory]]:
-    #     return list(zip(self.get_entities(), self.get_entity_categories()))
-
 # from https://stackoverflow.com/a/2187390/5049813
 def custom_formatwarning(msg, *args, **kwargs):
     # ignore everything except the message
@@ -479,14 +475,15 @@ for sentence_index, sentence in enumerate(sentences):
         continue
 
     if len(entities) != len(london_results_dict[string_sentence]):
-        print("FOUND BUG")
-        print(sentence)
-        print(entities)
-        print(london_results_dict[string_sentence])
+        assert len(entities) < len(london_results_dict[string_sentence]), f"Sentence entities: {entities}, London results: {london_results_dict[string_sentence]}"
+        warnings.warn(f"Example {sentence.id_value} has {len(entities)} entities but the london_translation.py results produced {len(london_results_dict[string_sentence])} different translations. This is usually because the example was included twice for the london_translation. We're going to just use the first translation produced by london_translation.py.")
+        london_results_dict[string_sentence] = london_results_dict[string_sentence][:len(entities)]
+        # TODO
+        # print("FOUND BUG")
+        # print(sentence)
+        # print(entities)
+        # print(london_results_dict[string_sentence])
         # note that this should never really happen
-        warnings.warn(f"Skipping sentence because the number of entities in it does not match the number of translated sentences: {sentence}")
-        skipped.append((sentence.id_value, SkipReason.MismatchedEntities))
-        continue
 
     # format: {index of entity in translated mulda sentence: TagCategory}
     entity_indexes_in_translated_mulda_entity_sentence: Dict[int, TagCategory] = {}
@@ -501,7 +498,7 @@ for sentence_index, sentence in enumerate(sentences):
                 entity_index_in_translated_mulda_entity_sentence = word_index
 
         if match_count != 1:
-            warnings.warn(f"Could not find entity {entity} in translated sentence exactly once:{translated_mulda_entity_sentence_str}")
+            warnings.warn(f"Could not find entity {entity} in translated sentence exactly once (found it {match_count} times): {translated_mulda_entity_sentence_str}")
             skipped.append((sentence.id_value, SkipReason.EntityNotFound))
             valid = False
             break

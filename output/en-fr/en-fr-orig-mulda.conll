@@ -3557,7 +3557,7 @@ avec _ _ O
 nat _ _ B-Artist
 coombs _ _ I-Artist
 comme _ _ O
-journaliste. _ _ O
+reporter. _ _ O
 
 
 # id c7402327-9df3-4278-8e97-597b050d4e7d	domain=fr
@@ -4830,7 +4830,11 @@ monmouth _ _ O
 thorpe _ _ B-OtherPER
 , _ _ I-OtherPER
 lewis _ _ I-OtherPER
-(éd.). _ _ O
+( _ _ O
+éd _ _ O
+. _ _ O
+) _ _ O
+. _ _ O
 
 
 # id 41b497f9-6f39-461f-8a5b-34f7eba1ac14	domain=fr
@@ -5712,27 +5716,6 @@ des _ _ O
 manuscrits _ _ O
 inconnus _ _ O
 jusqu'alors _ _ O
-. _ _ O
-
-
-# id 57b87701-005f-4e0a-b325-f2c4de55b534	domain=fr
-serao _ _ O
-était _ _ O
-médecin _ _ O
-en _ _ O
-chef _ _ O
-de _ _ O
-kingdom _ _ B-HumanSettlement
-of _ _ I-HumanSettlement
-naples _ _ I-HumanSettlement
-et _ _ O
-médecin _ _ O
-de _ _ O
-king _ _ B-OtherPER
-ferdinand _ _ I-OtherPER
-iv _ _ I-OtherPER
-of _ _ I-OtherPER
-bourbon _ _ I-OtherPER
 . _ _ O
 
 
@@ -7045,7 +7028,7 @@ poète _ _ O
 qui _ _ O
 a _ _ O
 vécu _ _ O
-sous _ _ O
+pendant _ _ O
 le _ _ O
 règne _ _ O
 de _ _ O
@@ -17031,7 +17014,7 @@ paris _ _ I-VisualWork
 
 
 # id d56330fa-66a5-427c-adbc-a5c5b0b3f159	domain=fr
-voici _ _ O
+voilà _ _ O
 ma _ _ O
 femme _ _ O
 ! _ _ O
@@ -17725,6 +17708,30 @@ indication _ _ O
 contraire _ _ O
 
 
+# id 7818d318-f4a5-497b-a29a-1dd18b2a93ed	domain=fr
+l'album _ _ O
+a _ _ O
+été _ _ O
+enregistré _ _ O
+en _ _ O
+seulement _ _ O
+15 _ _ O
+jours _ _ O
+produit _ _ O
+par _ _ O
+le _ _ O
+groupe _ _ O
+lui-même _ _ O
+avec _ _ O
+rick _ _ B-Artist
+parashar _ _ I-Artist
+de _ _ O
+london _ _ B-Facility
+bridge _ _ I-Facility
+studio _ _ I-Facility
+. _ _ O
+
+
 # id 89dacdbb-154f-4d39-b1c0-59b18c56aec3	domain=fr
 le _ _ O
 chanteur _ _ O
@@ -17954,8 +17961,10 @@ par _ _ O
 emmanuelle _ _ B-Artist
 chriqui _ _ I-Artist
 . _ _ O
-(28 _ _ O
-épisodes) _ _ O
+( _ _ O
+28 _ _ O
+épisodes _ _ O
+) _ _ O
 
 
 # id 0033f06c-9e6d-4273-8fb0-fb8ccf4f59bb	domain=fr
@@ -21106,7 +21115,7 @@ tapisserie. _ _ O
 # id a10387d5-0fae-4342-bcf1-09200e6fa2df	domain=fr
 avec _ _ O
 un _ _ O
-côté _ _ O
+bord _ _ O
 beaucoup _ _ O
 plus _ _ O
 dur _ _ O
@@ -24995,25 +25004,6 @@ l'égypte _ _ I-WrittenWork
 . _ _ O
 
 
-# id fff294f8-20a2-4f28-a171-206ab5d3f401	domain=fr
-c'était _ _ O
-le _ _ O
-deuxième _ _ O
-single _ _ O
-sorti _ _ O
-de _ _ O
-cet _ _ O
-album _ _ O
-avec _ _ O
-le _ _ O
-chant _ _ O
-principal _ _ O
-d' _ _ O
-peter _ _ B-Artist
-cetera _ _ I-Artist
-. _ _ O
-
-
 # id f258598e-7583-4bf9-8e7d-8bfa2d5ddc90	domain=fr
 il _ _ O
 a _ _ O
@@ -28121,7 +28111,7 @@ deux _ _ O
 ont _ _ O
 une _ _ O
 préface _ _ O
-de _ _ O
+par _ _ O
 justin _ _ B-Artist
 richards _ _ I-Artist
 . _ _ O
@@ -32739,17 +32729,6 @@ de _ _ O
 à _ _ O
 1999 _ _ O
 . _ _ O
-
-
-# id fba11785-aacf-4eae-9181-c2130d0cce05	domain=fr
-jeff _ _ B-Athlete
-francoeur _ _ I-Athlete
-voltigeur _ _ O
-droit _ _ O
-pour _ _ O
-le _ _ O
-atlanta _ _ B-SportsGRP
-braves _ _ I-SportsGRP
 
 
 # id bdfc71b7-b53f-412f-b0d2-9f7236464a0f	domain=fr
@@ -37443,7 +37422,7 @@ il _ _ O
 a _ _ O
 été _ _ O
 utilisé _ _ O
-dans _ _ O
+par _ _ O
 le _ _ O
 passé _ _ O
 par _ _ O
@@ -40068,6 +40047,33 @@ toulgoët _ _ I-OtherPER
 en _ _ O
 1984 _ _ O
 . _ _ O
+
+
+# id c2115442-b8b9-4118-b8c1-af44132968c4	domain=fr
+en _ _ O
+1540 _ _ O
+birgitte _ _ B-OtherPER
+gøye _ _ I-OtherPER
+fut _ _ O
+libéré _ _ O
+de _ _ O
+ses _ _ O
+fiançailles _ _ O
+avec _ _ O
+son _ _ O
+aide _ _ O
+ce _ _ O
+qui _ _ O
+conduisit _ _ O
+à _ _ O
+une _ _ O
+loi _ _ O
+interdisant _ _ O
+les _ _ O
+fiançailles _ _ O
+arrangées _ _ O
+des _ _ O
+mineurs. _ _ O
 
 
 # id 3be50f2c-9c63-464c-9fa4-bebefc29a6d8	domain=fr
@@ -45186,7 +45192,8 @@ perdu _ _ O
 au _ _ O
 premier _ _ O
 tour _ _ O
-contre _ _ O
+face _ _ O
+à _ _ O
 chanda _ _ B-Athlete
 rubin _ _ I-Athlete
 et _ _ O
@@ -48028,7 +48035,7 @@ et _ _ O
 le _ _ O
 match _ _ O
 s'est _ _ O
-poursuivi _ _ O
+déroulé _ _ O
 mais _ _ O
 à _ _ O
 ce _ _ O
@@ -48644,7 +48651,7 @@ pasadena _ _ B-HumanSettlement
 california _ _ I-HumanSettlement
 et _ _ O
 étaient _ _ O
-dirigés _ _ O
+menés _ _ O
 par _ _ O
 karl _ _ B-Athlete
 dorrell _ _ I-Athlete
@@ -57684,19 +57691,6 @@ les _ _ O
 activités _ _ O
 du _ _ O
 gang _ _ O
-
-
-# id 4f3b07a7-8bf4-42e7-ba06-86967615cd1a	domain=fr
-il _ _ O
-est _ _ O
-membre _ _ O
-de _ _ O
-uzbekistan _ _ B-ORG
-national _ _ I-ORG
-revival _ _ I-ORG
-democratic _ _ I-ORG
-party _ _ I-ORG
-. _ _ O
 
 
 # id 61545d5b-8843-42fc-8f62-7cb6e41bcef5	domain=fr
@@ -71283,9 +71277,8 @@ piquante. _ _ O
 
 
 # id d1e3bec1-e5cc-4a20-afc3-01c7948ebd56	domain=fr
-causé _ _ O
-par _ _ O
-l'homme _ _ O
+d'origine _ _ O
+humaine _ _ O
 ; _ _ O
 un _ _ O
 incendie _ _ O
@@ -73294,7 +73287,6 @@ bien _ _ O
 que _ _ O
 la _ _ O
 pierre _ _ O
-de _ _ O
 horsham _ _ B-HumanSettlement
 ait _ _ O
 été _ _ O
@@ -77969,7 +77961,7 @@ est _ _ O
 décédé _ _ O
 en _ _ O
 2013 _ _ O
-à _ _ O
+dans _ _ O
 santa _ _ B-HumanSettlement
 rosa _ _ I-HumanSettlement
 , _ _ I-HumanSettlement
@@ -78865,7 +78857,7 @@ switzerland _ _ B-HumanSettlement
 
 
 # id 15337e98-5c37-42b4-8166-e6e0236f6d48	domain=fr
-Andromache _ _ O
+Andromaque _ _ O
 est _ _ O
 seule _ _ O
 après _ _ O
@@ -87638,7 +87630,7 @@ fright _ _ I-VisualWork
 city _ _ B-VisualWork
 in _ _ I-VisualWork
 fear _ _ I-VisualWork
-– _ _ O
+- _ _ O
 a _ _ O
 contribué _ _ O
 à _ _ O
@@ -87942,9 +87934,11 @@ ab _ _ B-VisualWork
 dilli _ _ I-VisualWork
 dur _ _ I-VisualWork
 nahin _ _ I-VisualWork
-(scénario _ _ O
+( _ _ O
+scénario _ _ O
 / _ _ O
-histoire) _ _ O
+histoire _ _ O
+) _ _ O
 
 
 # id ac835aa1-cded-4682-ad72-aeac0cea3d99	domain=fr
@@ -88568,24 +88562,6 @@ the _ _ I-VisualWork
 animated _ _ I-VisualWork
 series _ _ I-VisualWork
 . _ _ O
-
-
-# id a35f79c2-0657-4f57-97b4-70aff2c6b166	domain=fr
-ranbir _ _ B-Artist
-kapoor _ _ I-Artist
-( _ _ O
-également _ _ O
-pour _ _ O
-wake _ _ B-VisualWork
-up _ _ I-VisualWork
-sid _ _ I-VisualWork
-et _ _ O
-ajab _ _ B-VisualWork
-prem _ _ I-VisualWork
-ki _ _ I-VisualWork
-ghazab _ _ I-VisualWork
-kahani _ _ I-VisualWork
-) _ _ O
 
 
 # id b26e2dc3-3d43-4ee5-8691-81400cd54d08	domain=fr
@@ -90640,7 +90616,7 @@ on _ _ I-VisualWork
 the _ _ I-VisualWork
 farm _ _ I-VisualWork
 (2018 _ _ O
-- _ _ O
+– _ _ O
 présent) _ _ O
 (déplacé _ _ O
 vers _ _ O
@@ -99169,7 +99145,7 @@ a _ _ O
 obtenu _ _ O
 sa _ _ O
 maîtrise _ _ O
-au _ _ O
+de _ _ O
 king’s _ _ B-Facility
 college _ _ I-Facility
 university _ _ B-ORG
@@ -99275,21 +99251,6 @@ de _ _ O
 1937 _ _ O
 à _ _ O
 1957 _ _ O
-. _ _ O
-
-
-# id 7b16b2bb-d6a3-4e0b-b6df-e75e4c6ccb0b	domain=fr
-il _ _ O
-a _ _ O
-également _ _ O
-été _ _ O
-cofondateur _ _ O
-du _ _ O
-théâtre _ _ B-Facility
-de _ _ I-Facility
-l'œuvre _ _ I-Facility
-avec _ _ O
-lugné-poe _ _ B-Artist
 . _ _ O
 
 
@@ -102954,27 +102915,6 @@ de _ _ O
 mccormick _ _ B-Facility
 place _ _ I-Facility
 . _ _ O
-
-
-# id 2329a743-c723-4d65-acab-1d55558fd322	domain=fr
-sears _ _ B-PublicCorp
-- _ _ O
-une _ _ O
-chaîne _ _ O
-de _ _ O
-department _ _ B-Facility
-stores _ _ I-Facility
-qui _ _ O
-sont _ _ O
-généralement _ _ O
-situés _ _ O
-dans _ _ O
-shopping _ _ B-Facility
-malls _ _ I-Facility
-avec _ _ O
-quelques _ _ O
-emplacements _ _ O
-autonomes. _ _ O
 
 
 # id 6271af70-86d2-4cec-bdc7-379bcee27c26	domain=fr
@@ -107736,37 +107676,23 @@ waters _ _ I-Artist
 . _ _ O
 
 
-# id e23e2bec-f8dd-4cc8-b7cd-e507f4ff1aea	domain=fr
-l' _ _ O
-équipe _ _ O
-a _ _ O
-rapidement _ _ O
-adapté _ _ O
-sa _ _ O
+# id 0689a8f9-97b2-4c4e-9b77-962fafd4f842	domain=fr
+la _ _ O
 conception _ _ O
-la _ _ O
-plus _ _ O
-récente _ _ O
-, _ _ O
+est _ _ O
+similaire _ _ O
+à _ _ O
 l' _ _ O
-dfs _ _ B-OtherPROD
-194 _ _ I-OtherPROD
-, _ _ O
-pour _ _ O
-propulser _ _ O
-la _ _ O
-fusée _ _ O
-, _ _ O
-le _ _ O
-premier _ _ O
-exemple _ _ O
-volant _ _ O
-avec _ _ O
-succès _ _ O
-au _ _ O
-début _ _ O
+walther _ _ B-OtherPROD
+pp _ _ I-OtherPROD
+et _ _ O
+comporte _ _ O
+un _ _ O
+levier _ _ O
 de _ _ O
-1940 _ _ O
+déverrouillage _ _ O
+à _ _ O
+glissière _ _ O
 . _ _ O
 
 
@@ -109820,7 +109746,7 @@ en _ _ O
 externe _ _ O
 sur _ _ O
 chaque _ _ O
-avion _ _ O
+plan _ _ O
 . _ _ O
 
 
@@ -113484,14 +113410,13 @@ plupart _ _ O
 des _ _ O
 systèmes _ _ O
 d'irrigation _ _ O
-au _ _ O
 goutte-à-goutte _ _ O
 conventionnels _ _ O
 peuvent _ _ O
 être _ _ O
 configurés _ _ O
 pour _ _ O
-pulser _ _ O
+fonctionner _ _ O
 en _ _ O
 utilisant _ _ O
 un _ _ O
@@ -113750,7 +113675,7 @@ de _ _ O
 vannes _ _ O
 à _ _ O
 boisseau _ _ O
-conique _ _ O
+coniques _ _ O
 . _ _ O
 
 
@@ -114967,25 +114892,6 @@ rôle _ _ O
 avec _ _ O
 martin _ _ B-Politician
 bladen _ _ I-Politician
-. _ _ O
-
-
-# id 6330bbd4-0245-4e82-b5ba-523631df3321	domain=fr
-head _ _ O
-est _ _ O
-né _ _ O
-à _ _ O
-white _ _ B-Facility
-plains _ _ I-Facility
-, _ _ I-Facility
-new _ _ I-Facility
-york _ _ I-Facility
-et _ _ O
-a _ _ O
-grandi _ _ O
-à _ _ O
-south _ _ B-Politician
-bronx _ _ I-Politician
 . _ _ O
 
 
@@ -116217,7 +116123,8 @@ blom _ _ I-Artist
 puis _ _ O
 la _ _ O
 terre _ _ O
-passa _ _ O
+est _ _ O
+passée _ _ O
 à _ _ O
 william _ _ B-Politician
 graham _ _ I-Politician
@@ -116234,8 +116141,7 @@ a _ _ O
 été _ _ O
 encouragé _ _ O
 à _ _ O
-se _ _ O
-présenter _ _ O
+courir _ _ O
 par _ _ O
 joseph _ _ B-Politician
 robach _ _ I-Politician
@@ -118430,28 +118336,6 @@ hensman _ _ I-Politician
 . _ _ O
 
 
-# id 4e24e0f1-818d-4cd6-87fb-a767c900c57f	domain=fr
-horn _ _ O
-a _ _ O
-perdu _ _ O
-sa _ _ O
-réélection _ _ O
-face _ _ O
-au _ _ O
-challenger _ _ O
-republican _ _ B-ORG
-stephanie _ _ B-Politician
-bice _ _ I-Politician
-qui _ _ O
-a _ _ O
-obtenu _ _ O
-52,1 _ _ O
-% _ _ O
-des _ _ O
-voix _ _ O
-. _ _ O
-
-
 # id 1a42ea4f-1a01-48d5-8f4c-0a1db79a309e	domain=fr
 elle _ _ O
 a _ _ O
@@ -119673,6 +119557,32 @@ par _ _ O
 wilhelm _ _ B-Politician
 kube _ _ I-Politician
 . _ _ O
+
+
+# id d42e80d6-4744-404c-a697-79eeb981fd40	domain=fr
+il _ _ O
+a _ _ O
+ensuite _ _ O
+déménagé _ _ O
+à _ _ O
+jefferson _ _ B-HumanSettlement
+, _ _ I-HumanSettlement
+wisconsin _ _ I-HumanSettlement
+et _ _ O
+a _ _ O
+commencé _ _ O
+un _ _ O
+cabinet _ _ O
+d'avocats _ _ O
+avec _ _ O
+le _ _ O
+premier _ _ O
+lieutenant-gouverneur _ _ O
+john _ _ B-Politician
+edwin _ _ I-Politician
+holmes _ _ I-Politician
+de _ _ O
+l'État. _ _ O
 
 
 # id a1a7e271-898e-4797-8b16-1f2844603681	domain=fr
@@ -128693,7 +128603,6 @@ cyteen _ _ O
 figure _ _ O
 dans _ _ O
 plusieurs _ _ O
-des _ _ O
 romans _ _ O
 de _ _ O
 l'univers _ _ O
@@ -131731,11 +131640,11 @@ en _ _ O
 
 
 # id 2881cccb-8e54-4dc3-acfd-0aec0bce30ae	domain=fr
+roman _ _ O
 a _ _ B-WrittenWork
 case _ _ I-WrittenWork
 of _ _ I-WrittenWork
 conscience _ _ I-WrittenWork
-roman _ _ O
 par _ _ O
 james _ _ B-Artist
 blish _ _ I-Artist
@@ -136145,7 +136054,7 @@ conversion. _ _ O
 le _ _ O
 nombre _ _ O
 de _ _ O
-mouvements _ _ O
+coups _ _ O
 disponibles _ _ O
 a _ _ O
 été _ _ O
@@ -140156,31 +140065,6 @@ blum _ _ I-Artist
 . _ _ O
 
 
-# id c0f7a784-be6e-4044-82f5-a469e35c04c2	domain=fr
-la _ _ O
-bande _ _ O
-originale _ _ O
-est _ _ O
-devenue _ _ O
-le _ _ O
-meilleur _ _ O
-téléchargement _ _ O
-de _ _ O
-sa _ _ O
-catégorie _ _ O
-sur _ _ O
-itunes _ _ B-Software
-au-dessus _ _ O
-de _ _ O
-la _ _ O
-bande _ _ O
-originale _ _ O
-de _ _ O
-casino _ _ B-VisualWork
-royale _ _ I-VisualWork
-. _ _ O
-
-
 # id e71addd0-d312-492e-b461-0db6b9bdff5f	domain=fr
 heroquest _ _ B-Software
 une _ _ O
@@ -141844,10 +141728,10 @@ premier _ _ O
 lieu _ _ O
 avec _ _ O
 des _ _ O
-stars _ _ O
+étoiles _ _ O
 pour _ _ O
-des _ _ O
-stars _ _ O
+les _ _ O
+étoiles _ _ O
 
 
 # id 025cf2fd-9885-461b-a90f-3ba9ab6105d5	domain=fr
@@ -141856,7 +141740,7 @@ région _ _ O
 est _ _ O
 connue _ _ O
 pour _ _ O
-son _ _ O
+ses _ _ O
 railway _ _ B-OtherLOC
 museum _ _ I-OtherLOC
 of _ _ I-OtherLOC
@@ -144060,7 +143944,7 @@ oliver _ _ O
 a _ _ O
 été _ _ O
 intronisé _ _ O
-à _ _ O
+dans _ _ O
 l' _ _ O
 north _ _ B-OtherLOC
 carolina _ _ I-OtherLOC
@@ -148693,9 +148577,8 @@ plus _ _ O
 sombre, _ _ O
 des _ _ O
 guitares _ _ O
-accordées _ _ O
-en _ _ O
-baisse _ _ O
+à _ _ O
+l'écoute _ _ O
 et _ _ O
 des _ _ O
 voix _ _ O
@@ -158555,7 +158438,7 @@ de _ _ O
 l'équipe _ _ O
 pour _ _ O
 sa _ _ O
-4e _ _ O
+4ème _ _ O
 saison _ _ O
 consécutive. _ _ O
 
@@ -164785,7 +164668,7 @@ place. _ _ O
 # id 4ea880ab-3f4c-4092-bd47-879f7cc9d3ad	domain=fr
 la _ _ O
 démo _ _ O
-brute _ _ O
+approximative _ _ O
 a _ _ O
 été _ _ O
 donnée _ _ O
@@ -168166,7 +168049,8 @@ bark _ _ B-AnatomicalStructure
 est _ _ O
 épais _ _ O
 et _ _ O
-liégeux. _ _ O
+corky _ _ O
+. _ _ O
 
 
 # id 20f572c3-aed7-42e9-8b9c-fa10a68b88bb	domain=fr
@@ -169836,18 +169720,6 @@ antitragus _ _ O
 . _ _ O
 
 
-# id 49b52be0-83dc-44eb-bec8-873ca16ac040	domain=fr
-l' _ _ O
-hip _ _ B-AnatomicalStructure
-est _ _ O
-essentiellement _ _ O
-une _ _ O
-articulation _ _ O
-à _ _ O
-rotule _ _ O
-. _ _ O
-
-
 # id 9cc2994c-75d5-49b8-9bd7-af9fa11d4c11	domain=fr
 droite _ _ O
 femoral _ _ B-AnatomicalStructure
@@ -169890,7 +169762,7 @@ ostiole _ _ B-AnatomicalStructure
 un _ _ O
 étroit _ _ O
 passage _ _ O
-tapissé _ _ O
+bordé _ _ O
 de _ _ O
 bractées _ _ O
 puis _ _ O
@@ -174746,24 +174618,6 @@ dont _ _ O
 l'ordination _ _ O
 des _ _ O
 rois. _ _ O
-
-
-# id f76b3a83-2692-4d89-9413-a0dd39f2daf5	domain=fr
-il _ _ O
-a _ _ O
-été _ _ O
-examiné _ _ O
-et _ _ O
-décrit _ _ O
-par _ _ O
-paulin _ _ B-Cleric
-martin _ _ I-Cleric
-collationné _ _ O
-par _ _ O
-eduard _ _ B-OtherPER
-de _ _ I-OtherPER
-muralt _ _ I-OtherPER
-. _ _ O
 
 
 # id 85cfedc2-6dca-4744-adcd-4db06640f7a7	domain=fr
@@ -182546,6 +182400,26 @@ man _ _ B-CarManufacturer
 . _ _ O
 
 
+# id dbd7001e-02cf-467b-b496-0637ad183fa4	domain=fr
+la _ _ O
+course _ _ O
+de _ _ O
+68 _ _ O
+tours _ _ O
+a _ _ O
+été _ _ O
+remportée _ _ O
+par _ _ O
+clay _ _ B-Athlete
+regazzoni _ _ I-Athlete
+au _ _ O
+volant _ _ O
+d'un _ _ O
+williams _ _ B-Vehicle
+ford _ _ B-CarManufacturer
+. _ _ O
+
+
 # id c48c0da2-9ba4-4d5c-9203-6f45242f85de	domain=fr
 Kellgren _ _ O
 a _ _ O
@@ -182918,7 +182792,9 @@ tonnes _ _ O
 # id e1dc874f-b730-4daa-801f-5e7045530324	domain=fr
 camion _ _ O
 tonne _ _ O
-4×2 _ _ O
+4 _ _ O
+× _ _ O
+2 _ _ O
 dodge _ _ B-CarManufacturer
 
 
@@ -183537,7 +183413,8 @@ le _ _ O
 troisième _ _ O
 plus _ _ O
 grand _ _ O
-u.s. _ _ O
+des _ _ O
+états-unis. _ _ O
 constructeur _ _ O
 automobile _ _ O
 cette _ _ O
@@ -185535,7 +185412,7 @@ fraîche. _ _ O
 ponche _ _ O
 de _ _ O
 crème _ _ O
-– _ _ O
+- _ _ O
 une _ _ O
 version _ _ O
 de _ _ O
@@ -188159,37 +188036,6 @@ ou _ _ O
 640 _ _ O
 $ _ _ O
 chacun. _ _ O
-
-
-# id b920d3ae-32d9-42f2-9c95-b50d1d7e1691	domain=fr
-la _ _ O
-suède _ _ O
-avait _ _ O
-pris _ _ O
-du _ _ O
-retard _ _ O
-par _ _ O
-rapport _ _ O
-aux _ _ O
-progrès _ _ O
-techniques _ _ O
-rapides _ _ O
-réalisés _ _ O
-ailleurs _ _ O
-et _ _ O
-saab _ _ B-AerospaceManufacturer
-devait _ _ O
-rattraper _ _ O
-son _ _ O
-retard _ _ O
-en _ _ O
-termes _ _ O
-d'aérodynamique _ _ O
-et _ _ O
-de _ _ O
-propulsion _ _ O
-à _ _ O
-réaction. _ _ O
 
 
 # id 4517a16c-7795-4591-b539-fd6169561f82	domain=fr
@@ -193073,31 +192919,6 @@ vidéo _ _ O
 par _ _ O
 raw _ _ B-PrivateCorp
 fury _ _ I-PrivateCorp
-
-
-# id 580d6db3-46b4-4578-a9ce-7219db55b5f6	domain=fr
-en _ _ O
-1989 _ _ O
-1990 _ _ O
-et _ _ O
-au _ _ O
-début _ _ O
-de _ _ O
-1991, _ _ O
-ils _ _ O
-ont _ _ O
-modelé _ _ O
-pour _ _ O
-chanel _ _ B-PrivateCorp
-thierry _ _ B-Artist
-mugler _ _ I-Artist
-jean _ _ B-Artist
-paul _ _ I-Artist
-gaultier _ _ I-Artist
-john _ _ B-Artist
-galliano _ _ I-Artist
-et _ _ O
-d'autres. _ _ O
 
 
 # id 71a6da5d-652c-4bd4-a5e7-66570ffd25b4	domain=fr
