@@ -1,8 +1,5 @@
 from google.cloud import translate_v2 as translate
-import sys
-import os
 import time
-from nltk import word_tokenize
 
 
 translator = translate.Client.from_service_account_json("translation-367016-9ae157928fc9.json")
@@ -147,9 +144,7 @@ def run(fpath, ofpath):
 #define source language and target language
 sl = 'en'
 tl = 'fr'
-#tl = 'es'
-#tl = 'nl'
 
 fpath = 'en-mulda-train.txt'
-ofpath = 'ttttt.txt'
+ofpath = 'en-fr-mulda-train.txt'
 run(fpath, ofpath)
