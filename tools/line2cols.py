@@ -99,19 +99,15 @@ def build_args(parser):
 
 
 def main():
-    #args = build_args(argparse.ArgumentParser())
-    inp_file = "es.mulda.coner.new.link.txt"
-    out_file = "out.txt"
-    #data = load(args.inp_file)
-    data = load(inp_file)
-    #args.log_file = Path(args.out_file).with_suffix(".log")
-    log_file = Path(out_file).with_suffix(".log")
-    flog = io.open(log_file, "w", encoding="utf-8", errors="ignore")
-    flog.write(f"Read from {inp_file}: {len(data)}\n")
+    args = build_args(argparse.ArgumentParser())
+    data = load(args.inp_file)
+    args.log_file = Path(args.out_file).with_suffix(".log")
+    flog = io.open(args.log_file, "w", encoding="utf-8", errors="ignore")
+    flog.write(f"Read from {args.inp_file}: {len(data)}\n")
 
-    with io.open(out_file, "w", encoding="utf-8", errors="ignore") as fout:
-        success = convert(fout, data)
-    flog.write(f"Write to {out_file}: {success}\n")
+    with io.open(args.out_file, "w", encoding="utf-8", errors="ignore") as fout:
+        success = convert(fout, data, args.ignore_cat_label)
+    flog.write(f"Write to {args.out_file}: {success}\n")
 
 
 if __name__ == "__main__":

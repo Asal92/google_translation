@@ -136,6 +136,7 @@ def run(fpath, ofpath):
                     sentence_preprocessed, tags_dict = preproess_coner(sentence)
                     if sentence_preprocessed is None:
                         continue
+                    print("what I send to Google Cloud:", sentence_preprocessed)
                     results = translator.translate(sentence_preprocessed, source_language=sl, target_language=tl)
                     t = postprocess_coner(results['translatedText'], tags_dict, sentence)
                     print("translated sentence: ", t)
@@ -150,5 +151,5 @@ tl = 'fr'
 #tl = 'nl'
 
 fpath = 'en-mulda-train.txt'
-ofpath = tl + '-' + fpath
+ofpath = 'ttttt.txt'
 run(fpath, ofpath)
